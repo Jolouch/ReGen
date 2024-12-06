@@ -159,7 +159,7 @@ class RegenChatBot:
                         if isinstance(event["messages"][-1], AIMessage):
                             # event["messages"][-1].pretty_print()
                             msg_tmp['step_replay_' + str(g + 2)] = {self.step_map['5']: event["messages"][-1].content}
-                    # 继续后面的步骤
+                    # proceed after backtrack
                     for j, step in enumerate(steps[6:]):
                         for event in app.stream({"messages": [("user", step)]}, config, stream_mode="values"):
                             if isinstance(event["messages"][-1], AIMessage):
@@ -185,13 +185,6 @@ class RegenChatBot:
 
 
 if __name__ == '__main__':
-    print(time.ctime())
-
-    # diffusion的token 
-    data = {"total_input": 0, "total_out": 0, "total": 0}
-    with open("tokens.json", "w", encoding='utf8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-
     bot = RegenChatBot(model='gpt-4o', temperature=1, generation=1, isDiff=True)
     bot(doc='1999 - tcs.json', rp='records_bot')
     # regen token
@@ -206,5 +199,3 @@ if __name__ == '__main__':
     # for j in range(len(sm)):
     #     print(llm_sm[j], sm[j])
     # print(accuracy(llm_sm))
-
-    print(time.ctime())
