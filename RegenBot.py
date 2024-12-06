@@ -111,17 +111,17 @@ class RegenChatBot:
                 self.in_tokens += msg.response_metadata['token_usage']['prompt_tokens']
                 self.out_tokens += msg.response_metadata['token_usage']['completion_tokens']
 
-    # 单文件测评
+    # single file 
     def __call__(self, doc, rp='records'):
         app = self.bot()
         with open("input_info/" + doc, "r", encoding="utf-8") as f:
             input_info = json.load(f)
-        input_info["specifications"] = input_info["specifications"][0:1]  # 选部分测试
+        input_info["specifications"] = input_info["specifications"][0:1]  # partial
         ci = 0
         for fun_spec in input_info["specifications"]:
             print('-' * 30 + fun_spec["function_name"] + '-' * 30)
             fun_name = fun_spec["function_name"]
-            if re.match(r'.*\d$', fun_name):  # 有同一个功能块，做了多个案例的，功能名后加了数字，在生成过程中不需要数字，但是记录的时候要数字区分记录文件
+            if re.match(r'.*\d$', fun_name):  # same fucntion name file split
                 fun_name = fun_name[:-1]
             if self.isDiff:
                 prompt_info = (input_info["topic"], fun_name, fun_spec["function_description"])
@@ -141,7 +141,7 @@ class RegenChatBot:
                     if isinstance(event["messages"][-1], AIMessage):
                         # event["messages"][-1].pretty_print()
                         msg_tmp[self.step_map[str(i)]] = event["messages"][-1].content
-                        # if i == len(steps) - 1:  # 输出最后一步的最终答案
+                        # if i == len(steps) - 1:  # output for final step
                         #     print(event["messages"][-1].content)
             self.count_tokens(app, config)
             # pass@k
@@ -152,9 +152,9 @@ class RegenChatBot:
                     for state in app.get_state_history(config):
                         # print("Num Messages: ", len(state.values["messages"]), "Next: ", state.next)
                         # print("-" * 30)
-                        if len(state.values["messages"]) == 11:  # 第三步
+                        if len(state.values["messages"]) == 11:  # the third step
                             to_replay = state
-                    # 回溯第三步
+                    # back to the third step
                     for event in app.stream(None, to_replay.config, stream_mode="values"):
                         if isinstance(event["messages"][-1], AIMessage):
                             # event["messages"][-1].pretty_print()
@@ -167,13 +167,13 @@ class RegenChatBot:
                                 msg_tmp['step_replay_' + str(g + 2)][self.step_map[str(6 + j)]] = event["messages"][-1].content
                     self.count_tokens(app, config, is_replay=True)
             record = {
-                "time": time.ctime(),  # 时间
+                "time": time.ctime(),  
                 "desc": "model: {}, temperature: {}, generation: {}, isDiffusion: {}".format(self.model,
                                                                                              self.temperature,
                                                                                              self.generation,
                                                                                              self.isDiff),
                 "diff_act": action_sequence,
-                "act_rel": "",  # 评测动作是否相关
+                "act_rel": "",  # 
                 "ai_message": msg_tmp,
             }
             ci += 1
@@ -187,19 +187,19 @@ class RegenChatBot:
 if __name__ == '__main__':
     print(time.ctime())
 
-    # diffusion的token 计算
+    # diffusion的token 
     data = {"total_input": 0, "total_out": 0, "total": 0}
     with open("tokens.json", "w", encoding='utf8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
     bot = RegenChatBot(model='gpt-4o', temperature=1, generation=1, isDiff=True)
     bot(doc='1999 - tcs.json', rp='records_bot')
-    # regen的token 计算
+    # regen token
     print(bot.in_tokens, bot.out_tokens)
 
     # eval
     # eva_total('records_bot', 'gpt-4o-mini')
-    # 单文档测评
+    # single file eva
     # eva_data = get_gen("1998 - themas", rp='records_bot')
     # sm = simi(eva_data)
     # llm_sm = eva(eva_data, model='gpt-4o')
