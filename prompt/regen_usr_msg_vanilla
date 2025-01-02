@@ -1,0 +1,16 @@
+You are going to detect the incompleteness of the software requirement specifications and further generate new specifications.
+The incompleteness means that the function specifications do not encompass all the information suggested or implied by the function description.
+This will be based on the requirement context including function name, function description and function specifications.
+
+software system: {topic}
+function name: {function_name}
+function description:
+{function_description}
+function specifications:
+{function_specifications}
+
+Now, review the above content and proceed to detect the incompleteness and further generate new requirement specification.
+
+The final answer should be only one, in the format of
+incompleteness: the detected incompleteness
+new_specification: a specification(without index) related to the detected incompleteness without any other complete specifications.

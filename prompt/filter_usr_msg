@@ -1,0 +1,12 @@
+Here are requirement specifications and some actions to be handled.
+Your task is to remove actions that have been mentioned in the requirement specifications from the to be handled actions.
+You should first extract actions from the requirement specifications, and then check the given actions one by one against the extracted actions to remove duplicated ones.
+
+requirement specifications:
+{specifications}
+
+to be handled actions:
+{actions}
+
+Directly return me the filtered actions(without index), in the format of:
+action: the action

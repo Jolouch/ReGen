@@ -1,0 +1,14 @@
+This is an incomplete functional requirement:
+{specs}
+
+The actual absence of this requirement is:
+{label}
+
+A general summary of this absence is:
+{absence}
+
+Now there is a prediction for this incomplete functional requirement, and the predicted incompleteness is:
+{prediction}
+
+Please analyze and judge whether this prediction is consistent with the factual absence(express or contain the same meaning).
+The final answer should be in format of 'true' or 'false'

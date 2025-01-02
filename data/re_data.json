@@ -1,0 +1,1663 @@
+{
+    "0000 - cctns": {
+        "topic": "crime investigation management system",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Access Module",
+                "function_description": "The system ensures secure search results, displaying only records accessible to the user and unauthorized access attempts should be logged. It maintains a comprehensive audit trail, recording all case accesses and actions.",
+                "function_specifications": [
+                    "1.If a user performs a quick or advanced search, the System must never include in the search result list any record which the user does not have the right to access.",
+                    "2.Any access to cases, and all other activities involving the cases and related documents or data should also need to be stored in the audit trail to ensure legal admissibility and to assist in data recovery."
+                ],
+                "type": "action",
+                "absence": "action of logging of unauthorised attempts to access",
+                "label": "Unauthorised attempts to access cases must be logged in the audit trail."
+            },
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "Audit Module",
+                "function_description": "The system automatically tracks and stores events once audit trail functionality is activated. It retains audit trails for the case's lifetime and ensures data availability for inspection. The system can export specified case trails and capture access control violations, including unauthorized access attempts and validly attempted violations.",
+                "function_specifications": [
+                    "1.Once the audit trail functionality has been activated, the System must track events without manual intervention, and store in the audit trail information about them.",
+                    "2.The System must maintain the audit trail for as long as required, which will be at least for the life of the case to which it refers.",
+                    "3.The System must ensure that audit trail data is available for inspection on request, so that a specific event can be identified and all related data made accessible.",
+                    "4.The System must be able to export audit trails for specified cases.",
+                    "5.The System must be able to capture and store violations of attempts to access a case to which he is denied access."
+                ],
+                "type": "action(obj)",
+                "absence": "action of capturing and storing violations of cases where violations can validly be attempted",
+                "label": "The System must be able to capture and store violations of cases where violations can validly be attempted."
+            },
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "Citizen Interface",
+                "function_description": "The system facilitates quick and efficient communication between citizens and police units through the Citizen Interface module of the CCTNS.",
+                "function_specifications": [
+                    "1.The Citizen Interface module of the CCTNS acts as a conduit for the information exchange between citizens and police units/personnel.",
+                    "2.Citizens can use it as a tool to get information or acknowledgements from police."
+                ],
+                "type": "action",
+                "absence": "action of respond to citizens by police",
+                "label": "The police in turn can use it to respond to citizens with very little turnaround time."
+            }
+        ]
+    },
+    "0000 - gamma j": {
+        "topic": "web store",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Shopping Cart",
+                "function_description": "The system enables adding products to the shopping cart, displaying the total number of items and the overall cost. Customers can add or remove products before checkout.",
+                "function_specifications": [
+                    "1.Customers will also be able to add products into the shopping cart.",
+                    "2.The shopping cart will clearly display the total cost.",
+                    "3.The customer will also be able to add to or remove products from the shopping cart prior to checkout and order confirmation."
+                ],
+                "type": "action(obj)",
+                "absence": "action of displaying the number of items",
+                "label": "The shopping cart will display the number of items in the cart"
+            }
+        ]
+    },
+    "1998 - themas": {
+        "topic": "energy management system",
+        "specifications": [
+            {
+                "order": "008",
+                "sample_level": 2,
+                "function_name": "Validate Temperature",
+                "function_description": "The THEMAS system shall only respond to temperatures from the thermostats that are within the specified valid range.",
+                "function_specifications": [
+                    "1.Two types of temperature data shall be recognized from the thermostats: 1) the temperature setting and 2) the current temperature. ",
+                    "2.A current temperature value that is received from an individual thermostat shall be compared to the valid temperature range values. ",
+                    "3.If the current temperature value is strictly less than the lower value of the valid temperature range or if the received temperature value is strictly greater than the upper value of the valid temperature range, then the THEMAS system shall identify the current temperature value as an invalid temperature and shall output an invalid temperature status.",
+                    "4.A temperature setting value that is received from an individual thermostat shall be compared to the valid temperature range values. ",
+                    "5.If the temperature setting value is strictly less than the lower value of the valid temperature range or if the temperature setting value is strictly greater than the upper value of the valid temperature range, then the THEMAS system shall identify the temperature setting as an invalid temperature and shall output an invalid temperature status. Otherwise, the THEMAS system shall realize the value for that thermostat's temperature setting."
+                ],
+                "type": "branch",
+                "label": "If the current temperature value is within the valid range, the THEMAS system shall output a valid temperature status.",
+                "absence": "situation of valid current temperature value"
+            },
+            {
+                "order": "009",
+                "sample_level": 2,
+                "function_name": "Determine Temperature Status",
+                "function_description": "The THEMAS system shall determine when a reported temperature exceeds the limits set by the overtemperature values. Temperatures that exceed the overtemperature limits shall be reported. Temperatures that do not exceed these limits shall be output for subsequent processing.",
+                "desc modification": "Whether the temperature exceeds the limit should be reported",
+                "function_specifications": [
+                    "1.The THEMAS system shall compare the reported temperature value to the temperature setting and detect when the temperature value exceeds the specified limits.",
+                    "2.To clarify these conditions, the following definitions shall be used. LO : Lower Overtemperature Value=TSET-OD. UO : Upper Overtemperature Value=TSET+OD",
+                    "3.If T<LO or UO<T then the THEMAS system shall recognize this condition as the temperature limit has been exceeded. In this case this process shall output the condition of the temperature limit having been exceeded."
+                ],
+                "index": [
+                    -1
+                ],
+                "type": "branch",
+                "label": "If LO<=T<=UO then the THEMAS system shall recognize the temperature limit has not been exceeded, then this process shall output the temperature status",
+                "absence": "situation of temperatures within the limits"
+            },
+            {
+                "order": "011",
+                "sample_level": 3,
+                "function_name": "Determine Status of All Heating Cooling Units",
+                "function_description": "The THEMAS system shall control each of the heating and cooling units. The THEMAS system shall limit the number of heating or cooling units that may be running simultaneously by a queue.",
+                "function_specifications": [
+                    "1.The THEMAS system shall maintain the ON/OFF status of each heating and cooling unit. When a request to turn on or off a heating or cooling unit, the following processing will occur.",
+                    "2.When a request to turn on a heating or cooling unit is received, the system shall determine if the request can be honored. If the maximum number of heating or cooling units is already running, the request shall be added to a LIFO queue. If the maximum number of heating or cooling units is not running, this process shall generate a request to turn on the requested unit.",
+                    "3.When a request to turn off a heating or cooling unit is received, this process shall generate a request to turn off the requested unit."
+                ],
+                "type": "action",
+                "label": "When a request to turn off a heating or cooling unit is received, this process shall first check the LIFO queue and remove the unit-turn-on request from the queue if exists.",
+                "absence": "action of checking the queue and removing the unit-turn-on request if exists when a request to turn off a unit is received"
+            },
+            {
+                "order": "012",
+                "sample_level": 2,
+                "function_name": "Generate Unit Unavailable Event",
+                "function_description": "When a request from the thermostat for a heating unit or cooling to be turned is denied, an event should be generated for subsequent record",
+                "function_specifications": [
+                    "1.When a request for a heating unit or cooling to be turned is denied, this procedure shall use the information about the thermostat and the heating or cooling unit to generate a specific system event.",
+                    "2.This system event shall consist of a description of the event type (a request denied event) and a designation of the thermostat that made the request."
+                ],
+                "type": "action(obj)",
+                "label": "This system event shall contain a designation of the heating or cooling unit that was not turned.",
+                "absence": "the designation of the not turned unit should be contained in the event"
+            },
+            {
+                "order": "013",
+                "sample_level": 2,
+                "function_name": "Generate Heating Cooling Request",
+                "function_description": "The THEMAS system shall generate heating or cooling request to control the heating and cooling units to be turned on or off.",
+                "function_specifications": [
+                    "1.When a request to turn on or off a heating or cooling unit is made, this process shall generate the appropriate request to carry out that request.",
+                    "2.This request shall include the designation of the heating or cooling unit."
+                ],
+                "type": "action(obj)",
+                "label": "This request shall indicate whether that unit is to be turned on or off",
+                "absence": "indication of on/off status in the request"
+            },
+            {
+                "order": "015",
+                "sample_level": 3,
+                "function_name": "Generate Alarm Data",
+                "function_description": "There are two events that shall result in an alarm condition: 1) an invalid temperature value is reported from a thermostat, or 2) the reported temperature has exceeded the defined limits. This system shall record the alarm event.",
+                "function_specifications": [
+                    "1.When the THEMAS system detects a request for an alarm, this process shall detect which of the two alarms are being requested. ",
+                    "2.If the system detects an invalid temperature, this process shall output a continuous series of alternating 500Hz and 700Hz beeps on the supervisor's computer. Each beep shall have a three-quarter second duration.",
+                    "3.If the system detects a temperature limit has been exceeded, this process shall output a continuous series of alternating 1000Hz and 1500Hz beeps on the supervisor's computer. Each beep shall have a one-half second duration. ",
+                    "4.Each time an alarm is requested, an alarm event shall be recorded. This event shall be used to provide operational and statistical reports about the system."
+                ],
+                "type": "action",
+                "label": "This series of beeps shall continue until the supervisor manually resets the alarm through the supervisor's interface window.",
+                "absence": "action of handling the alarm"
+            }
+        ]
+    },
+    "1999 - tcs": {
+        "topic": "aircraft control",
+        "specifications": [
+            {
+                "order": "3.1.1",
+                "sample_level": 2,
+                "function_name": "Startup State",
+                "function_description": "Upon power application, the TCS initializes in Startup State with Normal or Recovery modes, determined by prior software termination type",
+                "function_specifications": [
+                    "1.Upon application of power the TCS shall enter the Startup State.",
+                    "2.The Startup State shall be comprised of the following modes: Normal Startup Mode and Recovery Startup Mode.",
+                    "3.The TCS will execute the particular startup mode which corresponds with the manner in which the TCS Software was halted.",
+                    "4.When the TCS software is halted due to an unplanned power interruption as well as abnormal program termination, then the TCS shall enter the Recovery Startup Mode upon application of power."
+                ],
+                "type": "branch",
+                "absence": "situation of the TCS Software is terminated normally",
+                "label": "When the TCS Software is terminated normally the TCS shall enter the Normal Startup Mode of operation upon application of power."
+            },
+            {
+                "order": "3.1.1",
+                "sample_level": 1,
+                "function_name": "Startup State1",
+                "function_description": "Upon power application, the TCS initializes in Startup State with Normal or Recovery modes, determined by prior software termination type. Unplanned interruptions trigger Recovery Mode. The system assesses achievable interaction levels, disallowing higher levels than the configuration supports and alerts the operator when executing functions beyond the permitted interaction level.",
+                "function_specifications": [
+                    "1.Upon application of power the TCS shall enter the Startup State.",
+                    "2.The Startup State shall be comprised of the following modes: Normal Startup Mode and Recovery Startup Mode.",
+                    "3.The TCS will execute the particular startup mode which corresponds with the manner in which the TCS Software was halted.",
+                    "4.When the TCS Software is terminated normally the TCS shall enter the Normal Startup Mode of operation upon application of power.",
+                    "5.When the TCS software is halted due to an unplanned power interruption as well as abnormal program termination, then the TCS shall enter the Recovery Startup Mode upon application of power.",
+                    "6.During startup, the TCS shall determine which of the 5 levels of interaction are achievable by the TCS configuration.",
+                    "7.Levels of interaction higher than those achievable by a particular TCS configuration shall be prohibited."
+                ],
+                "type": "action",
+                "absence": "Warning for execution of functions prohibited according to determined interaction levels",
+                "label": "The TCS shall inform the operator if the operator attempts to execute a function prohibited as a result of the determined level of interaction."
+            },
+            {
+                "order": "3.1.2",
+                "sample_level": 1,
+                "function_name": "Operations State",
+                "function_description": "The system enables three distinct modes in the Operations State: normal, training, and maintenance, which cannot run simultaneously. From any mode, the system can transition to the Shutdown State. In normal and training modes, the system periodically conducts Fault Detection/Location.",
+                "function_specifications": [
+                    "1.When in the Operations State the TCS shall be capable of operating in three modes: normal operations mode, training operations mode, and maintenance operations mode.",
+                    "2.The operator shall have the capability to command the system to the Shutdown State from all modes under the Operations State.",
+                    "3.The TCS hardware and software shall execute periodic Fault Detection/Location(FD/L) while in the Normal Operations Mode and Training Mode, to include a periodic determination of level of interaction."
+                ],
+                "type": "action(constraint)",
+                "absence": "action of prohibiting multiple modes from running simultaneously",
+                "label": "The Operations State modes shall not exist concurrently."
+            },
+            {
+                "order": "3.2.2",
+                "sample_level": 1,
+                "function_name": "Mission Control And Monitoring",
+                "function_description": "The system enables control and monitoring of an AV(Air Vehicle). When Beyond Line Of Sight, it ensures full control functionality. The system allows command and control transmission uplink and reception of telemetry and payload data downlink.",
+                "function_specifications": [
+                    "1.The TCS will have the capability to control and monitor an AV, payload, data link, and C4I interfaces during the execution of a mission.",
+                    "2.While flying two MAE AVs Beyond Line Of Sight, the TCS shall provide full control functionality of each AV.",
+                    "3.The TCS shall transmit command and control information to the AV via the uplink to the AV."
+                ],
+                "type": "action",
+                "absence": "action of receiving data via downlink from the AV",
+                "label": "The TCS shall receive AV telemetry and payload information via downlink from the AV"
+            },
+            {
+                "order": "3.2.2.1",
+                "sample_level": 2,
+                "function_name": "AV Control And Monitoring Capability",
+                "function_description": "The system ensures seamless coordination with UAVs across all five interaction levels, allowing for manual or autonomous flight control and transferring control between systems. It shall defines preset limits and make alert when out of limits to ensure efficient and safe UAV operations.",
+                "function_specifications": [
+                    "1.The TCS shall be capable of being interoperable with Predator and Outrider UAVs across the 5 levels of UAV interaction.",
+                    "2.The TCS shall provide the capability to control the AV flight commands as well as to release the AV to an autonomous flight control mode.",
+                    "3.The TCS shall provide the capability to pass control of an AV to another TCS and receive control of an AV from another TCS.",
+                    "4.The TCS shall provide the capability to enter AV preset limits which, as a minimum, will include airspeed limits, altitude limits, and fuel limits."
+                ],
+                "type": "action",
+                "absence": "action of notifying the operator when AV performance parameters are out of limits.",
+                "label": "TCS shall notify the operator when AV performance parameters are out of limits."
+            },
+            {
+                "order": "3.2.2.1.4",
+                "sample_level": 1,
+                "function_name": "AV Launch And Recovery Task",
+                "function_description": "The system must support automatic launch and recovery, and provide the operator with adequate cues. If necessary, abort these operations. The system also ensures interoperability with two systems",
+                "function_specifications": [
+                    "1.The TCS shall support an automatic launch and recovery system.",
+                    "2.The TCS shall present sufficient cues to the operator to implement and monitor automatic launch and recovery.",
+                    "3.The TCS shall be interoperable with the Integrity Beacon Landing System(IBLS), and the Common Automated Recovery System(CARS)"
+                ],
+                "type": "action",
+                "absence": "action of aborting the launch and recovery procedures",
+                "label": "The TCS shall initiate abort the launch and recovery procedures if required."
+            },
+            {
+                "order": "3.2.2.1.5",
+                "sample_level": 2,
+                "function_name": "AV Monitoring Task",
+                "function_description": "The system enables monitoring and recording of specific telemetry elements. The system enables monitoring and warming of the deviation from  mission plan. The system provides status monitoring of subsystems.",
+                "function_specifications": [
+                    "1.TCS shall provide the capability to monitor specific telemetry elements real-time.",
+                    "2.TCS shall provide the capability to monitor AV adherence to the uplinked mission plan, detecting any deviations greater than 10% from projected flight path, and notifying the operator if deviations are detected.",
+                    "3.TCS shall provide the capability to monitor the status of all AV subsystems reporting status."
+                ],
+                "type": "action",
+                "absence": "action of recording telemetry elements",
+                "label": "TCS shall record all telemetry elements for future review and processing."
+            },
+            {
+                "order": "3.2.2.1.5.1",
+                "sample_level": 2,
+                "function_name": "AV Monitoring Displays",
+                "function_description": "The system shall display AV status and fuel parameters. If the data link is interrupted, the system shall present the last reported known values with report time. It calculates estimated AV position during Loss of Link using the last position and current flight path.",
+                "function_specifications": [
+                    "1.The TCS shall display the AV status and the fuel parameters.",
+                    "2.When the data link is interrupted, the TCS shall present the last known AV status values.",
+                    "3.The TCS shall compute the estimated position of the AV during Loss of Link(LOL) based upon the last known AV position and anticipated flight path based on current flight mode."
+                ],
+                "type": "action(obj)",
+                "absence": "action of presenting the time at which the last AV status",
+                "label": "When the data link is interrupted, the TCS also shall present the time at which the last AV status values were reported"
+            }
+        ]
+    },
+    "1999-multi-mahjong": {
+        "topic": "Mahjong Game",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "The MultiMahjongServer",
+                "function_description": "The system enables real-time chat for MultiMahjongClient users and allows players to update their names and icons during gameplay. Computer Opponents will reside on an architecture other than programs. A graphical interface provides log information and setting modifications for the administrator. It also saves preferences to a file, reading them at start-up.",
+                "function_specifications": [
+                    "1.The MultiMahjongServer will allow players on MultiMahjongClient programs to chat with each other in real time.",
+                    "2.The MultiMahjongServer will allow players on MultiMahjongClient programs to modify their own names and icons during gameplay(as opposed to only at the beginning).",
+                    "3.The MultiMahjongServer will support an architecture whereby all Computer Opponents(CO) required will reside on it instead of on the MultiMahjongClient programs.",
+                    "4.The MultiMahjongServer will have a graphical user interface with which the administrator of the server can change game settings.",
+                    "5.The MultiMahjongServer will be able to save preferences to a file and read from that file at start-up."
+                ],
+                "type": "action",
+                "absence": "getting log information by administrator through a graphical user interface",
+                "label": "The MultiMahjongServer will have a graphical user interface with which the administrator can get log information."
+            },
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "Error Handling",
+                "function_description": "The system categorizes errors as fatal or nonfatal. When any error occurs, a dialogue box appears detailing the error type, and if the nonfatal error, an online troubleshooting guide will be provided. The distinction between the two is that the program is unable to continue to execute upon encountering a fatal error.",
+                "function_specifications": [
+                    "1.Every error that occurs during program execution can be classified into two types-fatal and nonfatal errors.",
+                    "2.When an error occurs, a dialogue box reporting the nature of error will be displayed.",
+                    "3.If a fatal error occurs, the only option to the user is to quit the game and all processes will be cleaned up(if possible) and the program execution will terminate."
+                ],
+                "type": "branch",
+                "absence": "situation of a nonfatal error occurs",
+                "label": "If a nonfatal error occurs, the user will be able to continue the current game, and an option to access the online troubleshooting guide is included in the error dialogue box."
+            },
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Ending the Game",
+                "function_description": "The system concludes the game after four rounds or upon user termination. At any time, users may end the session, choosing to exit or start anew. If a user departs early, a new CO(Computer Opponents) occupies their role. The MultiMahjongServer updates all clients of the game's end, offering options to quit or restart.",
+                "function_specifications": [
+                    "1.The game will end when all 4 rounds have been played or if the user chooses to end the game.",
+                    "2.The user will be able to end the game at any stage of the game. The user will then be able to quit the program or begin/join a new game.",
+                    "3.The MultiMahjongServer will inform all MultiMahjongClients connected to the game that the game has ended. Users of any MultiMahjongClient previously connected to the game will have the choice to quit the program or to begin/join a new game."
+                ],
+                "type": "action",
+                "absence": "creation of a new CO to fill the place of a user leaving the game prematurely",
+                "label": "If a user leaves the game prematurely, a new CO is created to fill their place."
+            },
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Playing the Game",
+                "function_description": "The system allows undoing the last move and saving the game in single-player mode. Real-time chat and changing icons/pictures and names during the game are available.",
+                "function_specifications": [
+                    "1.Users will be able to Undo their last move if playing in single player mode.",
+                    "2.Users will be able to chat with each other in real time.",
+                    "3.Users will be able to change their icons/pictures and names during the game."
+                ],
+                "type": "action",
+                "absence": "save game in single player mode",
+                "label": "Users will be able to save their game if playing in single player mode."
+            },
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Playing the Game1",
+                "function_description": "The system allows adjustment of any CO's(Computer Opponents) ability levels, choosing different Mahjong rules and personalizing users' images. All these settings should be saved for initialization when the game begins.",
+                "function_specifications": [
+                    "1.Users who create a new game will be able to change the ability level of any CO involved in the game.",
+                    "2.Users who create a new game will be able to choose to play different variations of Mahjong rules other than those preseted.",
+                    "3.Any user who creates or joins a game will be able to upload their own JPEG or GIF image that they wish to have displayed above their name."
+                ],
+                "type": "action",
+                "absence": "action of saving user preferences for initialization when the game begins",
+                "label": "The MultiMahjongClient will save the user preferences in a file and read them in when the program begins."
+            }
+        ]
+    },
+    "2000-nasa x38": {
+        "topic": "spacecraft",
+        "specifications": [
+            {
+                "order": "3.2.1",
+                "sample_level": 2,
+                "function_name": "Synchronize FCP",
+                "function_description": "Upon power-on reset, the system initializes by synchronizing the FCP virtual group despite a 2.5-second power-on skew. It configures the group to utilize all synchronized processors if at least three of five FCRs are active. If any processor is unsynchronized, it attempts re-sync and handle the failed re-sync by sending a VMEbus reset.",
+                "function_specifications": [
+                    "1.Whenever a power-on reset occurs, System Initialization shall perform the following functions.",
+                    "2.System Initialization shall synchronize the FCP virtual group in the presence of a power on skew of 2.5 seconds.",
+                    "3.System Initialization shall configure the FCP virtual group to use all available synchronized processors, if at least3of the5FCRs are active.",
+                    "4.If any of the FCP processors are not synchronized, System Initialization in the surviving triplex shall attempt to sync with the failed FCP."
+                ],
+                "type": "action",
+                "absence": "action of sending a VMEbus reset",
+                "label": "If the failed FCP processor has not synced, it shall send a single voted VMEbus reset through the NE to the failed FCP"
+            },
+            {
+                "order": "3.2.4",
+                "sample_level": 1,
+                "function_name": "Communication Services",
+                "function_description": "The system delivers synchronous message passing with message queues, immediate message passing via pipes, broadcasts to virtual groups and restricts immediate message passing to tasks in the highest rate group on the FCP.",
+                "function_specifications": [
+                    "1.Communication services shall provide synchronous message passing services in the form of message queues.",
+                    "2.Communication services shall provide immediate message passing services in the form of pipes. Pipes provide fast data throughput between virtual groups or within a virtual group when minimal data latency is necessary.",
+                    "3.Communication services shall restrict the use of immediate message passing services between virtual groups(from FCP to ICP) to tasks running in the highest rate group on the FCP."
+                ],
+                "type": "action(obj)",
+                "absence": "action of broadcast messages",
+                "label": "Communication services shall provide the capability to broadcast messages to all virtual groups."
+            },
+            {
+                "order": "3.2.4.1",
+                "sample_level": 2,
+                "function_name": "Sockets",
+                "function_description": "The system uses synchronous message passing sockets that queue outgoing messages for transmission at frame boundaries. Through create and open API calls, define maximum message size and incoming message buffer limits. If enqueue space is insufficient, an error is returned. Sockets are non-blocking, requiring application tasks to handle polling.",
+                "function_specifications": [
+                    "1.Synchronous message passing sockets shall queue outgoing messages until they are transmitted at frame boundaries.",
+                    "2.The create and open API calls for synchronous sockets allow the application to specify how many incoming messages the socket may buffer.",
+                    "3.If there is insufficient space to enqueue a message for transmission, Communication services shall return an error to the corresponding task.",
+                    "4.Sockets are non-blocking and place the burden of polling on the application task."
+                ],
+                "type": "action(obj)",
+                "absence": "action of specifying the maximum message size",
+                "label": "The create and open API calls for synchronous sockets allow the application to specify the maximum message size."
+            },
+            {
+                "order": "3.2.5.2",
+                "sample_level": 2,
+                "function_name": "Continuous BIT",
+                "function_description": "The system integrates Continuous BIT with Redundancy Management and Scheduler operations, executing within a 50Hz rategroup after application tasks, maintaining under 2ms in nominal conditions and under 3ms when processing faults. Continuous BIT operates on the FCP virtual group and failure to reset the processor's watchdog timer generates a processor reset.",
+                "function_specifications": [
+                    "1.Continuous BIT, in conjunction with Redundancy Management and Scheduler operations running in the 50Hz rategroup after the application tasks, shall take less than 2 milliseconds under nominal no-fault conditions.",
+                    "3.Continuous BIT shall execute on the FCP virtual group.",
+                    "4.Continuous BIT shall reset the processor’s built-in watchdog timer at50Hz. A failure to reset the watchdog timer within the allotted time will generate a processor reset."
+                ],
+                "type": "branch",
+                "absence": "situation of processing faults",
+                "label": "Continuous BIT shall take less than 3 milliseconds while processing faults."
+            }
+        ]
+    },
+    "2001 - libra": {
+        "topic": "cluster computing scheduler",
+        "specifications": [
+            {
+                "order": "3.1.3",
+                "sample_level": 1,
+                "function_name": "Delete Change Job",
+                "function_description": "This feature allows the user to cancel a job or under specific circumstances, change a job parameter. Parameters such as deadline and cost are crucial to the job scheduling and would not normally be changeable. However, if the user wishes to specify a different output directory or a delayed deadline, this may be permitted.",
+                "function_specifications": [
+                    "1.The scheduler shall ensure that only the appropriate user is able to delete/change the job. ",
+                    "2.If the user wish to cancel a job, the scheduler shall remove job from the queue and update cluster status. ",
+                    "3.When a job is deleted or changed, the scheduler shall revise scheduling decisions about resource allocation to pending jobs and submission of new jobs."
+                ],
+                "type": "branch",
+                "label": "If the user wishes to specify a different output directory or a delayed deadline, the scheduler shall modify the job parameters.",
+                "absence": "situation of the user wishes to specify job parameters"
+            },
+            {
+                "order": "3.1.4",
+                "sample_level": 1,
+                "function_name": "Initialize Job",
+                "function_description": "It will initialize the job by two processes: retrieve the job parameters and set them in variables. Then these variables will be passed to the scheduling module to decide whether the job may be accepted or rejected.",
+                "function_specifications": [
+                    "1.This function shall first retrieve the job parameters of the job.",
+                    "2.Then these details shall be set in variables that represent the state of the cluster and its queues."
+                ],
+                "type": "action",
+                "label": "The parsed parameters shall be passed on to the scheduling module to be handled.",
+                "absence": "operation of passing the variables to the scheduling module"
+            },
+            {
+                "order": "3.1.5",
+                "sample_level": 2,
+                "function_name": "Accept Reject Job",
+                "function_description": "This is the function that is responsible for determining the possibility of satisfying the user, given the job parameters of budget and deadline. And output evaluation results",
+                "function_specifications": [
+                    "1.Based on the job parameters, the scheduler shall figure out a priority of the job that reflects the share of CPU time that it deserves and needs according to the specified criteria. ",
+                    "2.The scheduler shall determine whether the job can be finished by the requisite deadline, given the execution time of the job and the execution status of other pending jobs on various nodes.",
+                    "3.The scheduler shall output a boolean value specifying whether the job has been accepted or rejected."
+                ],
+                "index": [],
+                "type": "action",
+                "label": "The scheduler shall evaluate the budget for the job.",
+                "absence": "evaluation of budget for the job"
+            },
+            {
+                "order": "3.1.7&8",
+                "sample_level": 1,
+                "function_name": "Dispatch Job",
+                "function_description": "This feature decides on which node and on which queue the job will be placed for execution. Then the scheduler shall take the job and inserts it into the queue on the execution host to join the competition.",
+                "function_specifications": [
+                    "1.The Libra shall first check the load on each of the hosts and sorts them in ascending order.",
+                    "2.Then the Libra shall choose the host that is least loaded.",
+                    "3.The job shall join the competition for resources."
+                ],
+                "type": "action",
+                "label": "After the host is determined, the Libra shall select the appropriate queue based on the job parameter.",
+                "absence": "the selection of the appropriate queue after the host is determined"
+            },
+            {
+                "order": "3.1.9",
+                "sample_level": 3,
+                "function_name": "Update Cluster Status",
+                "function_description": "Every time a job is scheduled for execution on a host in the cluster, this feature of Libra updates the execution host queue status. This action is also performed when a job ends and is removed.",
+                "function_specifications": [
+                    "1.The libra shall first reserve the amount of resources that will be required by the job on the node. ",
+                    "2.When a job is scheduled for execution or removed, the libra shall update the execution host queue status."
+                ],
+                "type": "action",
+                "label": "After the execution host queue status is updated, the libra shall send the information about the additional load on the queue and node to the central information store.",
+                "absence": "update status information of the cluster"
+            },
+            {
+                "order": "3.1.10",
+                "sample_level": 3,
+                "function_name": "Execute Job",
+                "function_description": "As long as there are jobs in the queues, this feature is being run. It essentially decides how to time-slice between all the jobs currently being executed. These scheduling decisions are made based on the stride-scheduling algorithm.",
+                "function_specifications": [
+                    "1.The scheduler shall check all the jobs on the cluster and selects the one with the minimum pass value to execute.",
+                    "2.The pass of that job shall advance by its stride.",
+                    "3.This loop shall repeat until there are no jobs left to run on a queue."
+                ],
+                "index": [],
+                "type": "branch",
+                "label": "In case of a tie, the arbitrary FIFO job ordering is used.",
+                "absence": "situation of multiple minimum pass values(tie)"
+            }
+        ]
+    },
+    "2001 - space fractions": {
+        "topic": "learning tool for elementary school",
+        "specifications": [
+            {
+                "order": "3.2.2",
+                "sample_level": 2,
+                "function_name": "play introductory movie",
+                "function_description": "A short movie to set up the storyline of the game and provide information to help the user complete the fraction questions. The movie will continue unless the user clicks a mouse button to skip. After the movie, the main menu will be displayed",
+                "function_specifications": [
+                    "1.Upon entrance to the movie component, the introductory movie will begin playing. ",
+                    "2.If there is no operation, the movie will continue to its completion",
+                    "3.Finally, the user will be moved to the main menu."
+                ],
+                "type": "branch",
+                "label": "If a mouse click is received, this component will terminate the movie.",
+                "absence": "situation of the a mouse click is received"
+            },
+            {
+                "order": "3.2.3",
+                "sample_level": 1,
+                "function_name": "Game Sequence",
+                "function_description": "The component presents a series of multiple-choice fraction questions. Correct answers lead to next question. Incorrect answers prompt a retry without scoring. At critical points, plot direction changes based on the user's answer. After a set number of questions, the user is directed to the ending scene.",
+                "function_specifications": [
+                    "1.This component will display a question, and then wait until the user chooses an answer. ",
+                    "2.If the incorrect answer is selected, this component will inform the user of this and give them another chance to answer the question, while their score will not count ",
+                    "3.At certain critical points, this component will choose different directions in the plot based on whether the question at the critical point was answered correctly. ",
+                    "4.After the user has proceeded through a set number of questions, they will be directed to the ending scene component."
+                ],
+                "type": "branch",
+                "label": "If the user selects the correct answer, a message to this effect will be displayed and the component will move to the next question. ",
+                "absence": "situation of selecting the correct answer"
+            }
+        ]
+    },
+    "2002 - evla corr": {
+        "topic": "Monitor and Control System",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Security",
+                "function_description": "The system enables an administrator to manage user access effectively by creating, or removing users. Administrators can edit user access properties and block all access for all user or selectively. Blocked users will be automatically logged off.",
+                "function_specifications": [
+                    "1.The administrator shall have the ability to create and add a new user to the system.",
+                    "2.The administrator shall have the ability to remove a user from the system.",
+                    "3.The administrator shall have the ability to edit a user's system access properties.",
+                    "4.The administrator shall have the ability to block all access to the system for all users or selectively by user."
+                ],
+                "type": "action",
+                "absence": "action of forced logout of blocked users",
+                "label": "All blocked users with active sessions shall automatically be logged off."
+            },
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "Power Supplies",
+                "function_description": "The system must ensure that all computers and peripherals are powered by UPS devices with enough capacity. UPS devices should notify the CMCS of power outages with remaining backup power time.",
+                "function_specifications": [
+                    "1.All computers and peripherals shall be powered though UPS type devices with sufficient capacity for the computers to safely coordinate a system wide shutdown of the correlator hardware in the event of a prolonged power outage.",
+                    "2.The UPS devices need the ability to signal the CMCS when a power outage has occurred."
+                ],
+                "type": "action",
+                "absence": "action of sending time remaining on backup power upon a power outage",
+                "label": "The UPS shall keep the CMCS apprised of time remaining on backup power when a power outage has occurred."
+            }
+        ]
+    },
+    "2002-evla back": {
+        "topic": "astronomic data management",
+        "specifications": [
+            {
+                "order": "3.2.1",
+                "sample_level": 1,
+                "function_name": "Information and data flows",
+                "function_description": "The system acknowledges all received data from the Monitor and Control System. It notifies of any interruptions in data delivery from the Correlator System and verifies output delivery to the e2e. It ensures the safe delivery of internal messages and handles lag frames under 128 values and lag sets up to 262,144 values.",
+                "function_specifications": [
+                    "1.Monitor and Control System-The BE shall acknowledge receipt of all data received from M&C.",
+                    "2.Correlator System-The BE shall notify M&C of any detected interruptions of data delivery from the Correlator.",
+                    "3.Internal Data-The BE shall guarantee safe delivery of all internal messages.",
+                    "4.Lag Frames-The BE shall be able to handle lag frames of less than128values.",
+                    "5.Lag Sets-The BE shall be able to handle lag sets up to a maximum size of262, 144values."
+                ],
+                "type": "action",
+                "absence": "verif successful delivery of output to the e2e",
+                "label": "The BE shall verif successful delivery of output to the e2e."
+            },
+            {
+                "order": "3.2.2",
+                "sample_level": 2,
+                "function_name": "Monitor",
+                "function_description": "The system monitors I/O Performance, Compute Performance, Compute Errors.",
+                "function_specifications": [
+                    "1.Monitor I/O Performance–The BE shall monitor data transfer rates from the Correlator and to the e2e. Accumulate data transfer statistics and compare against tolerances. Report all out of tolerance conditions.",
+                    "2.Monitor Compute Performance–The BE shall monitor the overall data processing rate. Compare against tolerances and report all out of tolerance conditions.",
+                    "3.Monitor Compute Errors–The BE shall trap, flag and repair inf’s, NaN’s, underflows, overflows and other computation errors. Accumulate computation error statistics and compare against tolerances."
+                ],
+                "type": "action",
+                "absence": "action of reporting when monitoring Compute Errors",
+                "label": "Report all out of tolerance conditions when monitoring Compute Errors."
+            },
+            {
+                "order": "3.2.2",
+                "sample_level": 1,
+                "function_name": "Process Management",
+                "function_description": "The system shall start, stop and reboot Backend processor, and alter priority of tasks.",
+                "function_specifications": [
+                    "1.Start Process–The BE shall be able to initiate a processing task on any Backend processor.",
+                    "2.Stop Process–The BE shall be able to signal a kill for any Backend process.",
+                    "3.Alter Priority–The BE shall be able to alter the priority of any of the BE tasks."
+                ],
+                "type": "action",
+                "absence": "reboot Backend processor",
+                "label": "The BE shall be able to initiate a reboot of any Backend processor"
+            }
+        ]
+    },
+    "2003 - agentmom": {
+        "topic": "multi agent system",
+        "specifications": [
+            {
+                "sample_level": 1,
+                "function_name": "multicast communication",
+                "function_description": "agentMom enables multicast messaging, allowing users to send and receive multicast messages. User before joining and after leaving the group is not allowed to receive multicast message",
+                "function_specifications": [
+                    "1.agentMom shall support the ability to send and receive multicast message.",
+                    "2.agentMom shall support the ability to send request to join and leave multicast group",
+                    "3.agentMom shall not allow receiving multicast message from a group before joining that multicast group"
+                ],
+                "type": "branch",
+                "label": "agentMom shall not allow receiving multicast message from a group after leaving that multicast group",
+                "absence": "situation of rejection of receiving multicast message after leaving the multicast group"
+            }
+        ]
+    },
+    "2004 - philips": {
+        "topic": "messaging tool",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Messaging",
+                "function_description": "The system notifies visibly upon receiving a message, enables sending messages to buddies, and offers emoticons for enriching messages. It displays chat history for current sessions and supports group conversations.",
+                "function_specifications": [
+                    "1.The application has a visible notification when an incoming message is received.",
+                    "2.The application can create a message and send it to a buddy.",
+                    "3.Show the history of messages sent and received in the current chat session.",
+                    "4.The application shall support group conversation to allow users to chat with multiple buddies together."
+                ],
+                "type": "action",
+                "absence": "support of selecting emoticons when the user wants to include an emoticon in the message",
+                "label": "Display a list of emoticons to choose from when the user wants to include an emoticon in the message."
+            }
+        ]
+    },
+    "2004-rlcs": {
+        "topic": "railway control ",
+        "specifications": [
+            {
+                "order": "3.2.1.3",
+                "sample_level": 2,
+                "function_name": "Control and Monitor Command Entry Screen",
+                "function_description": "The system offers a GUI option to manage events with varying control based on security levels. It enables setting operational status for failed devices and displays information on active overrides.",
+                "function_specifications": [
+                    "1.The GUI shall provide an option that allows the system user to issue commands that monitor and control opening and closing events.",
+                    "2.The control option shall provide the user with control permission.",
+                    "3.The control option shall provide the user with the capability to set the operational status of failed devices.",
+                    "4.The RLCS software shall display information about active overrides: Which are active, and which devices have no currently active rules protection against erroneous opening/closing."
+                ],
+                "type": "action",
+                "absence": "control levels based on the user's security level",
+                "label": "Based on the user's security level, the control option shall provide the user with the appropriate level of control."
+            },
+            {
+                "order": "3.2.1.4",
+                "sample_level": 2,
+                "function_name": "Control and Monitor Devices",
+                "function_description": "The system displays device sensor status using dynamic icons. In case of alarms, an audible alert and a color-shifted icon appear, with an option to mute temporarily or permanently. Icons revert automatically once resolved. Alarm conditions are configurable.",
+                "function_specifications": [
+                    "1.Device sensor status using dynamic icons for all field device sensors and controllers.",
+                    "2.For alarm status, the GUI shall also issue an audible alarm, and the icon shall be different from the okay status for that device. The visual alarm shall include a change of color for the affected device.",
+                    "3.There shall be an option to turn off the audible alarm temporarily for a given period.",
+                    "4.The alarm icon shall change to the normal status icon automatically when the alarm condition is removed.",
+                    "5.Alarm conditions shall be configurable on the screen."
+                ],
+                "type": "action",
+                "absence": "action of turning off the audible alarm permanently",
+                "label": "There shall be an option to turn off the audible alarm permanently."
+            },
+            {
+                "order": "3.2.1.5",
+                "sample_level": 1,
+                "function_name": "System Configuration",
+                "function_description": "The system offers a Configuration option, accessible only to users with System Administrative privileges. It enables modification of all database tables except log tables, and analyzes data for conflicts before storage. Security levels and passwords should be assigned to staff members, with user security levels set at commands and system functions.",
+                "function_specifications": [
+                    "1.The GUI shall provide an option for Configuration that is only accessible by the RLCS Software user with System Administrative privileges.",
+                    "2.It shall display and allow modification of all database tables with the exception of log tables.",
+                    "3.When the system administrator modifies the database tables, the GUI shall analyze the data before storing in the database and notify the system administrator of any conflicting or redundant entries.",
+                    "4.The configuration option shall allow a security level to be assigned to each defined staff member.",
+                    "5.User security levels shall be assigned at the command level, device, mode, workstation, and system function."
+                ],
+                "type": "action(obj)",
+                "absence": "a password to be assigned to each staff member",
+                "label": "The configuration option shall allow a security level and password to be assigned to each defined staff member."
+            },
+            {
+                "order": "3.2.1.5",
+                "sample_level": 1,
+                "function_name": "System Configuration1",
+                "function_description": "The system offers a Configuration option, accessible only to users with System Administrative privileges. It enables modification of all database tables except log tables, and analyzes data for conflicts before storage. Security levels and passwords should be assigned to staff members, with user security levels set at commands and system functions.",
+                "function_specifications": [
+                    "1.The GUI shall provide an option for Configuration that is only accessible by the RLCS Software user with System Administrative privileges.",
+                    "2.It shall display and allow modification of all database tables.",
+                    "3.When the system administrator modifies the database tables, the GUI shall analyze the data before storing in the database and notify the system administrator of any conflicting or redundant entries.",
+                    "4.The configuration option shall allow a security level and password to be assigned to each defined staff member.",
+                    "5.User security levels shall be assigned at the command level, device, mode, workstation, and system function."
+                ],
+                "type": "action",
+                "absence": "modify database tables except log tables",
+                "label": "It shall allow modification of all database tables with the exception of log tables"
+            },
+            {
+                "order": "3.2.1.5",
+                "sample_level": 2,
+                "function_name": "Modify Configuration",
+                "function_description": "The system allows changes to user accounts remotely, and allows to configure device rules using an additional login password. The configuration screen displays affected devices or workstations within the RLCS network. Devices can be added or removed from the display, and the facility map can be modified.",
+                "function_specifications": [
+                    "1.The configuration option shall also allow user accounts to be changed remotely in the field units.",
+                    "2.When an operator is making changes on the system, the GUI configuration screen shall display to the user which device, controller, or workstation in the RLCS network will be affected by the changes.",
+                    "3.The GUI shall allow to configure device rules.",
+                    "4.The GUI shall allow devices to be added and removed from the display without requiring programming effort.",
+                    "5.The GUI shall allow the facility map to be modified without requiring programming effort."
+                ],
+                "type": "action",
+                "absence": "an additional login password for configuring device rules",
+                "label": "The option to configure device rules shall require an additional login password for that option."
+            },
+            {
+                "order": "3.2.2",
+                "sample_level": 3,
+                "function_name": "Process Monitoring and Control",
+                "function_description": "The system operates in degraded mode by monitoring device sensors at a specified database frequency. Control down to the device sensor level. Check the current status of all closure devices. Execution of commands requires device sensors to have a valid status.",
+                "function_specifications": [
+                    "1.During degraded mode, the system shall monitor device sensors at the frequency rate stored in the database to take effect only during degraded mode.",
+                    "2.The system shall control all system field elements to device sensor level for those device sensors that may be controlled.",
+                    "3.Each device control command shall check the current status of all closure devices in the system.",
+                    "4.Each command, or system operational command shall only be executed when a valid or good status exists for all device sensors."
+                ],
+                "type": "branch",
+                "absence": "situation of the device status is unknown",
+                "label": "The system shall abort the device if the status is unknown."
+            },
+            {
+                "order": "3.2.2.5",
+                "sample_level": 3,
+                "function_name": "Track Failed Requests",
+                "function_description": "The system should retry unresponsive requests.",
+                "function_specifications": [
+                    "1.The system shall track and log all Failed Requests for Device Status and Control",
+                    "2.If a status from any device is not received upon request, the system shall automatically request the status again."
+                ],
+                "type": "branch",
+                "absence": "situation of several number of failed retries",
+                "label": "Failure to receive a valid status after a configurable number of retries shall be considered a device failure."
+            },
+            {
+                "order": "3.2.3",
+                "sample_level": 3,
+                "function_name": "Halt Sequence",
+                "function_description": "The system halts opening or closing processes if a device doesn't complete a sequence step within its allotted response time, or if the status of a closure device changes to unknown, closed, or open without an operator's command, after being previously opened or closed at the current entrance.",
+                "function_specifications": [
+                    "1.At any point in an opening or closing sequence, the sequence shall be halted if:",
+                    "2.A device fails to report completion of the current sequence step within the response time window allotted for the step, or",
+                    "3.The status of a closure device, which was previously opened at the current entrance, changes to unknown or closed, without an operator-initiated command."
+                ],
+                "type": "branch",
+                "absence": "situation of previously closed device",
+                "label": "The status of a closure device, which was previously closed at the current entrance, changes to unknown or open, without an operator-initiated command."
+            },
+            {
+                "order": "3.2.4",
+                "sample_level": 3,
+                "function_name": "Data Processing and Security",
+                "function_description": "The system generates a table of 'one-way hash function' values for each control unit's non-volatile memory items. Periodically, at least daily, the system verifies that computed 'Message Digest' values match development records. Results are logged.",
+                "function_specifications": [
+                    "1.The system shall will also, for each control unit in the system, produce a table of the returned 'one-way hash function'(Message Digest) values, of each of the‘Control Unit Non-Volatile Memory’items.",
+                    "2.The system will provide for periodic verification that current, recomputed 'Message Digest' values, for each unit in the system, correspond with 'record' values computed by the development process MD5algorithm.",
+                    "3.The periodic evaluation shall will occur at least once a day.",
+                    "4.The 'Message Digest' value verification results shall will be recorded in the system log."
+                ],
+                "type": "action",
+                "absence": "action of alarm for a verification failure",
+                "label": "A verification failure shall will cause an alarm condition for the affected control unit."
+            },
+            {
+                "order": "3.3",
+                "sample_level": 1,
+                "function_name": "Performance of GUI",
+                "function_description": "The system accommodates multiple concurrent users up to the database limit. GUI requests for status updates or control commands will update within 2 seconds, excluding network/device delays. The facility map refreshes every 2 seconds, adjustable via the database. Critical alarm notifications are delivered to the operator's workstation within 2 seconds, regardless of operator login status.",
+                "function_specifications": [
+                    "1.The RLCS shall support multiple users logged on, up to the limit of the number of users defined in the database.",
+                    "2.Not including device and network response times, requests from the GUI for status updates shall not exceed 2 seconds to update the GUI display. Not including device and network response time, requests from the GUI for device status changes(control commands) shall not exceed2seconds.",
+                    "3.The facility map on the screen shall refresh every 2 seconds.",
+                    "4.The RLCS notification to the operator workstation of any critical alarms shall occur within 2 seconds of alarm detection, and shall occur whether or not an operator is logged on to the system."
+                ],
+                "type": "action",
+                "absence": "action of modifying refresh rate within the database",
+                "label": "Refreshrate of the facility map can be configurable within the database to more than 2 seconds by the user."
+            }
+        ]
+    },
+    "2005 - grid 3D": {
+        "topic": "visualization of biological data in 3D",
+        "specifications": [
+            {
+                "order": "全",
+                "sample_level": 1,
+                "function_name": "visualization of biological data",
+                "function_description": "The system allows up to 2000 data points. The system allows a single click to reveal a data point's name and multiple points can be simultaneously clicked. A double-click shows full details. Users can customize the grid orientation.",
+                "function_specifications": [
+                    "1.The product should be able to handle up to 2000 data points.",
+                    "2.A single click of the mouse over a data point should bring up the name of the data point.",
+                    "3.A double-click of the mouse over the data point should cause the application to display all the data points details.",
+                    "4.The product should allow the grid to be oriented by the user."
+                ],
+                "type": "action",
+                "absence": "action of clicking multiple points to display multiple names of the data points",
+                "label": "The product should allow multiple points to be clicked so that multiple names can be displayed."
+            }
+        ]
+    },
+    "2005 - pontis": {
+        "topic": "highway bridge information management",
+        "specifications": [
+            {
+                "order": "UC-2",
+                "sample_level": 3,
+                "function_name": "View Project Data",
+                "function_description": "The system allows SQL queries. The system allows to select a project through project ID, and select projects on the map and generate related list.",
+                "function_specifications": [
+                    "1.The user shall be able to enter a WHERE clause of the SQL query in the Find and the Filter window and run a query against the projects in the database. The SQL query will be verified by the application.",
+                    "2.The user shall be able to select a project by directly typing in the project ID in the GUI, with the display scrolling to that structure.",
+                    "3.The user shall be able to select projects(work) on a supported map display and generate a project/bridge list for use within Pontis."
+                ],
+                "type": "action",
+                "absence": "feedback on error SQL",
+                "label": "SQL errors will be reported to the user for correction."
+            },
+            {
+                "order": "UC-3",
+                "sample_level": 1,
+                "function_name": "Generate Predefined Reports",
+                "function_description": "The system enables view various data. It supports report creation, review, and integration. The system shall incorporate PDF files into reports and save reports in different formats.",
+                "function_specifications": [
+                    "1.The user shall be able to select and execute predefined reports to view bridge data, project data, preservation model data, program simulation results, and configuration data.",
+                    "2.The user shall be able to create reports in a .NET compliant report generator other than InfoMaker and review these reports from within the Pontis GUI.",
+                    "3.The system shall provide the ability to integrate current selections with a. NET compliant report generator other than InfoMaker.",
+                    "4.The system shall provide the ability to save reports in PDF, HTML, and XML formats."
+                ],
+                "type": "action",
+                "absence": "action of incorporating PDF files into standard reports",
+                "label": "The system shall provide the ability to incorporate PDF files into standard Pontis reports."
+            },
+            {
+                "order": "UC-5",
+                "sample_level": 2,
+                "function_name": "Create And Edit Structure",
+                "function_description": "The system enables creating new structures by a bridge key, copying data from existing structures, and importing from  files. Structures can be edited or removed. Bridge statuses can be marked and filtered. Support design/preconstruction information management. Support global renumbering of bridge keys contingent on user privileges.",
+                "function_specifications": [
+                    "1.The user shall be able to create a new structure by a user-defined bridge key, copying all data of an existing structure, and importing from a supported file type.",
+                    "2.The user shall be able to edit and remove existing structures.",
+                    "3.The system shall provide the ability to mark a bridge with any of several status values(e. g. inactive/closed) and automatically filter displays to recognize the status value.",
+                    "4.The system shall support storage and management of information for bridges in a design or preconstruction state",
+                    "5.The user shall be able to renumber the bridge key identifier and have the change made globally."
+                ],
+                "type": "action",
+                "absence": "The renumbering function shall be restricted depending on the user privilege",
+                "label": "The renumbering shall be restricted depending on the user privilege"
+            },
+            {
+                "order": "UC-10",
+                "sample_level": 1,
+                "function_name": "Configure Simulation Parameters",
+                "function_description": "The system allows specification of simulation characteristics, including timeframe, thresholds, project types, addressed needs, and annual budget. Unit costs and policy standards can be updated. Allow the user to modify model parameters and simulation rules.",
+                "function_specifications": [
+                    "1.The user shall be able to specify the characteristics of the simulation, including the simulation timeframe, various thresholds for the simulation, the project types included in the simulation, the needs addressed, and the annual budget for the simulation.",
+                    "2.The user shall be able to update the unit costs and the policy standards governing the improvement model.",
+                    "3.The user shall be able to modify the technical parameters governing the simulation including the parameters of the improvement model."
+                ],
+                "type": "action(obj)",
+                "absence": "action of modify the simulation rules",
+                "label": "The user shall be able to modify the simulation rules"
+            },
+            {
+                "order": "UC-14",
+                "sample_level": 3,
+                "function_name": "Create and Edit Projects",
+                "function_description": "The system enables creating, edit or delete projects; assign and remove work items to a project; and split projects into multiple projects.",
+                "function_specifications": [
+                    "1.The user shall be able to create new projects by manually entering the project information.",
+                    "2.The user shall be able to edit or delete existing projects.",
+                    "3.The user shall be able assign Pontis-generated work recommendations, inspector work candidates, and user-specified work items to a project, or remove work items from a project.",
+                    "4.The user shall be able to split a project into multiple projects."
+                ],
+                "type": "action",
+                "absence": "action of combining multiple projects into a master project",
+                "label": "The user shall be able to combine multiple projects into a master project."
+            },
+            {
+                "order": "UC-14",
+                "sample_level": 3,
+                "function_name": "Manage Projects",
+                "function_description": "The system offers batch project updates; monitors project budgets; enables grouping of work candidates.",
+                "function_specifications": [
+                    "1.The user shall be able to edit the characteristics of multiple projects simultaneously(batch update).",
+                    "2.The system shall be capable of tracking and linking funding levels and project budgets.",
+                    "3.The system shall be capable of grouping work candidates by different action types–bridge-level, element-level, and flexible-level actions."
+                ],
+                "type": "action",
+                "absence": "warn for over budget",
+                "label": "The system shall warn users if the project budget exceeds funding."
+            },
+            {
+                "order": "UC-15",
+                "sample_level": 2,
+                "function_name": "Perform Data Validation",
+                "function_description": "The system enables batch mode single or cross field validation during input and saving. Privileged users can configure validation rules. A data review wizard highlights errors shall be provided when comparing data.",
+                "function_specifications": [
+                    "1.The system shall be capable of performing single-field and cross-field validation on NBI data items in batch mode.",
+                    "2.The system shall be capable of performing configurable input range checks using the DATADICT table upon entering data.",
+                    "3.The system shall be capable of performing data validation tasks including cross field validation upon saving data.",
+                    "4.The system shall allow users to configure data validation rules.",
+                    "5.The system shall provide data review wizard for comparing incoming bridge data with existing data. The errors will be highlighted for easy review."
+                ],
+                "type": "action",
+                "label": "Configuring data validation rules shall be a privileged operation.",
+                "absence": "action of granting privilege to configuring data validation rules"
+            }
+        ]
+    },
+    "2005 - pontis1": {
+        "topic": "highway bridge information management",
+        "specifications": [
+            {
+                "order": "UC-17",
+                "sample_level": 1,
+                "function_name": "Perform Data Archiving",
+                "function_description": "The system offers the ability to archive data, with a filter for data archiving activity. A reporting mechanism allows viewing of archived data, which can be restored as needed. The system logs timestamps when rows were last modified.",
+                "function_specifications": [
+                    "1.The user shall be able to archive data for existing and removed structures.",
+                    "2.A selection/filter capability shall be provided to restrict operations on active, inactive, or all structures during any data archiving activity.",
+                    "3.The system shall provide reporting mechanism for viewing archived data.",
+                    "4.The system shall use timestamps in the database to log when rows were last changed."
+                ],
+                "type": "action",
+                "absence": "action of restoring the archived data",
+                "label": "The user shall be able to restore the archived data."
+            },
+            {
+                "order": "UC-19",
+                "sample_level": 1,
+                "function_name": "Define and Manage User Roles",
+                "function_description": "The system enables management of application roles through a interface. Administrators can create and edit roles, assign users and application permissions to roles.",
+                "function_specifications": [
+                    "1.The administrator shall be able to create and edit new application roles.",
+                    "2.The administrator shall be able to assign users to application roles.",
+                    "3.The system shall provide user interface for managing application roles."
+                ],
+                "type": "action",
+                "absence": "action of assigning application permissions to user roles",
+                "label": "The administrator shall be able to assign application permissions to each user roles."
+            },
+            {
+                "order": "UC-20",
+                "sample_level": 1,
+                "function_name": "Manage Application Users",
+                "function_description": "The system permits the administrator to add or remove users, create and assign bridge-level access filters, and disable access when necessary. Users can update their basic account profiles through the system.",
+                "function_specifications": [
+                    "1.The administrator shall be able to add new users to the system.",
+                    "2.The user shall be able to modify his or her basic account profile.",
+                    "3.The administrator shall be able to create bridge-level access filters.",
+                    "4.The administrator shall be able to assign bridge-level filters for each user.",
+                    "5.The administrator shall be able to remove users from the system."
+                ],
+                "type": "action",
+                "absence": "action of disabling access",
+                "label": "The administrator shall be able to disable access as appropriate."
+            },
+            {
+                "order": "UC-21",
+                "sample_level": 1,
+                "function_name": "Perform User Authentication",
+                "function_description": "The system validates username and password credentials, authorizes access to functionalities based on user privileges, tracks login and logout activities, supports running concurrent sessions for users.",
+                "function_specifications": [
+                    "1.The system shall be capable of validating user name and password during log-in process.",
+                    "2.The system shall be capable of authorizing access to Pontis functionalities depending on the user’s privileges during log-in process.",
+                    "3.The system shall be capable of running concurrent sessions for a user."
+                ],
+                "type": "action",
+                "absence": "tracking login and logout activity",
+                "label": "The system shall be capable of tracking login and logout activity."
+            }
+        ]
+    },
+    "2005 - znix": {
+        "topic": "framework",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "store for textual documents",
+                "function_description": "The system provides a special GUI for editing documents. Users can draw arrows to link documents with Entities to establish relationships, and name the document. The document is saved with its Entity connections intact for future retrieval. ",
+                "function_specifications": [
+                    "1.The user after editing a document in a word-processor invokes a special GUI supplied by the Framework.",
+                    "2.The GUI allows him to draw arrows to and from(a symbol representing) the current document to any Entity creating relationships between the document and the relevant Entities.",
+                    "3.The document is automatically saved to disk in a manner that reflects the relationships it has to other Entities. The user may in the future fetch this document by following the relationship paths that he had created."
+                ],
+                "type": "action",
+                "absence": "action of naming the document",
+                "label": "The user may optionally specify a descriptive name for the document."
+            }
+        ]
+    },
+    "2005-clarus high": {
+        "topic": "weather and road condition monitoring",
+        "specifications": [
+            {
+                "order": "3.1.1",
+                "sample_level": 2,
+                "function_name": "Data Management",
+                "function_description": "The system will collect environmental data, accessing in-situ and remotely sensed observations from data collectors, calculate derived environmental data.",
+                "function_specifications": [
+                    "1.The Clarus system shall collect, quality control, and disseminate environmental data.",
+                    "2.The Clarus system shall be able to access in-situ environmental observations from data collectors.",
+                    "4.The Clarus system shall calculate derived environmental data from observations."
+                ],
+                "type": "action",
+                "absence": "access remotely sensed data",
+                "label": "access remotely sensed environmental observations from data collectors"
+            }
+        ]
+    },
+    "2005-phin": {
+        "topic": "trace and monitor health outbreak",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "Case Investigation",
+                "function_description": "The system offers configuration and revision control for investigation-specific questionnaires and enables publishing of questionnaires and implementation guides. Reusable questionnaire libraries, using common terminology. It allows manual or automatic status updates of case records as definitions change and tracks all changes.",
+                "function_specifications": [
+                    "1.Systems supporting OM must provide the ability to control the configuration of and revisions to investigation-specific questionnaires.",
+                    "2.Systems supporting OM must provide the ability to publish investigation specific questionnaires.",
+                    "3.Case investigation should be supported by reusable questionnaire libraries that use common terminology(where available) to maximize the efficiency of data exchange.",
+                    "4.Systems supporting OM should provide a manual or automatic means of updating the status of case records as the case definition changes.",
+                    "5.Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition."
+                ],
+                "type": "action(obj)",
+                "absence": "action of publishing of implementation guides",
+                "label": "Systems supporting OM must provide the ability to publish investigation specific questionnaires and implementation guides."
+            },
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Case Investigation1",
+                "function_description": "The system offers configuration and revision control for investigation-specific questionnaires and enables publishing of questionnaires and implementation guides. Reusable questionnaire libraries, using common terminology. It allows manual or automatic status updates of case records as definitions change and tracks all changes.",
+                "function_specifications": [
+                    "1.Systems supporting OM must provide the ability to control the configuration of and revisions to investigation-specific questionnaires.",
+                    "2.Systems supporting OM must provide the ability to publish investigation specific questionnaires and implementation guides.",
+                    "3.Case investigation should be supported by reusable questionnaire libraries that use common terminology(where available) to maximize the efficiency of data exchange.",
+                    "4.Systems supporting OM should provide a manual or automatic means of updating the status of case records as the case definition changes."
+                ],
+                "type": "action",
+                "absence": "action of tracking changes made to the status of cases records",
+                "label": "Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition."
+            },
+            {
+                "order": "2.3.3",
+                "sample_level": 2,
+                "function_name": "Contact Exposure Tracing",
+                "function_description": "The system associates each investigation subject with exposure contacts, linking contacts across jurisdictions. Contacts can be traced, investigated, and monitored. It creates new contacts from existing case records and identifies contact types. The system supports bidirectional linking between multiple contacts and cases, sortable contact work lists for investigators.",
+                "function_specifications": [
+                    "1.Each investigation subject may be associated with exposure contacts, including unambiguous links to contacts in other jurisdictions.",
+                    "2.Contacts of exposed entities(e. g., people, animals, places) may be traced, investigated, and monitored.",
+                    "3.Systems supporting OM should be able to create new contacts from existing case records, and should also identify the contact type.",
+                    "4.Systems supporting OM must support contact exposure tracing by allowing one contact to be linked to multiple cases.",
+                    "5.Systems supporting OM should be able to produce contact work lists for each investigator to use, and should allow sorting by priority or geography."
+                ],
+                "type": "action",
+                "absence": "multiple contacts to be linked to a single case",
+                "label": "It allows multiple contacts to be linked to a single case."
+            }
+        ]
+    },
+    "2007 - ertms": {
+        "topic": "train control",
+        "specifications": [
+            {
+                "order": "4.1.2",
+                "sample_level": 2,
+                "function_name": "Driver Data Entry",
+                "function_description": "The system requires train data entry before allowing train movement. The driver can select Train Data Entry on the DMI and manually or automatically enter data when stationary. The driver can consult train data anytime. Data is stored in the ETCS equipment until inoperative and must be confirmed by the driver at Data Entry start.",
+                "function_specifications": [
+                    "1.Train data shall be entered before the on-board ETCS equipment allows train movement.",
+                    "2.. The driver shall be able to select Train Data Entry on the DMI.",
+                    "3.Entering or overwriting data manually by the driver shall be possible but only when stationary.",
+                    "4.Train data may be entered automatically from a railway management system or from train memory.",
+                    "5.The driver shall be able to consult train data when the train is stationary.",
+                    "6.Current train data shall be stored(except at transition to shunting) in the ETCS equipment until the traction unit is not operative.",
+                    "7.Stored train data shall be offered to the driver to be confirmed when Data Entry starts."
+                ],
+                "type": "action",
+                "absence": "action of consulting train data when moving",
+                "label": "The driver shall be able to consult train data when the train is stationary or moving."
+            },
+            {
+                "order": "4.1.3",
+                "sample_level": 2,
+                "function_name": "Shunting operation",
+                "function_description": "The system allows manual selection of Shunting. Automatic transfer to Shunting occurs at speeds equal or lower to the supervised shunting speed with confirmation from the driver. ETCS supervises Shunting to a national speed limit and indicates speed upon request. Train trip function applies if danger signals are passed.",
+                "function_specifications": [
+                    "1.It shall be possible to manually select Shunting from Stand By operation, Full Supervision operation or Partial Supervision operation.",
+                    "2.Automatic transfer to Shunting may be from Full Supervision operation and Partial Supervision operation status at any speed lower than or equal to the supervised shunting speed based on trackside information.",
+                    "3.ETCS shall supervise Shunting operation to a permitted national speed value.",
+                    "4.The supervised Shunting speed shall be indicated to the driver on request.",
+                    "5.It shall be possible to apply the train trip function, if the shunting movement passes a signal showing danger for shunting."
+                ],
+                "type": "action",
+                "absence": "confirmation from the driver if authomatic transition to Shunting",
+                "label": "Before authomatic transition to Shunting, ETCS shall request confirmation from the driver."
+            }
+        ]
+    },
+    "2007 - mdot": {
+        "topic": "transportation info management",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Administrative Services",
+                "function_description": "The system shall sequence computational modules, manage different services, restricting access to authorized users by modifying user access rights. It logs system operations, user access and administrative data transactions.",
+                "function_specifications": [
+                    "1.The DUAP System shall be able to organize the sequence of execution of computational modules.",
+                    "2.The DUAP System shall allow the system administrator to add, modify, and delete Input Services, Computational Services, Output Services and Presentation Services.",
+                    "3.The DUAP System shall restrict access to authorized users.",
+                    "4.The DUAP System shall allow a system administrator to add, modify and delete user access rights.",
+                    "5.The DUAP System shall be able to log system operations and Administrative Services data transactions."
+                ],
+                "type": "action(obj)",
+                "absence": "action of logging user access",
+                "label": "The DUAP System shall be able to log records of user access."
+            },
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "Dynamic Data Services",
+                "function_description": "The system caches raw and derived data for one week. The cached data should associate with its source, location and timestamp. Cached data is available for immediate access. The system logs all Dynamic Data Services data transactions.",
+                "function_specifications": [
+                    "1.The DUAP System shall cache(both raw and derived) probe vehicle data, traffic data, road weather data and road condition data.",
+                    "2.The DUAP System shall cache data only if the data record associates the data with its source, a geo-referenced location, and a timestamp.",
+                    "3.The DUAPSystem shall allow data to be accessed as soon as it is cached.",
+                    "4.The DUAP System shall log Dynamic Data Services data transactions."
+                ],
+                "type": "action(constraints)",
+                "absence": "statement of cached time of one week",
+                "label": "The DUAP System shall cache data for one week."
+            }
+        ]
+    },
+    "2007- eirene fun 7": {
+        "topic": "digital radio standard for railway",
+        "specifications": [
+            {
+                "order": "5.2.2",
+                "sample_level": 1,
+                "function_name": "Driver call related functions",
+                "function_description": "The system enables communication between connected parties once a call is established. Lifting the handset transfers sound to it, minimizing loudspeaker volume. Replacing the handset cancels the call or transfers communication back to the loudspeaker at its initial volume. A Push-To-Talk function is available for group calls.",
+                "function_specifications": [
+                    "1.Once a call has been established the connected parties shall be able to communicate.",
+                    "2.Picking up the handset shall transfer the communication to the handset.",
+                    "3.Replacing the handset either: −cancels the call; or−transfers the call to the loudspeaker at the initial volume.",
+                    "4.A Push-To-Talk function shall be provided for use during group calls."
+                ],
+                "type": "action",
+                "absence": "action of reducing the loudspeaker volume to its minimum level",
+                "label": "Picking up the handset shall reduce the loudspeaker volume to its minimum level."
+            },
+            {
+                "order": "5.2.2",
+                "sample_level": 2,
+                "function_name": "Call controller",
+                "function_description": "The system contacts the destination and shows its functional identity to the controller. The functional identity includes necessary information. Upon call connection, notify the driver audibly and visually and connect the call to the loudspeaker. If unsuccessful, inform the driver with indications of a busy line or network issues.",
+                "function_specifications": [
+                    "1.Once an appropriate destination has been obtained, the radio shall attempt to establish a call to this destination. The functional identity shall be displayed to the controller.",
+                    "2.The functional identity includes the train number, if available.",
+                    "3.When the call is connected to the controller, an audible and visual indication is to be provided to the driver. The call shall be connected to the loudspeaker at the pre-set value.",
+                    "4.If the system is not able to connect the call, an audible and visual indication shall be provided to the driver that the call was not received by the controller. This shall also indicate if the called party was busy or if the network could not connect the call."
+                ],
+                "type": "branch",
+                "absence": "situation of no train number is available",
+                "label": "The functional identity includes the engine number, if no train number is available."
+            },
+            {
+                "order": "5.2.2",
+                "sample_level": 1,
+                "function_name": "Call controller1",
+                "function_description": "The system contacts the destination and shows its functional identity to the controller. The functional identity includes necessary information. Upon call connection, notify the driver audibly and visually and connect the call to the loudspeaker. If unsuccessful, inform the driver with indications of a busy line or network issues.",
+                "function_specifications": [
+                    "1.Once an appropriate destination has been obtained, the radio shall attempt to establish a call to this destination. The functional identity shall be displayed to the controller.",
+                    "2.The functional identity includes the following: −the train number, if available; −the engine number, if no train number is available;",
+                    "3.When the call is connected to the controller, an audible and visual indication is to be provided to the driver. The call shall be connected to the loudspeaker at the pre-set value.",
+                    "4.If the system is not able to connect the call, an audible and visual indication shall be provided to the driver that the call was not received by the controller."
+                ],
+                "type": "action(obj)",
+                "absence": "specific indication of unsuccessful connect: busy or network error",
+                "label": "This shall also indicate if the called party was busy or if the network could not connect the call."
+            },
+            {
+                "order": "5.2.2",
+                "sample_level": 3,
+                "function_name": "Call controller3",
+                "function_description": "The system contacts the destination and shows its functional identity to the controller. The functional identity includes necessary information. Upon call connection, notify the driver audibly and visually and connect the call to the loudspeaker.",
+                "function_specifications": [
+                    "1.Once an appropriate destination has been obtained, the radio shall attempt to establish a call to this destination. The functional identity shall be displayed to the controller.",
+                    "2.The functional identity includes the following: −the train number, if available; −the engine number, if no train number is available;",
+                    "3.When the call is connected to the controller, an audible and visual indication is to be provided to the driver. The call shall be connected to the loudspeaker at the pre-set value.",
+                    "4.If the system is not able to connect the call, an audible and visual indication shall be provided to the driver that the call was not received by the controller."
+                ],
+                "type": "branch",
+                "absence": "situation of the unsuccessful connect",
+                "label": "If the system is not able to connect the call, an audible and visual indication shall be provided to the driver that the call was not received by the controller."
+            },
+            {
+                "order": "5.2.9",
+                "sample_level": 1,
+                "function_name": "Call other drivers on other trains in the area",
+                "function_description": "The system connects calls to the loudspeaker until the driver uses the handset, with the call continuing until ended by the calling driver. If a train exits the group call area or cannot connect, the system provides audible and visual indications to inform the driver of the issue.",
+                "function_specifications": [
+                    "1.The call shall be connected to the loudspeaker until the driver picks up the handset.",
+                    "2.The call shall continue until terminated by the calling driver, an authorised controller or the network.",
+                    "3.If the train moves out of the group call area whilst the call is in progress, an audible and visual indication of the loss of call shall be provided to the driver.",
+                    "4.If the system is not able to connect the call, an audible indication shall be provided to the driver."
+                ],
+                "type": "action(obj)",
+                "absence": "the visual indication shall be provided",
+                "label": "If the system is not able to connect the call, an audible and visual indication shall be provided to the driver."
+            },
+            {
+                "order": "5.2.18",
+                "sample_level": 3,
+                "function_name": "Send Railway emergency cal",
+                "function_description": "The system enables initiation of Railway emergency calls from the cab. The train-borne recorder logs activation, termination, and failures. A visual and audible alert is activated in the cab until the call is terminated",
+                "function_specifications": [
+                    "1.It shall be possible for a driver to initiate Railway emergency calls.",
+                    "2.Details of the activation, termination and any failures of the emergency function shall be sent to the train-borne recorder as each event occurs.",
+                    "3.A continuous visual and short audible indication(from0to20seconds, for trials: 5seconds) that the emergency function has been activated shall be provided in the cab."
+                ],
+                "type": "action",
+                "absence": "action of ceasing the alarm",
+                "label": "Once the call is terminated, the continuous visual alarm indication in the cab shall cease."
+            },
+            {
+                "order": "5.2.26",
+                "sample_level": 2,
+                "function_name": "Communicate with other drivers on same train",
+                "function_description": "The system enables the lead driver to establish a permanent radio connection between multiple active traction vehicles lacking wire connections. A 'multi-drivers' indicator displays on all cab radios. The lead driver receives notifications if a member places the call on hold.  The lead driver can remove members and terminate the call. If the call fails in the lead traction vehicle, the lead driver should reestablish it. If the call fails to any other cab, the driver in that cab shall call the lead cab and request reestablishment of the call.",
+                "function_specifications": [
+                    "1.Many trains employ multiple active traction vehicles. Where these vehicles are not connected by on-train wire connections, it shall be possible for the lead driver to establish a permanent radio connection between each of the active cabs.",
+                    "2.Whilst on-going, a‘multi-drivers’indication shall be displayed permanently at all Cab radios.",
+                    "3.The lead driver shall be notified if a member of the group has placed the call on hold, although this shall not affect communications between the remaining members of the group.",
+                    "4.At any time during the call, the lead driver shall be able to remove a member of the group.",
+                    "5.The lead driver shall be able to terminate the entire call.",
+                    "6.If the call fails in the lead traction vehicle, the lead driver will be responsible for reestablishing the call."
+                ],
+                "type": "branch",
+                "absence": "situation of call failure in other cabs(not the lead traction vehicle)",
+                "label": "If the call fails to any other cab, the driver in that cab will call the lead cab and request re-establishment of the call."
+            },
+            {
+                "order": "5.2.26",
+                "sample_level": 1,
+                "function_name": "Communicate with other drivers on same train1",
+                "function_description": "The system should clearly indicate when any driver disconnects from a multi-driver call. In every cab, calls should be routed to the loudspeaker if the handset is on-hook. Calls between the lead cab and controller can integrate the controller into the multi-driver call. If initiated by the controller, the controller should be automatically added with displaying the controller's identity in the lead cab.",
+                "function_specifications": [
+                    "1.If a driver is disconnected from the multi-driver call, a clear indication shall be given.",
+                    "2.In each cab, the call shall be connected to the loudspeaker whilst the handset is on-hook.",
+                    "3.For calls between a controller and the lead cab, it shall be possible to add the controller to the multi-driver call. Either the lead driver calls the controller or the controller calls the lead driver. In the latter case, the controller is automatically added into the multi-driver call."
+                ],
+                "type": "action",
+                "absence": "display the identity of the automatically added controller ",
+                "label": "Functional identity of the automatically added controller shall be displayed in the leading cab."
+            },
+            {
+                "order": "5.2.2.47",
+                "sample_level": 1,
+                "function_name": "Receive incoming group or broadcast voice call",
+                "function_description": "The system provides audible and visual alerts for incoming group or broadcast calls on the cab radio. The group identity is displayed. Calls connect to the loudspeaker when the handset is not in use and to the handset when off the hook. A visual indication on the MMI informs drivers of ongoing broadcast calls.",
+                "function_specifications": [
+                    "1.An audible and visual indication of the incoming call shall be provided when a Cab radio receives a group or broadcast call.",
+                    "2.The group identity of the voice group call shall be displayed.",
+                    "3.Group or broadcast calls shall automatically be connected to the loudspeaker if the handset is not in use",
+                    "4.The driver shall be informed if a broadcast call is ongoing by a visual indication displayed on the MMI."
+                ],
+                "type": "branch",
+                "absence": "situation of the handset is off hook",
+                "label": "be connected to the handset if the handset is off hook."
+            }
+        ]
+    },
+    "2007-nlm": {
+        "topic": "digital library repository management",
+        "specifications": [
+            {
+                "order": "7.2.4",
+                "sample_level": 2,
+                "function_name": "Error Checking and Disaster Recovery",
+                "function_description": "The system ensures data integrity during Archival Storage transfers by conducting checks for each file and reporting errors. The system offers disaster recovery capabilities including data backup, storage and recovery.",
+                "function_specifications": [
+                    "1.Provides statistically acceptable assurance that no components of the AIP are corrupted during any internal Archival Storage data transfer.",
+                    "2.Performs routine and special data integrity checking such as Cyclic Redundancy Checks(CRC) or checksums for each individual file and generates error reports.",
+                    "3.Provides disaster recovery capabilities including data backup, off-site data storage"
+                ],
+                "type": "action(obj)",
+                "absence": "inclusion of data recovery",
+                "label": "disaster recovery capabilities including data recovery"
+            },
+            {
+                "order": "7.3.4",
+                "sample_level": 1,
+                "function_name": "Receive Database Updates",
+                "function_description": "The system supports updates, batch submissions and online updates for individual records. The system can generate management reports and statistics.",
+                "function_specifications": [
+                    "1.Receives updates from other NLM Digital Repository functions(for example, Ingest and Administration).",
+                    "2.Allows online updates to individual records by authorized staff.",
+                    "3.Has capability to generate and provide management reports and statistics such as summaries of updates by category, user codes, etc."
+                ],
+                "type": "action",
+                "absence": "batch submissions",
+                "label": "Allows updates to be submitted in batches."
+            },
+            {
+                "order": "7.4.1",
+                "sample_level": 2,
+                "function_name": "Negotiate Submission Agreement",
+                "function_description": "The system manages negotiation status and submission agreements, maintaining comprehensive schedules. Users, based on access level, can add or edit agreement terms. Allows setting periodic or ad-hoc submission schedules, managing and monitoring submission volumes.",
+                "function_specifications": [
+                    "1.Tracks negotiation status, written submission agreements and maintains schedules.",
+                    "2.Able to add and edit terms of agreement.",
+                    "3.Submission schedules may be set on a periodic or ad-hoc basis.",
+                    "4.Submission volumes and schedules are managed and monitored.",
+                    "5.Able to store terms of agreements, and use them to monitor/review/process submissions.",
+                    "6.Keeps an audit trail of all actions."
+                ],
+                "type": "action",
+                "absence": "based on access of level to add and edit terms of agreement",
+                "label": "Able to add and edit terms of agreement, based on access of level of user."
+            }
+        ]
+    },
+    "2007-puget sound": {
+        "topic": "courseware system",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "Grade book",
+                "function_description": "The system allows course administrators to grade assignments, provide feedback via text or attachments, and include timestamps for modifications.  grade details, averages, and overall scores exclusively to relevant users, with privacy ensured. A grade history is maintained.",
+                "function_specifications": [
+                    "1.A course administrator must be able to grade an assignment.",
+                    "2.The course administrator should also be able to attach feedback in the form of text or an attachment.",
+                    "3.Time stamps should be attached to the last time the grade was modified.",
+                    "4.The system should display grade information such as the grade for each assignment, averages, and overall grade.",
+                    "5.The system should maintain a grade history."
+                ],
+                "type": "action",
+                "absence": "no mention of prohibiting anyone other than administrators from viewing others' grades",
+                "label": "No other actor should be able to view another one's grades except the course administrator."
+            },
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "Search",
+                "function_description": "The system offers a search box and button on every page and a dedicated search page with filtering function for the course management system. The results are listed in categories based on relevance that determined by matched terms numbers. Clicking results directs to the corresponding pages. Optionally, the search page can extend searches to the internet via Google.",
+                "function_specifications": [
+                    "1.The system should present a search box and a Search button on the top or bottom of every page.",
+                    "2.The system should provide a single page dedicated specifically to the task of searching the course management system.",
+                    "3.The page should allow an actor to filter out certain results and search specific sections(or components) of the course management system.",
+                    "4.Results should appear in categories based on relevance.",
+                    "5.When the actor clicks a search result link, they should be taken to the page corresponding to the search result.",
+                    "6.In addition, the search page described above might allow for the possibility of searching the world wide web using a standard search engine such as Google."
+                ],
+                "type": "action",
+                "absence": "relevance is determined by results that having the highest number terms matching the search terms.",
+                "label": "Relevance is determined by results that having the highest number terms matching the search terms."
+            }
+        ]
+    },
+    "2009 - library": {
+        "topic": "library system",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "field and record sharing",
+                "function_description": "The system enables simultaneous access and updates to patron and item records by multiple staff members and patrons. Based on privileges, staff and patrons have varying field visibility. Records can be changed and after which alert is needed.",
+                "function_specifications": [
+                    "1.Ability for multiple staff members and patrons to simultaneously access and update patron and item records.",
+                    "2.Depending on assigned privileges, staff can view all patron and item fields; patrons can access only selected fields.",
+                    "3.Record changes are applied in a reasonable way."
+                ],
+                "type": "action",
+                "absence": "action of warning when a record is changed",
+                "label": "The system shall warn when a record is changed."
+            },
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "system monitoring",
+                "function_description": "The system supports for monitoring resources through configurable alert thresholds. Alerts can be delivered to unlimited recipients via administrative dashboards, email, and text messages.",
+                "function_specifications": [
+                    "1.System supports monitoring of system resources.",
+                    "2.Alerts can be sent via administrative dashboards, email messages, and text messages.",
+                    "3.Alerts can be sent to unlimited number of recipients via any or all alert methods."
+                ],
+                "type": "action",
+                "absence": "action of configuring alert thresholds",
+                "label": "Alert thresholds are configurable."
+            }
+        ]
+    },
+    "2009 - library1": {
+        "topic": "library management system",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 2,
+                "function_name": "item transfer utility",
+                "function_description": "The system provides a utility for transferring batches of items between branches. It allows querying candidate materials, saving queries for repeated use, and manually selecting titles. The utility enables move selected items to new location and revert them.",
+                "function_specifications": [
+                    "1.System provides a utility for transferring batches of items between branches.",
+                    "2.Utility includes ability to query for candidate materials; ability to save queries for repeated use; ability to manually select titles from query results.",
+                    "3.Utility provides the ability to change records of all or selected items to move to new location."
+                ],
+                "type": "action",
+                "absence": "ability of reverting items to original location",
+                "label": "Utility provides means to revert items to original location after a set period of time"
+            }
+        ]
+    },
+    "2009 - video search": {
+        "topic": "search video in multiple search engines",
+        "specifications": [
+            {
+                "order": "",
+                "sample_level": 1,
+                "function_name": "Torrent Search",
+                "function_description": "The system integrates torrent search with the streaming search bar, allowing database updates online. A tick box enables torrent searches. Queries retrieve seeds, peers, file size, date, and webpage link. Results can be ordered with page navigation buttons for result browsing. A no-results message displays if no results searched.",
+                "function_specifications": [
+                    "1.Torrent search will share the same search bar with the streaming search.",
+                    "2.Database of torrent sites can be updated via the internet.",
+                    "3.There will be a tick box to allow the user to choose to include torrent searching in the search.",
+                    "4.Query will retrieve the seed and peers, size of the file, date posted and a link to the webpage itself.",
+                    "5.If there are results, results will be arranged in size/date/alphabetical order by clicking on the column headers.",
+                    "6.There will be page button for the user to navigate the results."
+                ],
+                "type": "branch",
+                "absence": "situation of no results were found",
+                "label": "If no results are found on a search it will display a message that No results were found for this search."
+            }
+        ]
+    },
+    "2009 - warc III": {
+        "topic": "archive file manipulation",
+        "specifications": [
+            {
+                "order": "Migration Tool",
+                "sample_level": 1,
+                "function_name": "Migration Tool",
+                "function_description": "The system features a migration workflow offering a user-friendly API with a single header file. Explicit configuration is mandatory, generating errors if absent. Conversion-related metadata for storage in converted files should be input by user or automatically generated.",
+                "function_specifications": [
+                    "1.The migration workflow shall provide a clear Application Programming Interface (API)to handle the migration process and default configuration.",
+                    "2.The migration API will require inclusion of only one header file.",
+                    "3.A configuration must be provided explicitly.",
+                    "4.The user shall be able to provide metadata related to the conversion that will be stored in the converted files.",
+                    "5.The system shall automatically generate migration metadata."
+                ],
+                "type": "action",
+                "absence": "action of generating errors in the absence of a configuration.",
+                "label": "Errors should be generated in the absence of a configuration."
+            },
+            {
+                "order": "Migration Tool",
+                "sample_level": 2,
+                "function_name": "Migration Tool1",
+                "function_description": "The system features a migration workflow offering a user-friendly API with a single header file. Explicit configuration is mandatory, generating errors if absent. Conversion-related metadata for storage in converted files shall be input by user or automatically generated.",
+                "function_specifications": [
+                    "1.The migration workflow shall provide a clear Application Programming Interface (API)to handle the migration process and default configuration.",
+                    "2.The migration API will require inclusion of only one header file.",
+                    "3.A configuration must be provided explicitly, errors should be generated in the absence of a configuration.",
+                    "4.The user shall be able to provide metadata related to the conversion that will be stored in the converted files."
+                ],
+                "type": "action",
+                "absence": "action of automatically generating migration metadata",
+                "label": "The system shall automatically generate migration metadata."
+            }
+        ]
+    },
+    "2010 - home": {
+        "topic": "digital home",
+        "specifications": [
+            {
+                "order": "4.2",
+                "sample_level": 2,
+                "function_name": "Thermostat Requirements",
+                "function_description": "The system provides remote temperature monitoring and control of a home's environment via a device. Access the current temperature reading at the thermostat position. Adjust the thermostat settings in one-degree increments within a range.",
+                "function_specifications": [
+                    "1.The DigitalHome programmable thermostat shall allow a user to monitor and control a home's temperature from any location, using a web ready computer, cell phone, or PDA.",
+                    "2.A DH user shall be able to read the temperature at a thermostat position.",
+                    "3.A DH user shall be able to set the thermostat temperatures to between 60°F and 80°F."
+                ],
+                "type": "action(obj)",
+                "absence": "set the thermostat temperatures at one degree increments",
+                "label": "set the thermostat temperatures at one degree increments"
+            },
+            {
+                "order": "4.2",
+                "sample_level": 1,
+                "function_name": "Thermostat Requirements1",
+                "function_description": "The system places up to eight thermostats throughout the home, allowing individual or collective control. Each thermostat supports scheduling up to twenty-four one-hour settings per day for each week. If a manual setting is enacted, it persists until the scheduled ends and then reverts to the default setting.",
+                "function_specifications": [
+                    "1.Up to eight thermostats shall be placed in rooms throughout the home.",
+                    "2.The thermostats may be controlled individually or collectively, so that temperature can be controlled at different levels in different home spaces.",
+                    "3.For each thermostat, up to twenty-four one hour settings per day for every day of the week can be scheduled.",
+                    "4.If a thermostat device allows a user to make a manual temperature setting, the setting shall remain in effect until the end of the planned or default time period."
+                ],
+                "type": "action",
+                "absence": "using the default setting after a manual temperature setting ends",
+                "label": "When a manual temperature setting ends, the default setting will be used for the next time period."
+            },
+            {
+                "order": "4.5",
+                "sample_level": 1,
+                "function_name": "Appliance Management Requirements",
+                "function_description": "The system provides and  change the state of a power switch. Manual switch changes maintain the appliance's state until the end of the current time period, after which default settings resume.",
+                "function_specifications": [
+                    "1.The system shall be able to provide information about the state of a power switch(OFF or ON), indicating the whether an appliance connected to the power switch is OFF or ON.",
+                    "2.The system shall be able to change the state of a power switch(OFF to ON, or ON to OFF), in turn changing the state of an appliance connected to the power switch.",
+                    "3.If a user changes the state of power switch device manually, the device shall remain in that state until the end of the planned or default time period."
+                ],
+                "type": "action",
+                "absence": "revert to the default setting after the manual set state ends",
+                "label": "When a manual set state of power ends, the default setting will be used for the next time period."
+            },
+            {
+                "order": "4.6",
+                "sample_level": 3,
+                "function_name": "DH Planning and Reporting Requirements",
+                "function_description": "The system provides reports for the system operation status for the past two years. It includes daily average, maximum, and minimum temperature and humidity values for each device, records security breaches with specific dates and times, and indicates any non-operational periods of the DH System.",
+                "function_specifications": [
+                    "1.For a given month and year, in the past two years, DigitalHome shall be able to provide a report on the management and control of the home.",
+                    "2.The month report shall contain daily average, maximum(with time) and minimum(with time) values of temperature and humidity for each thermostat and humidistat, respectively.",
+                    "3.The month report shall provide the day and time for which any security breaches occurred, that is, when the security alarms were activated."
+                ],
+                "type": "action(obj)",
+                "absence": "indication of periods when the DH System was not in operation",
+                "label": "The month report shall provide a section that indicates the periods of time when the DH System was not in operation."
+            }
+        ]
+    },
+    "2010 - mashboot": {
+        "topic": "monitor company presence in social network",
+        "specifications": [
+            {
+                "order": "0380",
+                "sample_level": 2,
+                "function_name": "User Account Deactivation",
+                "function_description": "The system provides options to deactivate user accounts while restricting deactivated users from access. Accounts with history are deactivated. Accounts without history can be deleted. Disabled accounts can be re-enabled, though all except the System Administrator account are subject to disabling.",
+                "function_specifications": [
+                    "1.User Account Deactivation The system allows user accounts to be deactivated.",
+                    "2.The system denies user who have been deactivated from accessing the system.",
+                    "3.If an account has no history associated with it, it can be deleted from the system.",
+                    "4.A disable account can be undisabled.",
+                    "5.It is possible to disable all accounts except for the System Administrator account."
+                ],
+                "type": "branch",
+                "absence": "situation of an account has any history",
+                "label": "If an account has any history associated with it, it can only be deactivated and not deleted."
+            },
+            {
+                "order": "3.3",
+                "sample_level": 2,
+                "function_name": "Security Requirements",
+                "function_description": "The system offers data backups, and alerts the System Administrator via email for multiple failed logins from the same user. Only valid users can log in. Users are logged out after a configurable timeout set by the System Administrator.",
+                "function_specifications": [
+                    "1.The system allows for the backup of the data system to local or remote non-volatile storage systems.",
+                    "2.The system is configurable to warn about multiple failed login attempts from the same user.",
+                    "3.The system allows only valid users to log into the system. A valid user is one which has not been disabled or deleted and exists on the system.",
+                    "4.The system allows the System Administrator to configure a timeout after which a user is automatically logged out of Mashbot."
+                ],
+                "type": "action",
+                "absence": "action of sending warnings for failed login",
+                "label": "These warnings are sent to the System Administrator."
+            }
+        ]
+    },
+    "2010-blit draft": {
+        "topic": "laboratory information system",
+        "specifications": [
+            {
+                "order": "2.1.1.2.1",
+                "sample_level": 1,
+                "function_name": "Create and Add User",
+                "function_description": "The system enables creation of new users either manually or from a template. When using a template, role-specific settings are inherited automatically, and additional roles can be added.",
+                "function_specifications": [
+                    "1.The user shall be able to create/add a new user manually or from a template.",
+                    "2.The user record shall inherit all specified role(s) settings in the template when the user record is created from the user template"
+                ],
+                "type": "action",
+                "absence": "action of adding additional roles when creating from a user template",
+                "label": "The user shall be able to add additional roles manually while creating/adding a new user from a user template."
+            },
+            {
+                "order": "2.1.1.2.1",
+                "sample_level": 1,
+                "function_name": "Search and Verify User",
+                "function_description": "The system saves user information in the database, associating roles with divisions for new users. It conducts searches on users to confirm user existence. It verifies user status when attempting to add a new user to the system.",
+                "function_specifications": [
+                    "1.The system shall save the user info to the database.",
+                    "2.The system shall perform a search on the user display name and user name columns in the user tables to find the user and verify the user's existence.",
+                    "3.The system shall perform a search in the Active Directory to verify the status of the user—Active/Inactive within the company—when the user attempts to create/add a new user in the system."
+                ],
+                "type": "action",
+                "absence": "action of associating the new user with the divisions",
+                "label": "The system shall save the user info to the database with specified roles associated with divisions for the newly created/added user."
+            },
+            {
+                "order": "2.1.1.2.1",
+                "sample_level": 2,
+                "function_name": "Save Data",
+                "function_description": "The system generates a confirmation message upon saving data, and  generates warning message when clicking the cancel button or close button. If cancel button is clicked, all entered data is cleared.",
+                "function_specifications": [
+                    "1.The system shall generate a standard confirmation message after saving data and warning/caution messages after the cancel or close button is clicked.",
+                    "2.The system shall clear up data if the user chooses to click the Cancel button in the midst of creating/adding a new user."
+                ],
+                "type": "branch",
+                "absence": "situation of clicking the close button",
+                "label": "The system shall direct the user to the xxx Page if the user chooses to click the close button without entering any data."
+            }
+        ]
+    }
+}

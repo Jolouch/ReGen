@@ -1,0 +1,19 @@
+The involved software is {topic}.
+
+I will provide you with the function name, the function description and {n} corresponding requirement specifications, {cut_len} of which is truncated.
+Your goal is to complete the truncated specifications based on the provided context.
+
+function name:
+{function_name}
+
+function description:
+{function_description}
+
+function specifications:
+{specs}
+
+The truncated specifications you are going to complete are:
+{truncated}
+
+Return me the {cut_len} completed truncated specifications in the format of
+completed_truncated_specifications: truncated part(without index) + completed part

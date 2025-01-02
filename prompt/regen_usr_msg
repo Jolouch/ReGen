@@ -1,0 +1,122 @@
+You are going to detect the incompleteness of the software requirement specifications and further generate new specifications.
+The incompleteness means that the function specifications do not encompass all the information suggested by the function description or the function description itself has defect.
+This will be based on 1) the requirement context including function name, function description and function specifications, and 2) the operation sequence for divergence thinking.
+
+Let's do it step by step
+1. Analyze and extract function points
+Read and understand the function description, then extract fine-grained function points from it. Fine grained means you need to focus on every condition, action, object, constraint.
+e.g. When signal is received[Condition], the system sets the signal[Action] received bit[Object] within 2 seconds[Constraint].
+
+2.Locate the incompleteness in the specifications
+You should first understand each specification, then examine the function points one by one to see if it is resolved by certain specifications.
+There are two situations:
+S1(Explicit absence): there exist functional point that is clearly not resolved in the function specifications.
+S2(Implied absence): the function points seem to have been all resolved by the function specifications.
+Determine one situation(S1 or S2) and then go to next step.
+
+3.Detect the specific incompleteness
+Consider the specific incompleteness from two perspectives:
+    1.branch coverage incompleteness(condition incompleteness): the specifications do not consider necessary situation.
+    2.action incompleteness: current operations are not sufficient to accomplish the function: lack of actions, objects, constraints or any other related elements.
+    (if the absent action falls under a situation, then it is not action incompleteness, it is branch coverage incompleteness.)
+3.1 If S1 in step 2(explicit absence), it means that the function specifications lack an entire specification related to the uncovered function point.
+Regard the the uncovered function point as the incompleteness and then directly proceed to step 4.
+
+3.2 If S2 in step 2(implied absence), If S2 in step 2(implied absence), it means that a certain function point maybe deficient in details, or the requirement description itself is incomplete and omits certain function point.
+Consider from two perspectives: 1.Are there any hidden situations that need to be considered? 2.Are the actions involved in the function point sufficient to complete the function?
+Simultaneously, you can refer to the operation sequence to get new insights, but remember that the actions in the sequence are not necessarily the correct absence(maybe all actions are useless). It can be used as a reference, but your own thinking is the priority.
+After determining the absent element, go to step 4.
+
+4.Summary and decision
+Based on the absent element you have detected, generate a new specification for it.
+You may have several ideas, but choose the one you believe to be the most likely.
+The answer(only one you believe to be the most likely) should be in the format of:
+absent element: the absent situation or the absent action(objects)
+new specification: a specification(without index) related to the absent element without any other complete specifications
+
+Let's see three examples to learn the analysis process.
+##example 1
+function name: Game
+function description: The component presents a series of multiple-choice fraction questions. Correct answers lead to next question. Incorrect answers prompt a retry without scoring.
+function specifications:
+1.This component will display a question, and then wait until the user chooses an answer.
+2.If the user selects the correct answer, a message to this effect will be displayed and the component will move to the next question.
+operation sequence: omitted in this case
+##analysis
+Step 1: analyze and extract function points
+The extracted fine-grained function points: 1.presents a series of questions. 2.different response according to answers(correct and incorrect).
+Step 2: locate the incompleteness
+The spec 1 displays questions. The spec 2 states the response to correct answer. So the function point 1 is resolved by spec 1. But the function point 2 is partially resolved by spec 2.
+So it is the S1: there exists function point clearly not resolved.
+Step 3: Detect the specific incompleteness
+Because the incompleteness belongs to S1, we go to the Step 3.1.
+The incompleteness is the uncovered function point 3: situation of response to incorrect answers. It belongs to the branch coverage incompleteness because it is a lack of situation.
+Step 4: Summary and Generation
+Based on the requirement context and the absence of response to incorrect answers, generate the new spec:
+If the incorrect answer is selected, this component will give them another chance to answer the question, while their score will not count.
+Final answer:
+absent element: situation of response to incorrect answers
+new specification: If the incorrect answer is selected, this component will give them another chance to answer the question, while their score will not count
+
+##example 2
+function name: interaction management
+function description: The system assesses achievable interaction levels, disallowing higher levels than the configuration supports.
+function specifications:
+1.The system shall determine which of the 5 levels of interaction are achievable by the configuration.
+2.Levels of interaction higher than those achievable by a particular configuration shall be prohibited.
+operation sequence:
+1.Inform the operator of the maximum achievable level of interaction
+2.Alert the operator when attempting to execute functions beyond the permitted interaction level
+##analysis
+Step 1: analyze and extract function points
+The extracted fine-grained function points: 1.assesses achievable interaction levels. 2.prohibit higher levels than configuration supports.
+Step 2: locate the incompleteness
+The spec 1 determines levels of interaction. The spec 2 disallows unsupported levels. The function point 1 is resolved by spec 1. The function pont 2 is resolved by spec 2.
+All function points appear to be resolved by current specifications. It is the S2.
+Step 3: Detect the specific incompleteness
+Because the incompleteness belongs to  S2, we go to the Step 3.2.
+After review of the specifications, no unconsidered condition is found, and no further detailed actions need to be added. Let's get new insights from the operation sequence.
+I noticed the second action in the sequence: alert the operator when executing beyond the permitted interaction level. This is a reasonable incompleteness because the requirement mentions the prohibition of unauthorized interaction, but it does not mention issuing an alarm for it.
+Consequently there exists action incompleteness because the specification lacks a necessary operation: the warning for execution of functions prohibited.
+Step 4: Summary and Generation
+Based on the requirement context and the absence of warning for execution of functions prohibited, generate the new spec:
+The system shall alert the operator if the operator attempts to execute a function prohibited.
+Final answer:
+absent element: warning for execution of functions prohibited
+new specification: The system shall alert the operator if the operator attempts to execute a function prohibited
+
+##example 3
+function name: Generate Signal
+function description: Once a request to turn on or off a heating or cooling unit, the system shall provide control signal for the unit. The status change event shall be recorded.
+function specifications:
+1.The system shall recognize whether the request was made by the heating unit or the cooling unit and the ON or OFF status that is being requested.
+2.The system shall generate the signal indicating the designation of heating or cooling unit.
+3.The system shall record the event each time a change is made to the status of a heating or cooling unit.
+operation sequence:
+1.recognize whether the request was made by the user, the system, or an automated schedule
+2.ensure proper communication with the unit for accurate operation
+##analysis
+Step 1: analyze and extract function points
+The extracted fine-grained function points: 1.provide control signal including heating or cooling and on or off. 2.record the event
+Step 2: locate the incompleteness
+The spec 1 recognizes the request, through two aspects: heating or cooling and on or off. But The spec 2 generates control signal of only heating or cooling. The spec 3 record the event.
+So the function point 1 is not fully resolved by the spec 1 and 2. It is the S1.
+Step 3: Detect the specific incompleteness
+We go to step 3.1. The incompleteness is the lack of on or off signal. It belongs to action(object) incompleteness.
+Step 4: Summary and Generation
+Based on the requirement context and the absence of designation of ON or OFF status, generate the new spec:
+The system shall generate the signal of turning on or off the unit.
+Final answer:
+absent element: the signal of turning on or off the unit should be designated
+new specification: The system shall generate the signal of turning on or off the unit
+
+
+##Let's begin.
+The requirement context is as follows:
+software system: {topic}
+function name: {function_name}
+function description: {function_description}
+function specifications:
+{function_specifications}
+operation sequence:
+{operation_sequence}

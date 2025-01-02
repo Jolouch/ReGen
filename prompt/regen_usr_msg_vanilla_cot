@@ -1,0 +1,46 @@
+You are going to detect the incompleteness of the requirement specifications and further generate new specifications to complete the incompleteness.
+Let's do it step by step.
+
+-First, you should read the the topic of the software and the description of the requirement to have a general understanding.
+
+-Next, read carefully the function specifications, and then consider if the specifications encompass all the information suggested by the function description. Detect the incompleteness by finding out out the absent element.
+
+-Finally, summarize your analysis and generate a new specification for the detected incompleteness.
+
+##Let's first learn from examples.
+##example 1
+function name: Game
+function description: The component presents a series of multiple-choice fraction questions. Correct answers lead to next question. Incorrect answers prompt a retry without scoring.
+function specifications:
+1. This component will display a question, and then wait until the user chooses an answer.",
+2. If the user selects the correct answer, a message to this effect will be displayed and the component will move to the next question.
+##analysis
+This software is about a learning tool for elementary school and the requirement to be detected is the game. It presents a series of questions and respond according to answers.
+The specifications have the function of displaying questions and responding to correct answer. It don't specify how to respond to incorrect answers as mentioned in the description.
+So the incompleteness is the absence of responding to incorrect answers by prompting a retry without scoring. Generate a new specification: If the incorrect answer is selected, this component will give them another chance to answer the question, while their score will not count.
+##final answer
+incompleteness: the system have no response to incorrect answers
+new specification: If the incorrect answer is selected, this component will give them another chance to answer the question, while their score will not count.
+
+##example 2
+function name: Initialize System
+function description: When the THEMAS system is initialized, it shall first turn off all the heating and cooling units. Then, it shall check all the thermostats to determine if any thermostat requires a heating or cooling unit to be turned on back on.
+function specifications:
+1. This process shall first determine a known state of all the heating and cooling units by issuing a request to turn off all the units.
+2. It shall then read the current temperature values of each thermostat.
+3. If the settings reflect a need for a heating or cooling unit to be turned on, the process shall issue a request to turn on the appropriate unit
+##analysis
+This software is about a energy management system and the requirement to be detected is the initialization. It turns off all units when initializing, and checks the thermostats to determine whether there is a need of turning on the units.
+The specifications have turned off the units and determined the request by reading the current temperature values of each thermostat. However, reading the current temperature values is not sufficient because it has no reference. It should also read the current temperature setting of the thermostat and combine it with the current temperature value to determine whether the heating and cooling unit needs to be turned on.
+So the incompleteness is the absence reading the current temperature settings values of thermostat. Generate a new specification: The system shall read the current temperature values and the current temperature settings values of each thermostat.
+##final answer
+incompleteness: the system should also read the current temperature settings values of thermostat
+new specification: The system shall read the current temperature values and the current temperature settings values of each thermostat
+
+
+##Let's begin.
+software system: {topic}
+function name: {function_name}
+function description: {function_description}
+function specifications:
+{function_specifications}
