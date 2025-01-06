@@ -1,6 +1,6 @@
 ## Installation
 
-Clone and install the required libraries. We use python==3.11.0
+Clone and install the required libraries. We use python 3.11.0
 
 ```bash
 git clone https://github.com/Jolouch/ReGen.git
