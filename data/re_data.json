@@ -89,7 +89,6 @@
                 "sample_level": 2,
                 "function_name": "Determine Temperature Status",
                 "function_description": "The THEMAS system shall determine when a reported temperature exceeds the limits set by the overtemperature values. Temperatures that exceed the overtemperature limits shall be reported. Temperatures that do not exceed these limits shall be output for subsequent processing.",
-                "desc modification": "Whether the temperature exceeds the limit should be reported",
                 "function_specifications": [
                     "1.The THEMAS system shall compare the reported temperature value to the temperature setting and detect when the temperature value exceeds the specified limits.",
                     "2.To clarify these conditions, the following definitions shall be used. LO : Lower Overtemperature Value=TSET-OD. UO : Upper Overtemperature Value=TSET+OD",
