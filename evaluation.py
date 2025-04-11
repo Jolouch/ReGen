@@ -335,6 +335,6 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--rq", type=str, default='rq1')
+    parser.add_argument("--rq", type=str, default='rq1', choices=['rq1', 'rq2', 'rq3', 'rq4'])
     args = parser.parse_args()
     main(args)

@@ -17,7 +17,7 @@ def cut_specs(specs: List, cut_ratio=0.3, cut_mtd='random'):
 
     @param specs: requirement specifications
     @param cut_ratio: cut ration
-    @param cut_mtd: cut menthod
+    @param cut_mtd: cut method
     @return: cut specifications
     """
     nlp = en_core_web_lg.load()
