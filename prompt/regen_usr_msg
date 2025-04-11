@@ -22,7 +22,7 @@ Consider the specific incompleteness from two perspectives:
 3.1 If S1 in step 2(explicit absence), it means that the function specifications lack an entire specification related to the uncovered function point.
 Regard the the uncovered function point as the incompleteness and then directly proceed to step 4.
 
-3.2 If S2 in step 2(implied absence), If S2 in step 2(implied absence), it means that a certain function point maybe deficient in details, or the requirement description itself is incomplete and omits certain function point.
+3.2 If S2 in step 2(implied absence), it means that a certain function point maybe deficient in details, or the requirement description itself is incomplete and omits certain function point.
 Consider from two perspectives: 1.Are there any hidden situations that need to be considered? 2.Are the actions involved in the function point sufficient to complete the function?
 Simultaneously, you can refer to the operation sequence to get new insights, but remember that the actions in the sequence are not necessarily the correct absence(maybe all actions are useless). It can be used as a reference, but your own thinking is the priority.
 After determining the absent element, go to step 4.

@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.adding",
+            "2.removing",
+            "3.editing"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "assigning application permissions to roles",
+                "new_specification": "The administrator shall be able to assign application permissions to application roles."
+            },
+            {
+                "generation": "2",
+                "absent_element": "assign application permissions to roles",
+                "new_specification": "The administrator shall be able to assign application permissions to application roles."
+            },
+            {
+                "generation": "3",
+                "absent_element": "assign application permissions to roles",
+                "new_specification": "The administrator shall be able to assign application permissions to application roles."
+            }
+        ],
+        "label": "The administrator shall be able to assign application permissions to each user roles.",
+        "absence": "action of assigning application permissions to user roles",
+        "semantic_similarity": "0.83,0.81,0.81",
+        "llm_eva_results": "1,1,1"
+    }
+]

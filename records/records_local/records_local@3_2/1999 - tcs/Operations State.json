@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.being active",
+            "2.select",
+            "3.transition",
+            "4.initiate"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "prevention of simultaneous execution of multiple modes",
+                "new_specification": "The system shall prevent the simultaneous operation of more than one mode under the Operations State."
+            },
+            {
+                "generation": "2",
+                "absent_element": "prevention of simultaneous execution of multiple modes",
+                "new_specification": "The system shall prevent the simultaneous execution of normal, training, and maintenance modes in the Operations State."
+            },
+            {
+                "generation": "3",
+                "absent_element": "transition between modes in the Operations State",
+                "new_specification": "The system shall enable transition between normal, training, and maintenance modes within the Operations State."
+            }
+        ],
+        "label": "The Operations State modes shall not exist concurrently.",
+        "absence": "action of prohibiting multiple modes from running simultaneously",
+        "semantic_similarity": "0.85,0.85,0.53",
+        "llm_eva_results": "1,1,0"
+    }
+]

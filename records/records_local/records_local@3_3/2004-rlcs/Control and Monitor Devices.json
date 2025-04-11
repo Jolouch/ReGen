@@ -1,0 +1,35 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.notify the operator of potential issues",
+            "2.mute the alarm permanently",
+            "3.customize alarm thresholds",
+            "4.set trigger points",
+            "5.set notification settings",
+            "6.resolve the alarm condition",
+            "7.return to normal device sensor status"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "option to mute permanently in the alarm status",
+                "new_specification": "The system shall provide an option to mute the audible alarm permanently for a given device."
+            },
+            {
+                "generation": "2",
+                "absent_element": "option to mute temporarily",
+                "new_specification": "The system shall provide an option to mute the audible alarm temporarily for a given period."
+            },
+            {
+                "generation": "3",
+                "absent_element": "option to mute temporarily",
+                "new_specification": "The system shall provide an option to mute the audible alarm temporarily for a given period."
+            }
+        ],
+        "label": "There shall be an option to turn off the audible alarm permanently.",
+        "absence": "action of turning off the audible alarm permanently",
+        "semantic_similarity": "0.72,0.42,0.42",
+        "llm_eva_results": "1,0,0"
+    }
+]

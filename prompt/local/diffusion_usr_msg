@@ -1,0 +1,18 @@
+The involved software is {topic}.
+
+I will provide you with the function name, the function description and {n} corresponding requirement specifications, {cut_len} of which is truncated.
+Your goal is to complete the truncated specifications based on the provided context.
+
+function name:
+{function_name}
+
+function description:
+{function_description}
+
+function specifications:
+{specs}
+
+The truncated specifications you are going to complete are:
+{truncated}
+
+Directly return a JSON object (wrapped with ```json...```, without any other words) with the {cut_len} completed truncated specifications (key: specifications, value (a list): completed truncated specifications)

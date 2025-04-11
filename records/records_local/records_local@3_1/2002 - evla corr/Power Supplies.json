@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.ensure uninterrupted operation",
+            "2.calculate the capacity of each UPS device",
+            "3.connect devices to UPS type devices",
+            "4.provide",
+            "5.ensure"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notification of remaining backup power time to CMCS",
+                "new_specification": "The UPS devices shall notify the CMCS of the estimated remaining backup power time when a power outage occurs."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification of remaining backup power time to CMCS",
+                "new_specification": "The UPS devices shall notify the CMCS of the estimated remaining backup power time in the event of a power outage."
+            },
+            {
+                "generation": "3",
+                "absent_element": "notification of remaining backup power time to CMCS",
+                "new_specification": "The UPS devices shall notify the CMCS of the remaining backup power time when a power outage occurs."
+            }
+        ],
+        "label": "The UPS shall keep the CMCS apprised of time remaining on backup power when a power outage has occurred.",
+        "absence": "action of sending time remaining on backup power upon a power outage",
+        "semantic_similarity": "0.72,0.72,0.72",
+        "llm_eva_results": "1,1,1"
+    }
+]

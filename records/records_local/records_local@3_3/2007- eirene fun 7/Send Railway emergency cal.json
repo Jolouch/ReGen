@@ -1,0 +1,30 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.initiate",
+            "2.terminate Railway emergency call"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "automatic termination of the visual and audible alert after the emergency call is terminated",
+                "new_specification": "The system shall automatically terminate the visual and audible alert in the cab when the Railway emergency call is terminated."
+            },
+            {
+                "generation": "2",
+                "absent_element": "specification for handling multiple simultaneous emergency calls or priority of calls",
+                "new_specification": "The system shall handle multiple simultaneous Railway emergency calls and prioritize them according to predefined rules."
+            },
+            {
+                "generation": "3",
+                "absent_element": "reset or cancellation of the visual and audible alert after the emergency call is terminated",
+                "new_specification": "The system shall reset the visual and audible alert in the cab upon termination of the Railway emergency call."
+            }
+        ],
+        "label": "Once the call is terminated, the continuous visual alarm indication in the cab shall cease.",
+        "absence": "action of ceasing the alarm",
+        "semantic_similarity": "0.59,0.25,0.59",
+        "llm_eva_results": "1,0,1"
+    }
+]

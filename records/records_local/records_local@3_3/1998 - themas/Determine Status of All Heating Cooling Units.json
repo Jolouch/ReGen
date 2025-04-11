@@ -1,0 +1,34 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.monitor",
+            "2.control",
+            "3.notify the user that the request has been queued",
+            "4.remove the unit from the list of running units",
+            "5.update its status to OFF",
+            "6.generate a request to turn on the next unit in the queue"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "determining the maximum number of heating or cooling units that can run simultaneously",
+                "new_specification": "The THEMAS system shall define and maintain a configuration parameter to limit the maximum number of heating or cooling units that may be running at any given time."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification when a unit is turned on from the queue",
+                "new_specification": "The system shall notify the user when a unit is turned on from the queue."
+            },
+            {
+                "generation": "3",
+                "absent_element": "removal of a unit from the queue when it is turned on",
+                "new_specification": "The system shall remove the unit from the LIFO queue when the request to turn on the unit is honored and the unit is actually turned on."
+            }
+        ],
+        "label": "When a request to turn off a heating or cooling unit is received, this process shall first check the LIFO queue and remove the unit-turn-on request from the queue if exists.",
+        "absence": "action of checking the queue and removing the unit-turn-on request if exists when a request to turn off a unit is received",
+        "semantic_similarity": "0.23,0.69,0.83",
+        "llm_eva_results": "0,0,0"
+    }
+]

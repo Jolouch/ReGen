@@ -13,6 +13,13 @@ from utils import llm_call
 
 # cut
 def cut_specs(specs: List, cut_ratio=0.3, cut_mtd='random'):
+    """cut requirement specifications for diffusion
+
+    @param specs: requirement specifications
+    @param cut_ratio: cut ration
+    @param cut_mtd: cut menthod
+    @return: cut specifications
+    """
     nlp = en_core_web_lg.load()
     if cut_mtd not in ['random', 'md']:
         return "not valid cut method"
@@ -42,6 +49,14 @@ def cut_specs(specs: List, cut_ratio=0.3, cut_mtd='random'):
 
 # diffusion
 def diffusion(specs, truncated_specs, prompt_info, cut_ratio):
+    """action diffusion
+
+    @param specs: requirements specifications
+    @param truncated_specs: trunc requirement specifications
+    @param prompt_info: prompt information
+    @param cut_ratio: cut ration
+    @return: completed specifications
+    """
     batch_len = len(specs[0])
     cut_len = math.ceil(cut_ratio * batch_len)
     topic, fun_name, fun_desc = prompt_info
@@ -63,6 +78,11 @@ def diffusion(specs, truncated_specs, prompt_info, cut_ratio):
 
 
 def extract_actions_by_llm(specs):
+    """extract actions from diffused specifications
+
+    @param specs: requirements specifications after diffusion
+    @return: extracted actions
+    """
     prompt_files = ("extract_sys_msg", "extract_usr_msg")
     batch_info = [{"specifications": "\n".join(s)} for s in specs]
 
@@ -73,6 +93,12 @@ def extract_actions_by_llm(specs):
 
 
 def filter_by_llm(extracted_actions, fun_specs):
+    """filter extracted actions
+
+    @param extracted_actions: extracted actions
+    @param fun_specs: functions specifications
+    @return: filtered actions
+    """
     prompt_files = ("extract_sys_msg", "filter_usr_msg")
     batch_info = {"actions": "\n".join(extracted_actions),
                   "specifications": "\n".join(fun_specs)}
@@ -83,6 +109,14 @@ def filter_by_llm(extracted_actions, fun_specs):
 
 
 def save_record(doc, fun, record_info, rp='records'):
+    """save records
+
+    @param doc: document
+    @param fun: function
+    @param record_info: record information
+    @param rp: path
+    @return: None
+    """
     file_path = rp + '/' + doc + "/" + fun + ".json"
     dir_path = os.path.dirname(file_path)
     if not os.path.exists(dir_path):
@@ -145,7 +179,12 @@ def regen_main(args):
 
 
 def record_process(record_info, response):
-    # print("regen **** first stage **** results:...")
+    """format record data
+
+    @param record_info: record information
+    @param response: llm response
+    @return: formatted record information
+    """
     for i, res in enumerate(response):
         ana = []
         for j, step in enumerate(res['parsed'].steps):
@@ -178,10 +217,8 @@ def main():
 
     args = parser.parse_args()
 
-    runs = 1
-    for _ in range(runs):
-        regen_main(args=args)
-        eva_total(rp=args.rp)
+    regen_main(args=args)
+    eva_total(rp=args.rp)
 
 
 if __name__ == '__main__':

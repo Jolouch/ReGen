@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.return",
+            "2.investigate",
+            "3.facilitate consistency and efficiency in data collection",
+            "4.track changes",
+            "5.record changes"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notification of updates to case records",
+                "new_specification": "The system shall notify users when case records are updated due to changes in case definitions."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification of changes to case records",
+                "new_specification": "The system shall notify users of changes to case records as the case definition changes."
+            },
+            {
+                "generation": "3",
+                "absent_element": "notification for stakeholders when case definitions or questionnaires are updated",
+                "new_specification": "The system shall notify relevant stakeholders when changes occur to case definitions or investigation-specific questionnaires."
+            }
+        ],
+        "label": "Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition.",
+        "absence": "action of tracking changes made to the status of cases records",
+        "semantic_similarity": "0.64,0.69,0.4",
+        "llm_eva_results": "0,0,0"
+    }
+]

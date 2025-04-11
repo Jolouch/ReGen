@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.installed",
+            "2.managed",
+            "3.controlled",
+            "4.revert to default setting"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "indication of when a manual setting is enacted and when it will revert to the default setting",
+                "new_specification": "The system shall provide an indication to the user when a manual temperature setting is enacted and when it will revert to the default setting."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification or alert when manual setting is enacted and before reverting to default setting",
+                "new_specification": "The system shall notify or alert the user when a manual temperature setting is enacted and before it reverts to the default setting."
+            },
+            {
+                "generation": "3",
+                "absent_element": "indication of schedule conflict or override when manual setting is enacted",
+                "new_specification": "The system shall notify the user if a manual temperature setting conflicts with a scheduled setting and provide an option to override the scheduled setting."
+            }
+        ],
+        "label": "When a manual temperature setting ends, the default setting will be used for the next time period.",
+        "absence": "using the default setting after a manual temperature setting ends",
+        "semantic_similarity": "0.52,0.48,0.3",
+        "llm_eva_results": "1,0,0"
+    }
+]

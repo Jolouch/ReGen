@@ -1,0 +1,21 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 1",
+        "diff_act": [
+            "1.return",
+            "2.track",
+            "3.change"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "tracking of changes to case records",
+                "new_specification": "The system shall track all changes made to case records as definitions change."
+            }
+        ],
+        "label": "Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition.",
+        "absence": "action of tracking changes made to the status of cases records",
+        "semantic_similarity": "0.81",
+        "llm_eva_results": "1"
+    }
+]

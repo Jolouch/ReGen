@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.notify the user that the request cannot be fulfilled at this time",
+            "2.remove the unit from the list of running units",
+            "3.update its status to OFF",
+            "4.generate a request to turn on the next unit in the queue"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "update the status of a unit when it is turned on",
+                "new_specification": "The THEMAS system shall update its status to ON when a request to turn on a heating or cooling unit is honored."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification when a unit is turned on from the queue",
+                "new_specification": "The system shall notify the user when a heating or cooling unit is turned on from the queue."
+            },
+            {
+                "generation": "3",
+                "absent_element": "notification when a unit is turned on from the queue",
+                "new_specification": "The system shall notify the user when a heating or cooling unit is turned on from the queue."
+            }
+        ],
+        "label": "When a request to turn off a heating or cooling unit is received, this process shall first check the LIFO queue and remove the unit-turn-on request from the queue if exists.",
+        "absence": "action of checking the queue and removing the unit-turn-on request if exists when a request to turn off a unit is received",
+        "semantic_similarity": "0.58,0.69,0.69",
+        "llm_eva_results": "0,0,0"
+    }
+]

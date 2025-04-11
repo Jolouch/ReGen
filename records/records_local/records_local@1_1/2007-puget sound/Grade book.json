@@ -1,0 +1,24 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 1",
+        "diff_act": [
+            "1.access",
+            "2.modify",
+            "3.add",
+            "4.provide",
+            "5.restrict access to grade history",
+            "6.restrict modifications to authorized course administrators and graded students"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "mechanism for users to view their own grade history",
+                "new_specification": "The system shall provide an interface for students to view their own grade history."
+            }
+        ],
+        "label": "No other actor should be able to view another one's grades except the course administrator.",
+        "absence": "no mention of prohibiting anyone other than administrators from viewing others' grades",
+        "semantic_similarity": "0.61",
+        "llm_eva_results": "0"
+    }
+]

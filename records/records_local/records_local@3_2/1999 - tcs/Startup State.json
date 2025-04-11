@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.initialize",
+            "2.comprise",
+            "3.determine",
+            "4.terminate"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "designation of Normal Startup Mode upon planned power interruption or normal program termination",
+                "new_specification": "The TCS shall enter the Normal Startup Mode when the TCS software is halted due to a planned power interruption or normal program termination."
+            },
+            {
+                "generation": "2",
+                "absent_element": "the condition for entering Normal Startup Mode",
+                "new_specification": "The TCS shall enter the Normal Startup Mode upon application of power when the TCS software was halted due to a planned termination."
+            },
+            {
+                "generation": "3",
+                "absent_element": "determination of Normal Startup Mode upon planned software termination",
+                "new_specification": "The TCS shall enter the Normal Startup Mode when the TCS software was halted due to a planned termination."
+            }
+        ],
+        "label": "When the TCS Software is terminated normally the TCS shall enter the Normal Startup Mode of operation upon application of power.",
+        "absence": "situation of the TCS Software is terminated normally",
+        "semantic_similarity": "0.26,0.27,0.41",
+        "llm_eva_results": "1,1,1"
+    }
+]

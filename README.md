@@ -1,30 +1,74 @@
+## Overview
+
+| file name        | description          |
+| ---------------- | -------------------- |
+| data             | dataset              |
+| prompt           | prompts files        |
+| records          | experimental results |
+| evaluation.py    | evaluation script    |
+| regen.py         | RePolishGPT main     |
+| regen_local.py   | RePolishGPT local    |
+| requirements.txt | dependency package   |
+
+
+
+
 ## Installation
 
-Clone and install the required libraries. We use python 3.11.0
+Creating a Python Virtual Environment with Anaconda. Then clone and install the required libraries. 
 
 ```bash
+conda create -n myenv python=3.11.0
+conda activate myenv
+
 git clone https://github.com/Jolouch/ReGen.git
 cd ReGen
-pip install -r requirements.txt 
+pip install -r requirements.txt
+wget https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl
+pip install en_core_web_lg-3.7.1-py3-none-any.whl
 ```
 
-## Set openai api key
 
-Enter your openai api key in setting.ini
+## Run
+Before running, set openai api key. Enter your openai api key in `setting.ini`.
 
-## Run and Evaluation
-Note that run the total dataset will cost about 4$ with gpt-4o.
-```
-python regen.py
-```
-
-Since we generate with temperature 1, you'll get different results each time you run the above command. You can directly use the results in `records` directory. It is one run of k=3.
+Run with openai api (gpt-4o).
 
 ```
-python evaluation.py
+python regen.py \
+--cut_ratio 0.3 \ 
+--cut_mtd random \
+--is_diff True \
+--generation 3 \
+--rp records
 ```
 
-## Prompt
+Run with local llama3.3. First install the ollama client. Detail in [ollama/README.md at main · ollama/ollama · GitHub](https://github.com/ollama/ollama/blob/main/README.md#quickstart)
+
+```
+curl -fsSL https://ollama.com/install.sh | sh
+ollama run llama3.3
+```
+
+Then run
+
+```
+python regen_local.py \
+--model llama3.3 \
+--generation 3 \
+--rp records
+```
+
+##  Evaluation
+
+We provide our experimental results for rq1-4.
+Run for evaluation,
+
+```
+python evaluation.py --rq rq1  # rq2, rq3, rq4
+```
+
+## Prompts
 
 The prompt of every task is list in the `prompt` directory.
 
@@ -38,7 +82,8 @@ The prompt of every task is list in the `prompt` directory.
 | regen_usr_msg_vanilla     | vanilla prompt                                               |
 | regen_usr_msg_vanilla_cot | vanilla CoT prompt                                           |
 
-## Data
+## Data samples
+
 Data used in our paper is in the `data` directory. We list examples of three levels.
 
 `Level 1 case`
@@ -76,4 +121,3 @@ Data used in our paper is in the `data` directory. We list examples of three lev
 | type                    | action                                                       |
 | absence                 | action of handling the alarm                                 |
 | label                   | This series of beeps shall continue until the supervisor manually resets the alarm through the supervisor's interface window. |
-

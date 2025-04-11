@@ -1,0 +1,23 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 1",
+        "diff_act": [
+            "1.notify all remaining drivers",
+            "2.display an alert message",
+            "3.check if the handset is on-hook",
+            "4.display the controller's identity in the lead cab",
+            "5.initiate the call by the controller"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notification to the lead cab when a driver is disconnected from a multi-driver call",
+                "new_specification": "The system shall notify the lead cab and display an alert message when any driver disconnects from the multi-driver call."
+            }
+        ],
+        "label": "Functional identity of the automatically added controller shall be displayed in the leading cab.",
+        "absence": "display the identity of the automatically added controller ",
+        "semantic_similarity": "0.2",
+        "llm_eva_results": "0"
+    }
+]

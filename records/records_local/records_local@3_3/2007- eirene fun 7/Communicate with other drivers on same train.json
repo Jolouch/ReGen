@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.maintain",
+            "2.interrupt",
+            "3.affect"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "specification for reestablishing call when it fails in non-lead traction vehicle",
+                "new_specification": "When the call fails in a non-lead traction vehicle, the system shall automatically reconnect or prompt the driver in that vehicle to call the lead cab and request reestablishment of the call."
+            },
+            {
+                "generation": "2",
+                "absent_element": "procedure for a driver in a non-lead cab to reestablish the call after it fails",
+                "new_specification": "If the call fails in any non-lead traction vehicle, the system shall provide a mechanism for the driver in that vehicle to initiate a request to the lead cab for reestablishment of the call."
+            },
+            {
+                "generation": "3",
+                "absent_element": "procedure for driver in non-lead cab to request reestablishment of call after failure",
+                "new_specification": "The system shall provide a mechanism for the driver in a non-lead cab to initiate a request to the lead cab to reestablish the call if it fails."
+            }
+        ],
+        "label": "If the call fails to any other cab, the driver in that cab will call the lead cab and request re-establishment of the call.",
+        "absence": "situation of call failure in other cabs(not the lead traction vehicle)",
+        "semantic_similarity": "0.74,0.77,0.76",
+        "llm_eva_results": "1,1,1"
+    }
+]

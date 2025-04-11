@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.display",
+            "2.maintain the new state",
+            "3.resume the default settings"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notification or confirmation of manual switch change",
+                "new_specification": "The system shall notify or confirm to the user when a manual switch change is made to ensure awareness of the temporary state change until default settings resume."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification or alert when default settings resume",
+                "new_specification": "The system shall notify the user when the default settings resume after the end of the planned or default time period."
+            },
+            {
+                "generation": "3",
+                "absent_element": "indication of when the default settings will resume after manual switch change",
+                "new_specification": "The system shall inform the user about the remaining time until the default settings resume after a manual power switch change."
+            }
+        ],
+        "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
+        "absence": "revert to the default setting after the manual set state ends",
+        "semantic_similarity": "0.33,0.49,0.64",
+        "llm_eva_results": "0,0,1"
+    }
+]

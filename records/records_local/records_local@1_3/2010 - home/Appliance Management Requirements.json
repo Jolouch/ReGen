@@ -1,0 +1,22 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 1",
+        "diff_act": [
+            "1.return",
+            "2.turn an appliance connected to the power switch on",
+            "3.turn an appliance connected to the power switch off",
+            "4.resume default settings"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "indication of when the default settings will resume after manual switch change",
+                "new_specification": "The system shall provide an indication to the user of when the default settings will resume after a manual power switch change."
+            }
+        ],
+        "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
+        "absence": "revert to the default setting after the manual set state ends",
+        "semantic_similarity": "0.64",
+        "llm_eva_results": "1"
+    }
+]

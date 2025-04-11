@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.take over role in the game",
+            "2.select exit option",
+            "3.select restart option"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "replacing user with CO when they depart early",
+                "new_specification": "The system shall replace a departing user with a Computer Opponent to continue the game."
+            },
+            {
+                "generation": "2",
+                "absent_element": "replacing user with Computer Opponent when user departs early",
+                "new_specification": "The system shall replace a departed user with a Computer Opponent to continue the game."
+            },
+            {
+                "generation": "3",
+                "absent_element": "replacement of departed user by CO",
+                "new_specification": "The system shall replace a departed user with a Computer Opponent to continue the game"
+            }
+        ],
+        "label": "If a user leaves the game prematurely, a new CO is created to fill their place.",
+        "absence": "creation of a new CO to fill the place of a user leaving the game prematurely",
+        "semantic_similarity": "0.76,0.6,0.77",
+        "llm_eva_results": "1,1,1"
+    }
+]
