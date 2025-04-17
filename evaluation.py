@@ -15,6 +15,10 @@ api_key = config['API']['api_key']
 
 
 def simi(data):
+    """Compute the similarity between two sentences
+    @param data:
+    @return: similarity value
+    """
     model = SentenceTransformer('all-mpnet-base-v2')
     result = []
     for fun, values in data.items():
@@ -30,6 +34,12 @@ def simi(data):
 
 
 def get_gen(label_data, doc, rp='records'):
+    """prepare data for evaluation
+    @param label_data: label
+    @param doc: requirements document
+    @param rp: record path
+    @return: formatted data for evaluation
+    """
     function_output = []
     for _, _, files in os.walk(rp + "/" + doc):
         function_output = files
@@ -68,6 +78,13 @@ def fmt_eva_res(eva_res_str):
 
 
 def eva(eva_data, model='gpt-4o', temperature=1):
+    """call llm for evaluation
+
+    @param eva_data: data for evaluation
+    @param model: llm
+    @param temperature: temperature
+    @return: evaluation results for 5 times: [('true', 3), ('false', 2)]
+    """
     eva_usr_msg = open('prompt/eva_usr_msg', 'r', encoding='utf-8').read()
     prompt = ChatPromptTemplate.from_messages([
         ("system", "You are an excellent AI assistant."),
@@ -110,6 +127,12 @@ def eva(eva_data, model='gpt-4o', temperature=1):
 
 
 def eva_total(rp, model="gpt-4o"):
+    """evaluate for all documents
+
+    @param rp: record path
+    @param model: llm
+    @return: global accuracy rate
+    """
     total_true = 0
     total_samp = 0
     with open("data/re_data.json", "r", encoding="utf-8") as f:
@@ -153,6 +176,10 @@ def statistics():
 
 
 def acc_sample_levels(rp):
+    """evaluate accuracy rate across three levels
+    @param rp: record path
+    @return: results: {}
+    """
     count = statistics()
     acc_count = {"1": 0, "2": 0, "3": 0}
     with open("data/re_data.json", "r", encoding="utf-8") as f:
@@ -178,6 +205,11 @@ def acc_sample_levels(rp):
 
 
 def eva_llm_human(rp):
+    """assess accuracy rate of llm evaluations
+
+    @param rp: record path
+    @return: results:{}
+    """
     llm_eva_results = []
     human_eva_results = []
     json_files = []
@@ -201,6 +233,11 @@ def eva_llm_human(rp):
 
 
 def eva_act_rel(rp):
+    """evaluate valuable actions
+
+    @param rp: record path
+    @return: results:{}
+    """
     act_rel = 0
     true_pred = 0
     total_true_case = 0
@@ -240,6 +277,12 @@ def eva_act_rel(rp):
 
 
 def eva_d_m(rp, k=3):
+    """evaluate D-M
+
+    @param rp:
+    @param k: generation
+    @return:
+    """
     json_files = []
     useless_gen = 0
     m_c = 0
