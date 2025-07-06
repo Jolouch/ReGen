@@ -67,7 +67,7 @@ Run for evaluation.
 ```
 python evaluation.py --rq rq1  # rq2, rq3, rq4
 ```
-The results of manual annotation are in the results file. Human assessment for llm evaluation is marked as 'human_eva_results', Action-relevance of RQ2 is marked as 'act_rel', and the D-M annotation is marked as 'D-M'. An example ([records_regen@3_1](results%2Frq1%2Frecords_regen%403_1)):
+The results of manual annotation are in the results file. Human assessment for llm evaluation is marked as 'human_eva_results', Action-relevance of RQ2 is marked as 'act_rel', and the D-M annotation is marked as 'D-M'. An example in ([records_regen@3_1](results%2Frq1%2Frecords_regen%403_1)):
 ```
 [
     {
