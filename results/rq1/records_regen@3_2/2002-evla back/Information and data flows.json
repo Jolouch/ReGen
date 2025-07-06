@@ -47,7 +47,6 @@
         "label": "The BE shall verif successful delivery of output to the e2e.",
         "absence": "verif successful delivery of output to the e2e",
         "llm_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

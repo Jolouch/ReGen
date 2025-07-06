@@ -29,7 +29,6 @@
         ],
         "label": "There shall be an option to turn off the audible alarm permanently.",
         "absence": "action of turning off the audible alarm permanently",
-        "semantic_similarity": "0.72,0.42,0.42",
         "llm_eva_results": "1,0,0"
     }
 ]

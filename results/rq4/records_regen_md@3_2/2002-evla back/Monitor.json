@@ -50,7 +50,6 @@
         "label": "Report all out of tolerance conditions when monitoring Compute Errors.",
         "absence": "action of reporting when monitoring Compute Errors",
         "llm_eva_results": "0,0,0",
-        "D-M": "1,1,1",
-        "sample_level": 2
+        "D-M": "1,1,1"
     }
 ]

@@ -28,7 +28,6 @@
         ],
         "label": "Alert thresholds are configurable.",
         "absence": "action of configuring alert thresholds",
-        "semantic_similarity": "0.77,0.65,0.65",
         "llm_eva_results": "1,1,1"
     }
 ]

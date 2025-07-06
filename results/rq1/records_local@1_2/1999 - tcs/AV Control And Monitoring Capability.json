@@ -21,7 +21,6 @@
         ],
         "label": "TCS shall notify the operator when AV performance parameters are out of limits.",
         "absence": "action of notifying the operator when AV performance parameters are out of limits.",
-        "semantic_similarity": "0.39",
         "llm_eva_results": "0"
     }
 ]

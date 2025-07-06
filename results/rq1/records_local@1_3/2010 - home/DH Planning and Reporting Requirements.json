@@ -16,7 +16,6 @@
         ],
         "label": "The month report shall provide a section that indicates the periods of time when the DH System was not in operation.",
         "absence": "indication of periods when the DH System was not in operation",
-        "semantic_similarity": "0.88",
         "llm_eva_results": "1"
     }
 ]

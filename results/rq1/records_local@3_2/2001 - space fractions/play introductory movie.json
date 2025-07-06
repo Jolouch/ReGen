@@ -25,7 +25,6 @@
         ],
         "label": "If a mouse click is received, this component will terminate the movie.",
         "absence": "situation of the a mouse click is received",
-        "semantic_similarity": "0.53,0.43,0.56",
         "llm_eva_results": "1,1,1"
     }
 ]

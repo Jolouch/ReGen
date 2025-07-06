@@ -28,7 +28,6 @@
         ],
         "label": "The scheduler shall evaluate the budget for the job.",
         "absence": "evaluation of budget for the job",
-        "semantic_similarity": "0.17,0.65,0.65",
         "llm_eva_results": "0,1,1"
     }
 ]

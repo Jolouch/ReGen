@@ -18,7 +18,6 @@
         ],
         "label": "The system shall save the user info to the database with specified roles associated with divisions for the newly created/added user.",
         "absence": "action of associating the new user with the divisions",
-        "semantic_similarity": "0.66",
         "llm_eva_results": "1"
     }
 ]

@@ -28,7 +28,6 @@
         ],
         "label": "A verification failure shall will cause an alarm condition for the affected control unit.",
         "absence": "action of alarm for a verification failure",
-        "semantic_similarity": "0.37,0.4,0.4",
         "llm_eva_results": "1,1,1"
     }
 ]

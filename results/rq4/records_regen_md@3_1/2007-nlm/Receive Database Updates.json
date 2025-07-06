@@ -28,7 +28,6 @@
         "label": "Allows updates to be submitted in batches.",
         "absence": "batch submissions",
         "llm_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

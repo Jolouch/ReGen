@@ -25,7 +25,6 @@
         ],
         "label": "If a user leaves the game prematurely, a new CO is created to fill their place.",
         "absence": "creation of a new CO to fill the place of a user leaving the game prematurely",
-        "semantic_similarity": "0.79,0.7,0.58",
         "llm_eva_results": "0,1,1"
     }
 ]

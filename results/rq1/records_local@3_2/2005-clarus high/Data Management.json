@@ -24,7 +24,6 @@
         ],
         "label": "access remotely sensed environmental observations from data collectors",
         "absence": "access remotely sensed data",
-        "semantic_similarity": "0.52,0.63,0.52",
         "llm_eva_results": "0,1,0"
     }
 ]

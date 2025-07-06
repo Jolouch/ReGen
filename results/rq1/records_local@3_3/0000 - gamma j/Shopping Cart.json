@@ -26,7 +26,6 @@
         ],
         "label": "The shopping cart will display the number of items in the cart",
         "absence": "action of displaying the number of items",
-        "semantic_similarity": "0.86,0.32,0.32",
         "llm_eva_results": "1,0,0"
     }
 ]

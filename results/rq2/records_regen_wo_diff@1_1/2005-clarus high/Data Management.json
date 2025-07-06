@@ -11,7 +11,6 @@
         ],
         "label": "access remotely sensed environmental observations from data collectors",
         "absence": "access remotely sensed data",
-        "llm_eva_results": "0",
-        "sample_level": 2
+        "llm_eva_results": "0"
     }
 ]

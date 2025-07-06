@@ -47,7 +47,6 @@
         "label": "SQL errors will be reported to the user for correction.",
         "absence": "feedback on error SQL",
         "llm_eva_results": "0,0,0",
-        "D-M": "0,0,0",
-        "sample_level": 3
+        "D-M": "0,0,0"
     }
 ]

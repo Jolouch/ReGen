@@ -21,7 +21,6 @@
         ],
         "label": "These warnings are sent to the System Administrator.",
         "absence": "action of sending warnings for failed login",
-        "llm_eva_results": "1,0,0",
-        "sample_level": 2
+        "llm_eva_results": "1,0,0"
     }
 ]

@@ -24,7 +24,6 @@
         ],
         "label": "It allows multiple contacts to be linked to a single case.",
         "absence": "multiple contacts to be linked to a single case",
-        "semantic_similarity": "0.35,0.47,0.38",
         "llm_eva_results": "0,0,0"
     }
 ]

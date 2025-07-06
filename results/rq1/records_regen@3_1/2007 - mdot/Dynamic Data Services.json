@@ -43,10 +43,8 @@
         ],
         "label": "The DUAP System shall cache data for one week.",
         "absence": "statement of cached time of one week",
-        "semantic_similarity": "0.73,0.6,0.59",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 2
+        "D-M": "-1,-1,-1"
     }
 ]

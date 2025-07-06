@@ -18,7 +18,6 @@
         ],
         "label": "No other actor should be able to view another one's grades except the course administrator.",
         "absence": "no mention of prohibiting anyone other than administrators from viewing others' grades",
-        "semantic_similarity": "0.61",
         "llm_eva_results": "0"
     }
 ]

@@ -44,7 +44,6 @@
         "label": "Alert thresholds are configurable.",
         "absence": "action of configuring alert thresholds",
         "llm_eva_results": "1,0,1",
-        "D-M": "-1,1,-1",
-        "sample_level": 1
+        "D-M": "-1,1,-1"
     }
 ]

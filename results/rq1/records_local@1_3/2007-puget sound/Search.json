@@ -19,7 +19,6 @@
         ],
         "label": "Relevance is determined by results that having the highest number terms matching the search terms.",
         "absence": "relevance is determined by results that having the highest number terms matching the search terms.",
-        "semantic_similarity": "0.35",
         "llm_eva_results": "0"
     }
 ]

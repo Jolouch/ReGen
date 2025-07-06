@@ -11,7 +11,6 @@
         ],
         "label": "TCS shall record all telemetry elements for future review and processing.",
         "absence": "action of recording telemetry elements",
-        "llm_eva_results": "0",
-        "sample_level": 2
+        "llm_eva_results": "0"
     }
 ]

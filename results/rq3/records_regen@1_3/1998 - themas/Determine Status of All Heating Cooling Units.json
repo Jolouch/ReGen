@@ -26,9 +26,7 @@
         ],
         "label": "When a request to turn off a heating or cooling unit is received, this process shall first check the LIFO queue and remove the unit-turn-on request from the queue if exists.",
         "absence": "action of checking the queue and removing the unit-turn-on request if exists when a request to turn off a unit is received",
-        "semantic_similarity": "0.37",
         "llm_eva_results": "0",
-        "D-M": "1",
-        "sample_level": 3
+        "D-M": "1"
     }
 ]

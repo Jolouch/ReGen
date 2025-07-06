@@ -22,9 +22,7 @@
         ],
         "label": "This request shall indicate whether that unit is to be turned on or off",
         "absence": "the indication of whether the unit is to be turned on or off(the indication of status) should be included in the request",
-        "semantic_similarity": "0.55",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 2
+        "D-M": "-1"
     }
 ]

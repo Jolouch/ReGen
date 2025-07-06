@@ -21,9 +21,7 @@
         ],
         "label": "After the execution host queue status is updated, the libra shall send the information about the additional load on the queue and node to the central information store.",
         "absence": "update status information of the cluster",
-        "semantic_similarity": "0.48",
         "llm_eva_results": "0",
-        "D-M": "1",
-        "sample_level": 3
+        "D-M": "1"
     }
 ]

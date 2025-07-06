@@ -47,7 +47,6 @@
         "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
         "absence": "revert to the default setting after the manual set state ends",
         "llm_eva_results": "1,0,1",
-        "D-M": "-1,1,-1",
-        "sample_level": 1
+        "D-M": "-1,1,-1"
     }
 ]

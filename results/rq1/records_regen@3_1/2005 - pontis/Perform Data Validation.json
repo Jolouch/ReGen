@@ -48,10 +48,8 @@
         ],
         "label": "Configuring data validation rules shall be a privileged operation.",
         "absence": "configuring data validation rules shall be a privileged operation",
-        "semantic_similarity": "0.26,0.36,0.71",
         "llm_eva_results": "0,0,1",
         "human_eva_results": "0,0,1",
-        "D-M": "0,1,-1",
-        "sample_level": 2
+        "D-M": "0,1,-1"
     }
 ]

@@ -11,7 +11,6 @@
         ],
         "label": "Based on the user's security level, the control option shall provide the user with the appropriate level of control.",
         "absence": "control levels based on the user's security level",
-        "llm_eva_results": "1",
-        "sample_level": 2
+        "llm_eva_results": "1"
     }
 ]

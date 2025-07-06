@@ -11,7 +11,6 @@
         ],
         "label": "If the failed FCP processor has not synced, it shall send a single voted VMEbus reset through the NE to the failed FCP",
         "absence": "action of sending a VMEbus reset",
-        "llm_eva_results": "1",
-        "sample_level": 2
+        "llm_eva_results": "1"
     }
 ]

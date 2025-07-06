@@ -50,7 +50,6 @@
         "label": "The user shall be able to restore the archived data.",
         "absence": "action of restoring the archived data",
         "llm_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

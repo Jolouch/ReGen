@@ -47,7 +47,6 @@
         "label": "The DUAP System shall be able to log records of user access.",
         "absence": "action of logging user access",
         "llm_eva_results": "1,1,0",
-        "D-M": "-1,-1,1",
-        "sample_level": 1
+        "D-M": "-1,-1,1"
     }
 ]

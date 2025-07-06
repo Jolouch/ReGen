@@ -22,9 +22,7 @@
         ],
         "label": "The BE shall be able to initiate a reboot of any Backend processor",
         "absence": "reboot Backend processor",
-        "semantic_similarity": "1.0",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 1
+        "D-M": "-1"
     }
 ]

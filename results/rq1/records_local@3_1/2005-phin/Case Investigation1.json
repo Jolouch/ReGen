@@ -24,7 +24,6 @@
         ],
         "label": "Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition.",
         "absence": "action of tracking changes made to the status of cases records",
-        "semantic_similarity": "0.65,0.7,0.65",
         "llm_eva_results": "0,1,0"
     }
 ]

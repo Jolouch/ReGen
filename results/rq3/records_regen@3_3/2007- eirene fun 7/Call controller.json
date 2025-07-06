@@ -50,7 +50,6 @@
         "label": "The functional identity includes the engine number, if no train number is available.",
         "absence": "situation of no train number is available",
         "llm_eva_results": "0,0,0",
-        "D-M": "1,0,1",
-        "sample_level": 2
+        "D-M": "1,0,1"
     }
 ]

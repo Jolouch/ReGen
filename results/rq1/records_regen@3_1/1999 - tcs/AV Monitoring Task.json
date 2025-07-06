@@ -47,10 +47,8 @@
         ],
         "label": "TCS shall record all telemetry elements for future review and processing.",
         "absence": "action of recording telemetry elements",
-        "semantic_similarity": "0.74,0.74,0.9",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 2
+        "D-M": "-1,-1,-1"
     }
 ]

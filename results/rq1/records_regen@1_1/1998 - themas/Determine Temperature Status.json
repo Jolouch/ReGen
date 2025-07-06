@@ -23,9 +23,7 @@
         ],
         "label": "If LO<=T<=UO then the THEMAS system shall recognize the temperature limit has not been exceeded, then this process shall output the temperature status",
         "absence": "situation of temperatures within the limits",
-        "semantic_similarity": "0.73",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 2
+        "D-M": "-1"
     }
 ]

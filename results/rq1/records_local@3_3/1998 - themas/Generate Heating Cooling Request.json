@@ -26,7 +26,6 @@
         ],
         "label": "This request shall indicate whether that unit is to be turned on or off",
         "absence": "indication of on/off status in the request",
-        "semantic_similarity": "0.89,0.5,0.38",
         "llm_eva_results": "1,1,0"
     }
 ]

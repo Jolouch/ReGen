@@ -15,7 +15,6 @@
         ],
         "label": "The system shall abort the device if the status is unknown.",
         "absence": "situation of the device status is unknown",
-        "semantic_similarity": "0.45",
         "llm_eva_results": "1"
     }
 ]

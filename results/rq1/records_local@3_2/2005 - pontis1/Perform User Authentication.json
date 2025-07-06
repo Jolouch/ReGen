@@ -25,7 +25,6 @@
         ],
         "label": "The system shall be capable of tracking login and logout activity.",
         "absence": "tracking login and logout activity",
-        "semantic_similarity": "0.95,0.95,0.95",
         "llm_eva_results": "1,1,1"
     }
 ]

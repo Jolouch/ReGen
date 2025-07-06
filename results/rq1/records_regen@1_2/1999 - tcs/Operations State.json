@@ -22,9 +22,7 @@
         ],
         "label": "The Operations State modes shall not exist concurrently.",
         "absence": "action of prohibiting multiple modes from running simultaneously",
-        "semantic_similarity": "0.66",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 1
+        "D-M": "-1"
     }
 ]

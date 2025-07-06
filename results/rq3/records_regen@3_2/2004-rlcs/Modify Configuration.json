@@ -49,7 +49,6 @@
         "label": "The option to configure device rules shall require an additional login password for that option.",
         "absence": "an additional login password for configuring device rules",
         "llm_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 2
+        "D-M": "-1,-1,-1"
     }
 ]

@@ -47,10 +47,8 @@
         ],
         "label": "If the current temperature value is within the valid range, the THEMAS system shall output a valid temperature status.",
         "absence": "situation of valid current temperature value",
-        "semantic_similarity": "0.81,0.51,0.45",
         "llm_eva_results": "1,0,0",
         "human_eva_results": "1,1,0",
-        "D-M": "-1,-1,0",
-        "sample_level": 2
+        "D-M": "-1,-1,0"
     }
 ]

@@ -46,7 +46,6 @@
         "label": "All blocked users with active sessions shall automatically be logged off.",
         "absence": "action of forced logout of blocked users",
         "llm_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

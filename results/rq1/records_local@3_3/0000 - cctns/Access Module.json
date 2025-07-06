@@ -27,7 +27,6 @@
         ],
         "label": "Unauthorised attempts to access cases must be logged in the audit trail.",
         "absence": "action of logging of unauthorised attempts to access",
-        "semantic_similarity": "0.85,0.85,0.85",
         "llm_eva_results": "1,1,1"
     }
 ]

@@ -27,7 +27,6 @@
         ],
         "label": "When a manual temperature setting ends, the default setting will be used for the next time period.",
         "absence": "using the default setting after a manual temperature setting ends",
-        "semantic_similarity": "0.36,0.36,0.5",
         "llm_eva_results": "0,0,1"
     }
 ]

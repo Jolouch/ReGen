@@ -21,7 +21,6 @@
         ],
         "label": "The administrator shall be able to disable access as appropriate.",
         "absence": "action of disabling access",
-        "llm_eva_results": "1,1,1",
-        "sample_level": 1
+        "llm_eva_results": "1,1,1"
     }
 ]

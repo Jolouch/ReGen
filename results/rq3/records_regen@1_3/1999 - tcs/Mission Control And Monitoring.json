@@ -25,9 +25,7 @@
         ],
         "label": "The TCS shall receive AV telemetry and payload information via downlink from the AV",
         "absence": "action of receiving data via downlink from the AV",
-        "semantic_similarity": "0.63",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 1
+        "D-M": "-1"
     }
 ]

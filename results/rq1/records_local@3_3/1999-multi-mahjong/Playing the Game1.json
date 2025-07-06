@@ -24,7 +24,6 @@
         ],
         "label": "The MultiMahjongClient will save the user preferences in a file and read them in when the program begins.",
         "absence": "action of saving user preferences for initialization when the game begins",
-        "semantic_similarity": "0.86,0.87,0.86",
         "llm_eva_results": "1,1,1"
     }
 ]

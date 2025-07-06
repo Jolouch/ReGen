@@ -17,7 +17,6 @@
         ],
         "label": "The system shall warn users if the project budget exceeds funding.",
         "absence": "warn for over budget",
-        "semantic_similarity": "0.54",
         "llm_eva_results": "1"
     }
 ]

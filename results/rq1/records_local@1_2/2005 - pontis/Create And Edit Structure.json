@@ -21,7 +21,6 @@
         ],
         "label": "The renumbering shall be restricted depending on the user privilege",
         "absence": "The renumbering function shall be restricted depending on the user privilege",
-        "semantic_similarity": "0.74",
         "llm_eva_results": "1"
     }
 ]

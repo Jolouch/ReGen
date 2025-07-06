@@ -20,7 +20,6 @@
         ],
         "label": "This series of beeps shall continue until the supervisor manually resets the alarm through the supervisor's interface window.",
         "absence": "action of handling the alarm",
-        "semantic_similarity": "0.49",
         "llm_eva_results": "0"
     }
 ]

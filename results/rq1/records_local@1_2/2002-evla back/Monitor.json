@@ -15,7 +15,6 @@
         ],
         "label": "Report all out of tolerance conditions when monitoring Compute Errors.",
         "absence": "action of reporting when monitoring Compute Errors",
-        "semantic_similarity": "0.5",
         "llm_eva_results": "1"
     }
 ]

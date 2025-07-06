@@ -17,7 +17,6 @@
         ],
         "label": "Allows updates to be submitted in batches.",
         "absence": "batch submissions",
-        "semantic_similarity": "0.71",
         "llm_eva_results": "1"
     }
 ]

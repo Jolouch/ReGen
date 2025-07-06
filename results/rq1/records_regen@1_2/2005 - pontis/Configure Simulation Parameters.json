@@ -21,9 +21,7 @@
         ],
         "label": "The user shall be able to modify the simulation rules",
         "absence": "action of modify the simulation rules",
-        "semantic_similarity": "0.61",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 1
+        "D-M": "-1"
     }
 ]

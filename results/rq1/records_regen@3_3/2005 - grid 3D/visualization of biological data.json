@@ -44,7 +44,6 @@
         "label": "The product should allow multiple points to be clicked so that multiple names can be displayed.",
         "absence": "action of clicking multiple points to display multiple names of the data points",
         "llm_eva_results": "1,1,0",
-        "D-M": "-1,-1,1",
-        "sample_level": 1
+        "D-M": "-1,-1,1"
     }
 ]

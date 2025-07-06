@@ -25,7 +25,6 @@
         ],
         "label": "Utility provides means to revert items to original location after a set period of time",
         "absence": "ability of reverting items to original location",
-        "semantic_similarity": "0.81,0.85,0.52",
         "llm_eva_results": "1,1,1"
     }
 ]

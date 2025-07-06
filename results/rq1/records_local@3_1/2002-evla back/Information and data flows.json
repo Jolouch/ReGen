@@ -25,7 +25,6 @@
         ],
         "label": "The BE shall verif successful delivery of output to the e2e.",
         "absence": "verif successful delivery of output to the e2e",
-        "semantic_similarity": "0.88,0.88,0.88",
         "llm_eva_results": "1,1,1"
     }
 ]

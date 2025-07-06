@@ -22,9 +22,7 @@
         ],
         "label": "These warnings are sent to the System Administrator.",
         "absence": "action of sending warnings for failed login",
-        "semantic_similarity": "0.7",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 2
+        "D-M": "-1"
     }
 ]

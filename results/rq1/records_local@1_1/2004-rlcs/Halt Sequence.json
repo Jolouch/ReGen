@@ -15,7 +15,6 @@
         ],
         "label": "The status of a closure device, which was previously closed at the current entrance, changes to unknown or open, without an operator-initiated command.",
         "absence": "situation of previously closed device",
-        "semantic_similarity": "0.53",
         "llm_eva_results": "1"
     }
 ]

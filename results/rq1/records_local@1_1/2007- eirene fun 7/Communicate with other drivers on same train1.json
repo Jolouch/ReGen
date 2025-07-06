@@ -17,7 +17,6 @@
         ],
         "label": "Functional identity of the automatically added controller shall be displayed in the leading cab.",
         "absence": "display the identity of the automatically added controller ",
-        "semantic_similarity": "0.52",
         "llm_eva_results": "0"
     }
 ]

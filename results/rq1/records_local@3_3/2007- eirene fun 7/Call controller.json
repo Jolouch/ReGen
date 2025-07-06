@@ -30,7 +30,6 @@
         ],
         "label": "The functional identity includes the engine number, if no train number is available.",
         "absence": "situation of no train number is available",
-        "semantic_similarity": "0.21,0.22,0.22",
         "llm_eva_results": "0,0,0"
     }
 ]

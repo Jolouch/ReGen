@@ -30,9 +30,7 @@
         ],
         "label": "If no results are found on a search it will display a message that No results were found for this search.",
         "absence": "situation of no results were found",
-        "semantic_similarity": "0.49",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 1
+        "D-M": "-1"
     }
 ]

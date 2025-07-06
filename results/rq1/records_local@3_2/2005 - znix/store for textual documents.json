@@ -27,7 +27,6 @@
         ],
         "label": "The user may optionally specify a descriptive name for the document.",
         "absence": "action of naming the document",
-        "semantic_similarity": "0.3,0.82,0.64",
         "llm_eva_results": "0,1,1"
     }
 ]

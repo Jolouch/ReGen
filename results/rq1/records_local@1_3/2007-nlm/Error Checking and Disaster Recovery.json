@@ -17,7 +17,6 @@
         ],
         "label": "disaster recovery capabilities including data recovery",
         "absence": "inclusion of data recovery",
-        "semantic_similarity": "0.6",
         "llm_eva_results": "1"
     }
 ]

@@ -45,10 +45,8 @@
         ],
         "label": "The user shall be able to add additional roles manually while creating/adding a new user from a user template.",
         "absence": "action of adding additional roles when creating from a user template",
-        "semantic_similarity": "0.67,0.65,0.67",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

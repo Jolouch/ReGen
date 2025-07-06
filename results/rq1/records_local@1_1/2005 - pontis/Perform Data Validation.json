@@ -20,7 +20,6 @@
         ],
         "label": "Configuring data validation rules shall be a privileged operation.",
         "absence": "action of granting privilege to configuring data validation rules",
-        "semantic_similarity": "0.29",
         "llm_eva_results": "0"
     }
 ]

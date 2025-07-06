@@ -23,9 +23,7 @@
         ],
         "label": "If the user selects the correct answer, a message to this effect will be displayed and the component will move to the next question. ",
         "absence": "situation of selecting the correct answer",
-        "semantic_similarity": "0.71",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 1
+        "D-M": "-1"
     }
 ]

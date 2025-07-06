@@ -53,7 +53,6 @@
         "label": "It allows multiple contacts to be linked to a single case.",
         "absence": "multiple contacts to be linked to a single case",
         "llm_eva_results": "0,0,0",
-        "D-M": "1,1,0",
-        "sample_level": 2
+        "D-M": "1,1,0"
     }
 ]

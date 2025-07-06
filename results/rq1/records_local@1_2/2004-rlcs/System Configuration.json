@@ -17,7 +17,6 @@
         ],
         "label": "The configuration option shall allow a security level and password to be assigned to each defined staff member.",
         "absence": "a password to be assigned to each staff member",
-        "semantic_similarity": "0.91",
         "llm_eva_results": "1"
     }
 ]

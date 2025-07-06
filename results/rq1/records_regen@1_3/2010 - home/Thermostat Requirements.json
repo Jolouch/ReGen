@@ -22,9 +22,7 @@
         ],
         "label": "set the thermostat temperatures at one degree increments",
         "absence": "set the thermostat temperatures at one degree increments",
-        "semantic_similarity": "0.77",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 2
+        "D-M": "-1"
     }
 ]

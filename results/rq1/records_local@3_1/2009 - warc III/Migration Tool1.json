@@ -29,7 +29,6 @@
         ],
         "label": "The system shall automatically generate migration metadata.",
         "absence": "action of automatically generating migration metadata",
-        "semantic_similarity": "0.53,0.53,0.53",
         "llm_eva_results": "1,1,1"
     }
 ]

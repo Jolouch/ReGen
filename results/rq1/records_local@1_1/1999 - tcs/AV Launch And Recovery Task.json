@@ -17,7 +17,6 @@
         ],
         "label": "The TCS shall initiate abort the launch and recovery procedures if required.",
         "absence": "action of aborting the launch and recovery procedures",
-        "semantic_similarity": "0.61",
         "llm_eva_results": "1"
     }
 ]

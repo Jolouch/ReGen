@@ -21,7 +21,6 @@
         ],
         "label": "When the data link is interrupted, the TCS also shall present the time at which the last AV status values were reported",
         "absence": "action of presenting the time at which the last AV status",
-        "llm_eva_results": "1,1,1",
-        "sample_level": 2
+        "llm_eva_results": "1,1,1"
     }
 ]

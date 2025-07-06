@@ -46,7 +46,6 @@
         "label": "The create and open API calls for synchronous sockets allow the application to specify the maximum message size.",
         "absence": "action of specifying the maximum message size",
         "llm_eva_results": "0,1,1",
-        "D-M": "0,-1,-1",
-        "sample_level": 2
+        "D-M": "0,-1,-1"
     }
 ]

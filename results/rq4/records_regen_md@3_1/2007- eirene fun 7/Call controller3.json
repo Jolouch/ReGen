@@ -30,7 +30,6 @@
         "label": "If the system is not able to connect the call, an audible and visual indication shall be provided to the driver that the call was not received by the controller.",
         "absence": "situation of the unsuccessful connect",
         "llm_eva_results": "0,0,0",
-        "D-M": "1,1,1",
-        "sample_level": 3
+        "D-M": "1,1,1"
     }
 ]

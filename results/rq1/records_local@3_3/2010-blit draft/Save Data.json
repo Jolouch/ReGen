@@ -26,7 +26,6 @@
         ],
         "label": "The system shall direct the user to the xxx Page if the user chooses to click the close button without entering any data.",
         "absence": "situation of clicking the close button",
-        "semantic_similarity": "0.83,0.67,0.78",
         "llm_eva_results": "1,0,1"
     }
 ]

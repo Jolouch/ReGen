@@ -21,7 +21,6 @@
         ],
         "label": "The driver shall be able to consult train data when the train is stationary or moving.",
         "absence": "action of consulting train data when moving",
-        "llm_eva_results": "0,0,1",
-        "sample_level": 2
+        "llm_eva_results": "0,0,1"
     }
 ]

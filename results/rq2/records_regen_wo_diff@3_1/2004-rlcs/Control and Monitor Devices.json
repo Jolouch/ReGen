@@ -21,7 +21,6 @@
         ],
         "label": "There shall be an option to turn off the audible alarm permanently.",
         "absence": "action of turning off the audible alarm permanently",
-        "llm_eva_results": "1,1,1",
-        "sample_level": 2
+        "llm_eva_results": "1,1,1"
     }
 ]

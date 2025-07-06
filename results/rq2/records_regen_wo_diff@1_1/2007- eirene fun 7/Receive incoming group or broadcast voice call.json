@@ -11,7 +11,6 @@
         ],
         "label": "be connected to the handset if the handset is off hook.",
         "absence": "situation of the handset is off hook",
-        "llm_eva_results": "1",
-        "sample_level": 1
+        "llm_eva_results": "1"
     }
 ]

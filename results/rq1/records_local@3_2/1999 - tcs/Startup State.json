@@ -26,7 +26,6 @@
         ],
         "label": "When the TCS Software is terminated normally the TCS shall enter the Normal Startup Mode of operation upon application of power.",
         "absence": "situation of the TCS Software is terminated normally",
-        "semantic_similarity": "0.26,0.27,0.41",
         "llm_eva_results": "1,1,1"
     }
 ]

@@ -11,7 +11,6 @@
         ],
         "label": "This request shall indicate whether that unit is to be turned on or off",
         "absence": "indication of on/off status in the request",
-        "llm_eva_results": "1",
-        "sample_level": 2
+        "llm_eva_results": "1"
     }
 ]

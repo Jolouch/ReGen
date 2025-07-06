@@ -47,7 +47,6 @@
         "label": "The system shall warn when a record is changed.",
         "absence": "action of warning when a record is changed",
         "llm_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

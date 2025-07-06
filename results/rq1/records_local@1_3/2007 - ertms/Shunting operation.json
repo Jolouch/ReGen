@@ -16,7 +16,6 @@
         ],
         "label": "Before authomatic transition to Shunting, ETCS shall request confirmation from the driver.",
         "absence": "confirmation from the driver if authomatic transition to Shunting",
-        "semantic_similarity": "0.76",
         "llm_eva_results": "0"
     }
 ]

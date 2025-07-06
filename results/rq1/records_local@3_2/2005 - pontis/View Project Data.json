@@ -26,7 +26,6 @@
         ],
         "label": "SQL errors will be reported to the user for correction.",
         "absence": "feedback on error SQL",
-        "semantic_similarity": "-0.01,0.24,0.23",
         "llm_eva_results": "0,0,0"
     }
 ]

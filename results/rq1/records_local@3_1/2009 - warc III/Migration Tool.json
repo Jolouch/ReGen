@@ -27,7 +27,6 @@
         ],
         "label": "Errors should be generated in the absence of a configuration.",
         "absence": "action of generating errors in the absence of a configuration.",
-        "semantic_similarity": "0.64,0.38,0.41",
         "llm_eva_results": "1,0,0"
     }
 ]

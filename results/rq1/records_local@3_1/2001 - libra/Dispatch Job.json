@@ -25,7 +25,6 @@
         ],
         "label": "After the host is determined, the Libra shall select the appropriate queue based on the job parameter.",
         "absence": "the selection of the appropriate queue after the host is determined",
-        "semantic_similarity": "0.67,0.6,0.67",
         "llm_eva_results": "1,1,1"
     }
 ]

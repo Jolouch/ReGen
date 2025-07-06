@@ -47,10 +47,8 @@
         ],
         "label": "The shopping cart will display the number of items in the cart",
         "absence": "action of displaying the number of items",
-        "semantic_similarity": "0.82,0.83,0.63",
         "llm_eva_results": "1,1,0",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,1",
-        "sample_level": 1
+        "D-M": "-1,-1,1"
     }
 ]

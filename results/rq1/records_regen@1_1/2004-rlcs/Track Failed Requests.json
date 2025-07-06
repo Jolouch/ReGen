@@ -22,9 +22,7 @@
         ],
         "label": "Failure to receive a valid status after a configurable number of retries shall be considered a device failure.",
         "absence": "situation of several number of failed retries",
-        "semantic_similarity": "0.72",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 3
+        "D-M": "-1"
     }
 ]

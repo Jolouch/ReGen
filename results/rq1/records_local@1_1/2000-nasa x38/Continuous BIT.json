@@ -16,7 +16,6 @@
         ],
         "label": "Continuous BIT shall take less than 3 milliseconds while processing faults.",
         "absence": "situation of processing faults",
-        "semantic_similarity": "0.61",
         "llm_eva_results": "1"
     }
 ]

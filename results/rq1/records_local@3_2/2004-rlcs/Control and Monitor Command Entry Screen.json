@@ -27,7 +27,6 @@
         ],
         "label": "Based on the user's security level, the control option shall provide the user with the appropriate level of control.",
         "absence": "control levels based on the user's security level",
-        "semantic_similarity": "0.36,0.77,0.36",
         "llm_eva_results": "1,1,1"
     }
 ]

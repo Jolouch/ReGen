@@ -21,9 +21,7 @@
         ],
         "label": "Once the call is terminated, the continuous visual alarm indication in the cab shall cease.",
         "absence": "action of ceasing the alarm",
-        "semantic_similarity": "0.56",
         "llm_eva_results": "0",
-        "D-M": "0",
-        "sample_level": 3
+        "D-M": "0"
     }
 ]

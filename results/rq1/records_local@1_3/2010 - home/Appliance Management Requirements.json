@@ -16,7 +16,6 @@
         ],
         "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
         "absence": "revert to the default setting after the manual set state ends",
-        "semantic_similarity": "0.64",
         "llm_eva_results": "1"
     }
 ]

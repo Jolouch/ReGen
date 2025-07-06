@@ -46,7 +46,6 @@
         "label": "In case of a tie, the arbitrary FIFO job ordering is used.",
         "absence": "situation of multiple minimum pass values(tie)",
         "llm_eva_results": "0,0,0",
-        "D-M": "0,0,0",
-        "sample_level": 3
+        "D-M": "0,0,0"
     }
 ]

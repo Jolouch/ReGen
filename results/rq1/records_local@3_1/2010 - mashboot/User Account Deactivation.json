@@ -25,7 +25,6 @@
         ],
         "label": "If an account has any history associated with it, it can only be deactivated and not deleted.",
         "absence": "situation of an account has any history",
-        "semantic_similarity": "0.32,0.36,0.42",
         "llm_eva_results": "0,0,1"
     }
 ]

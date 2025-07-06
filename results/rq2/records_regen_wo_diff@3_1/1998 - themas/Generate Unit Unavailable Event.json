@@ -21,7 +21,6 @@
         ],
         "label": "This system event shall contain a designation of the heating or cooling unit that was not turned.",
         "absence": "the designation of the not turned unit should be contained in the event",
-        "llm_eva_results": "0,0,0",
-        "sample_level": 2
+        "llm_eva_results": "0,0,0"
     }
 ]

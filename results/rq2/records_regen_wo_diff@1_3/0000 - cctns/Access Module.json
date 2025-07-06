@@ -11,7 +11,6 @@
         ],
         "label": "Unauthorised attempts to access cases must be logged in the audit trail.",
         "absence": "action of logging of unauthorised attempts to access",
-        "llm_eva_results": "1",
-        "sample_level": 1
+        "llm_eva_results": "1"
     }
 ]

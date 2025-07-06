@@ -30,7 +30,6 @@
         ],
         "label": "The user shall be able to combine multiple projects into a master project.",
         "absence": "action of combining multiple projects into a master project",
-        "semantic_similarity": "0.21,0.31,0.24",
         "llm_eva_results": "0,0,0"
     }
 ]

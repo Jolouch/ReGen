@@ -15,7 +15,6 @@
         ],
         "label": "The police in turn can use it to respond to citizens with very little turnaround time.",
         "absence": "action of respond to citizens by police",
-        "semantic_similarity": "0.52",
         "llm_eva_results": "1"
     }
 ]

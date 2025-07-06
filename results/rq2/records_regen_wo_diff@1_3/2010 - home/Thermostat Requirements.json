@@ -11,7 +11,6 @@
         ],
         "label": "set the thermostat temperatures at one degree increments",
         "absence": "set the thermostat temperatures at one degree increments",
-        "llm_eva_results": "1",
-        "sample_level": 2
+        "llm_eva_results": "1"
     }
 ]

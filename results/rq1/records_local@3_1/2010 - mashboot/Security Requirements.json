@@ -28,7 +28,6 @@
         ],
         "label": "These warnings are sent to the System Administrator.",
         "absence": "action of sending warnings for failed login",
-        "semantic_similarity": "0.62,0.62,0.57",
         "llm_eva_results": "1,0,0"
     }
 ]

@@ -11,7 +11,6 @@
         ],
         "label": "If the user wishes to specify a different output directory or a delayed deadline, the scheduler shall modify the job parameters.",
         "absence": "situation of the user wishes to specify job parameters",
-        "llm_eva_results": "1",
-        "sample_level": 1
+        "llm_eva_results": "1"
     }
 ]

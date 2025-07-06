@@ -28,7 +28,6 @@
         ],
         "label": "The system shall provide the ability to incorporate PDF files into standard Pontis reports.",
         "absence": "action of incorporating PDF files into standard reports",
-        "semantic_similarity": "0.82,0.87,0.59",
         "llm_eva_results": "1,1,0"
     }
 ]

@@ -46,10 +46,8 @@
         ],
         "label": "Report all out of tolerance conditions when monitoring Compute Errors.",
         "absence": "action of reporting when monitoring Compute Errors",
-        "semantic_similarity": "0.56,0.51,0.75",
         "llm_eva_results": "0,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 2
+        "D-M": "-1,-1,-1"
     }
 ]

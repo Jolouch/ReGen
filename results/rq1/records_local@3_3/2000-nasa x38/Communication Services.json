@@ -27,7 +27,6 @@
         ],
         "label": "Communication services shall provide the capability to broadcast messages to all virtual groups.",
         "absence": "action of broadcast messages",
-        "semantic_similarity": "0.51,0.51,0.51",
         "llm_eva_results": "1,1,1"
     }
 ]

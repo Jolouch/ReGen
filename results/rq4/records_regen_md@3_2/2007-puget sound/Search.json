@@ -46,7 +46,6 @@
         "label": "Relevance is determined by results that having the highest number terms matching the search terms.",
         "absence": "relevance is determined by results that having the highest number terms matching the search terms.",
         "llm_eva_results": "1,0,0",
-        "D-M": "-1,1,0",
-        "sample_level": 2
+        "D-M": "-1,1,0"
     }
 ]

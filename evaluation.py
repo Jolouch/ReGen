@@ -6,31 +6,11 @@ from collections import Counter
 import numpy as np
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
-from sentence_transformers import SentenceTransformer
 import configparser
 
 config = configparser.ConfigParser()
 config.read('setting.ini')
 api_key = config['API']['api_key']
-
-def simi(data):
-    """Compute the similarity between two sentences
-    @param data:
-    @return: similarity value
-    """
-    model = SentenceTransformer('all-mpnet-base-v2')
-    result = []
-    for fun, values in data.items():
-        s1 = values["absence"]  # absence, label
-        s2 = values["predictions"]
-
-        embeddings1 = model.encode(s1)
-        embeddings2 = model.encode(s2)
-
-        similarities = model.similarity(embeddings1, embeddings2)
-        result.append((fun, np.round(similarities.numpy().astype(np.float64), 2).tolist()[0]))
-    return result
-
 
 def get_gen(label_data, doc, rp='records'):
     """prepare data for evaluation
@@ -139,7 +119,7 @@ def eva_total(rp, model="gpt-4o"):
     for doc in os.listdir(rp):
         print("------eva doc: {}---------".format(doc))
         eva_data = get_gen(re_data[doc], doc, rp)
-        sm = simi(eva_data)
+        # sm = simi(eva_data)
         llm_sm = eva(eva_data, model=model)
         for i, res in enumerate(llm_sm):
             # print(llm_sm[i], sm[i])
@@ -148,7 +128,7 @@ def eva_total(rp, model="gpt-4o"):
             llm_eva_results = [1 if item == 'true' else 0 for item in res[1]]
             regen_data[-1]["label"] = eva_data[res[0]]["label"]
             regen_data[-1]["absence"] = eva_data[res[0]]["absence"]
-            regen_data[-1]['semantic_similarity'] = ",".join(map(str, sm[i][1]))
+            # regen_data[-1]['semantic_similarity'] = ",".join(map(str, sm[i][1]))
             regen_data[-1]['llm_eva_results'] = ",".join(map(str, llm_eva_results))
             regen_data[-1]['human_eva_results'] = ""
             with open(rp + "/" + doc + "/" + res[0] + ".json", "w", encoding="utf-8") as fw:

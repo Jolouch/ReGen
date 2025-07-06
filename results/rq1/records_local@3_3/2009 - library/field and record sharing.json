@@ -27,7 +27,6 @@
         ],
         "label": "The system shall warn when a record is changed.",
         "absence": "action of warning when a record is changed",
-        "semantic_similarity": "0.71,0.75,0.43",
         "llm_eva_results": "1,1,1"
     }
 ]

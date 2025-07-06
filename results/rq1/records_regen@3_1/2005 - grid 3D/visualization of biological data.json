@@ -47,10 +47,8 @@
         ],
         "label": "The product should allow multiple points to be clicked so that multiple names can be displayed.",
         "absence": "action of clicking multiple points to display multiple names of the data points",
-        "semantic_similarity": "0.91,0.65,0.84",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

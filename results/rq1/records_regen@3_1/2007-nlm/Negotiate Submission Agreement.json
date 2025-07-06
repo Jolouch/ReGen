@@ -53,10 +53,8 @@
         ],
         "label": "Able to add and edit terms of agreement, based on access of level of user.",
         "absence": "based on access of level to add and edit terms of agreement",
-        "semantic_similarity": "0.32,0.84,0.5",
         "llm_eva_results": "0,1,0",
         "human_eva_results": "0,1,0",
-        "D-M": "0,-1,1",
-        "sample_level": 2
+        "D-M": "0,-1,1"
     }
 ]

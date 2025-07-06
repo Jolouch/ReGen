@@ -21,7 +21,6 @@
         ],
         "label": "The scheduler shall evaluate the budget for the job.",
         "absence": "evaluation of budget for the job",
-        "llm_eva_results": "1,1,1",
-        "sample_level": 2
+        "llm_eva_results": "1,1,1"
     }
 ]

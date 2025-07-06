@@ -32,7 +32,6 @@
         ],
         "label": "The user shall be able to restore the archived data.",
         "absence": "action of restoring the archived data",
-        "semantic_similarity": "0.48,0.7,0.48",
         "llm_eva_results": "0,0,0"
     }
 ]

@@ -13,7 +13,6 @@
         ],
         "label": "The system shall be capable of tracking login and logout activity.",
         "absence": "tracking login and logout activity",
-        "semantic_similarity": "0.98",
         "llm_eva_results": "1"
     }
 ]

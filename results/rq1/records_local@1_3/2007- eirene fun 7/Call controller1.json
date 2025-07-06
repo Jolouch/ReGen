@@ -18,7 +18,6 @@
         ],
         "label": "This shall also indicate if the called party was busy or if the network could not connect the call.",
         "absence": "specific indication of unsuccessful connect: busy or network error",
-        "semantic_similarity": "0.67",
         "llm_eva_results": "1"
     }
 ]

@@ -45,7 +45,6 @@
         "label": "Display a list of emoticons to choose from when the user wants to include an emoticon in the message.",
         "absence": "support of selecting emoticons when the user wants to include an emoticon in the message",
         "llm_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

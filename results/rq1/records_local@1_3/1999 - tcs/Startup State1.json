@@ -19,7 +19,6 @@
         ],
         "label": "The TCS shall inform the operator if the operator attempts to execute a function prohibited as a result of the determined level of interaction.",
         "absence": "Warning for execution of functions prohibited according to determined interaction levels",
-        "semantic_similarity": "0.37",
         "llm_eva_results": "0"
     }
 ]

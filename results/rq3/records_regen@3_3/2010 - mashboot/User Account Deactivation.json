@@ -44,7 +44,6 @@
         "label": "If an account has any history associated with it, it can only be deactivated and not deleted.",
         "absence": "situation of an account has any history",
         "llm_eva_results": "1,1,0",
-        "D-M": "-1,-1,0",
-        "sample_level": 2
+        "D-M": "-1,-1,0"
     }
 ]

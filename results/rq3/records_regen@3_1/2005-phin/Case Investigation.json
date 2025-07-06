@@ -50,10 +50,8 @@
         ],
         "label": "Systems supporting OM must provide the ability to publish investigation specific questionnaires and implementation guides.",
         "absence": "action of publishing of implementation guides",
-        "semantic_similarity": "0.82,0.92,0.74",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 2
+        "D-M": "-1,-1,-1"
     }
 ]

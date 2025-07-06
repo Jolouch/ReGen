@@ -21,7 +21,6 @@
         ],
         "label": "If the call fails to any other cab, the driver in that cab will call the lead cab and request re-establishment of the call.",
         "absence": "situation of call failure in other cabs(not the lead traction vehicle)",
-        "llm_eva_results": "1,1,1",
-        "sample_level": 2
+        "llm_eva_results": "1,1,1"
     }
 ]

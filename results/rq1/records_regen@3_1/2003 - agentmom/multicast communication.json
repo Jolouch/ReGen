@@ -53,10 +53,8 @@
         ],
         "label": "agentMom shall not allow receiving multicast message from a group after leaving that multicast group",
         "absence": "situation of rejection of receiving multicast message after leaving the multicast group",
-        "semantic_similarity": "0.49,0.55,0.86",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

@@ -45,10 +45,8 @@
         ],
         "label": "Picking up the handset shall reduce the loudspeaker volume to its minimum level.",
         "absence": "action of reducing the loudspeaker volume to its minimum level",
-        "semantic_similarity": "0.63,0.64,0.63",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

@@ -45,7 +45,6 @@
         "label": "The parsed parameters shall be passed on to the scheduling module to be handled.",
         "absence": "operation of passing the variables to the scheduling module",
         "llm_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

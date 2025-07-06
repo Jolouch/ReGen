@@ -47,10 +47,8 @@
         ],
         "label": "The administrator shall be able to assign application permissions to each user roles.",
         "absence": "action of assigning application permissions to user roles",
-        "semantic_similarity": "0.5,0.45,0.65",
         "llm_eva_results": "0,0,0",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

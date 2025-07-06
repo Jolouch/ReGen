@@ -23,7 +23,6 @@
         ],
         "label": "The DUAP System shall be able to log records of user access.",
         "absence": "action of logging user access",
-        "semantic_similarity": "0.86",
         "llm_eva_results": "1"
     }
 ]

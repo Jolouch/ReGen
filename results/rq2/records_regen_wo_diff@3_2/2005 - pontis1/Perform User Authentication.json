@@ -21,7 +21,6 @@
         ],
         "label": "The system shall be capable of tracking login and logout activity.",
         "absence": "tracking login and logout activity",
-        "llm_eva_results": "1,1,1",
-        "sample_level": 1
+        "llm_eva_results": "1,1,1"
     }
 ]

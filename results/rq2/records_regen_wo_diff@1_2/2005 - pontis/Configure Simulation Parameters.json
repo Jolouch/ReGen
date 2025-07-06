@@ -11,7 +11,6 @@
         ],
         "label": "The user shall be able to modify the simulation rules",
         "absence": "action of modify the simulation rules",
-        "llm_eva_results": "1",
-        "sample_level": 1
+        "llm_eva_results": "1"
     }
 ]

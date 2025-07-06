@@ -34,9 +34,7 @@
         ],
         "label": "Refreshrate of the facility map can be configurable within the database to more than 2 seconds by the user.",
         "absence": "action of modifying refresh rate within the database",
-        "semantic_similarity": "0.29",
         "llm_eva_results": "0",
-        "D-M": "0",
-        "sample_level": 1
+        "D-M": "0"
     }
 ]

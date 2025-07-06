@@ -23,9 +23,7 @@
         ],
         "label": "The shopping cart will display the number of items in the cart",
         "absence": "action of displaying the number of items",
-        "semantic_similarity": "0.7",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 1
+        "D-M": "-1"
     }
 ]

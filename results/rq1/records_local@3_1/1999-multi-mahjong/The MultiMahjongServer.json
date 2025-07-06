@@ -34,7 +34,6 @@
         ],
         "label": "The MultiMahjongServer will have a graphical user interface with which the administrator can get log information.",
         "absence": "getting log information by administrator through a graphical user interface",
-        "semantic_similarity": "0.14,0.5,0.13",
         "llm_eva_results": "0,0,0"
     }
 ]

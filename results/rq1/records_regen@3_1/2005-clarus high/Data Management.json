@@ -46,10 +46,8 @@
         ],
         "label": "access remotely sensed environmental observations from data collectors",
         "absence": "access remotely sensed data",
-        "semantic_similarity": "0.9,0.92,0.81",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 2
+        "D-M": "-1,-1,-1"
     }
 ]

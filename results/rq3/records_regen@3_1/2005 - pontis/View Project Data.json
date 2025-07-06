@@ -45,10 +45,8 @@
         ],
         "label": "SQL errors will be reported to the user for correction.",
         "absence": "feedback on error SQL",
-        "semantic_similarity": "0.09,-0.06,0.47",
         "llm_eva_results": "0,0,1",
         "human_eva_results": "0,0,1",
-        "D-M": "1,1,-1",
-        "sample_level": 3
+        "D-M": "1,1,-1"
     }
 ]

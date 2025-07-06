@@ -21,7 +21,6 @@
         ],
         "label": "If the system is not able to connect the call, an audible and visual indication shall be provided to the driver.",
         "absence": "the visual indication shall be provided",
-        "llm_eva_results": "0,0,0",
-        "sample_level": 1
+        "llm_eva_results": "0,0,0"
     }
 ]

@@ -31,7 +31,6 @@
         ],
         "label": "If a nonfatal error occurs, the user will be able to continue the current game, and an option to access the online troubleshooting guide is included in the error dialogue box.",
         "absence": "situation of a nonfatal error occurs",
-        "semantic_similarity": "0.35,0.29,0.31",
         "llm_eva_results": "1,1,1"
     }
 ]

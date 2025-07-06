@@ -47,10 +47,8 @@
         ],
         "label": "The administrator shall be able to disable access as appropriate.",
         "absence": "action of disabling access",
-        "semantic_similarity": "0.79,0.66,0.77",
         "llm_eva_results": "1,1,1",
         "human_eva_results": "1,1,1",
-        "D-M": "-1,-1,-1",
-        "sample_level": 1
+        "D-M": "-1,-1,-1"
     }
 ]

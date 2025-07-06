@@ -21,7 +21,6 @@
         ],
         "label": "It shall allow modification of all database tables with the exception of log tables",
         "absence": "modify database tables except log tables",
-        "llm_eva_results": "0,0,1",
-        "sample_level": 1
+        "llm_eva_results": "0,0,1"
     }
 ]

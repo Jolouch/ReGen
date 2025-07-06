@@ -32,7 +32,6 @@
         ],
         "label": "It shall allow modification of all database tables with the exception of log tables",
         "absence": "modify database tables except log tables",
-        "semantic_similarity": "0.49,0.75,0.85",
         "llm_eva_results": "1,1,1"
     }
 ]

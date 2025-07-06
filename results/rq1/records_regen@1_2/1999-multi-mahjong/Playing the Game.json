@@ -21,9 +21,7 @@
         ],
         "label": "Users will be able to save their game if playing in single player mode.",
         "absence": "save game in single player mode",
-        "semantic_similarity": "0.96",
         "llm_eva_results": "1",
-        "D-M": "-1",
-        "sample_level": 1
+        "D-M": "-1"
     }
 ]

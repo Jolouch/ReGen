@@ -46,7 +46,6 @@
         "label": "The system shall direct the user to the xxx Page if the user chooses to click the close button without entering any data.",
         "absence": "situation of clicking the close button",
         "llm_eva_results": "0,1,0",
-        "D-M": "0,-1,1",
-        "sample_level": 2
+        "D-M": "0,-1,1"
     }
 ]

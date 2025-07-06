@@ -14,7 +14,6 @@
         ],
         "label": "The UPS shall keep the CMCS apprised of time remaining on backup power when a power outage has occurred.",
         "absence": "action of sending time remaining on backup power upon a power outage",
-        "semantic_similarity": "0.78",
         "llm_eva_results": "1"
     }
 ]

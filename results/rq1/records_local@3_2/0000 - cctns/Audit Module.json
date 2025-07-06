@@ -25,7 +25,6 @@
         ],
         "label": "The System must be able to capture and store violations of cases where violations can validly be attempted.",
         "absence": "action of capturing and storing violations of cases where violations can validly be attempted",
-        "semantic_similarity": "0.46,0.39,0.39",
         "llm_eva_results": "0,0,0"
     }
 ]
