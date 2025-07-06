@@ -6,8 +6,8 @@
 | prompt           | prompts files        |
 | records          | experimental results |
 | evaluation.py    | evaluation script    |
-| regen.py         | RePolishGPT main     |
-| regen_local.py   | RePolishGPT local    |
+| regen.py         | ReCompGPT main     |
+| regen_local.py   | ReCompGPT local    |
 | requirements.txt | dependency package   |
 
 
@@ -77,8 +77,8 @@ The prompt of every task is list in the `prompt` directory.
 | diffusion_usr_msg         | action diffusion                                             |
 | extract_usr_msg           | extract actions from completed specifications                |
 | filter_usr_msg            | filter actions that have been mentioned in original specifications |
-| regen_sys_msg             | system prompt of RePolishGPT                                 |
-| regen_usr_msg             | main prompt of RePolishGPT                                   |
+| regen_sys_msg             | system prompt of ReCompGPT                                 |
+| regen_usr_msg             | main prompt of ReCompGPT                                   |
 | regen_usr_msg_vanilla     | vanilla prompt                                               |
 | regen_usr_msg_vanilla_cot | vanilla CoT prompt                                           |
 

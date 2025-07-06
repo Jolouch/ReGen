@@ -5,34 +5,34 @@ This will be based on 1) the requirement context including function name, functi
 Let's do it step by step
 1. Analyze and extract function points
 Read and understand the function description, then extract fine-grained function points from it. Fine grained means you need to focus on every condition, action, object, constraint.
-e.g. When signal is received[Condition], the system sets the signal[Action] received bit[Object] within 2 seconds[Constraint].
+e.g. When signal is received [Condition], the system sets the signal [Action] received bit [Object] within 2 seconds [Constraint].
 
 2.Locate the incompleteness in the specifications
 You should first understand each specification, then examine the function points one by one to see if it is resolved by certain specifications.
 There are two situations:
-S1(Explicit absence): there exist functional point that is clearly not resolved in the function specifications.
-S2(Implied absence): the function points seem to have been all resolved by the function specifications.
+S1 (global incompleteness): there exist functional point that is clearly not resolved in the function specifications.
+S2 (local incompleteness): the function points seem to have been all resolved by the function specifications.
 Determine one situation(S1 or S2) and then go to next step.
 
 3.Detect the specific incompleteness
 Consider the specific incompleteness from two perspectives:
-    1.branch coverage incompleteness(condition incompleteness): the specifications do not consider necessary situation.
+    1.branch coverage incompleteness (condition incompleteness): the specifications do not consider necessary situation.
     2.action incompleteness: current operations are not sufficient to accomplish the function: lack of actions, objects, constraints or any other related elements.
     (if the absent action falls under a situation, then it is not action incompleteness, it is branch coverage incompleteness.)
-3.1 If S1 in step 2(explicit absence), it means that the function specifications lack an entire specification related to the uncovered function point.
+3.1 If S1 in step 2 (global incompleteness), it means that the function specifications lack an entire specification related to the uncovered function point.
 Regard the the uncovered function point as the incompleteness and then directly proceed to step 4.
 
-3.2 If S2 in step 2(implied absence), it means that a certain function point maybe deficient in details, or the requirement description itself is incomplete and omits certain function point.
+3.2 If S2 in step 2 (local incompleteness), it means that a certain function point maybe deficient in details, or the requirement description itself is incomplete and omits certain function point.
 Consider from two perspectives: 1.Are there any hidden situations that need to be considered? 2.Are the actions involved in the function point sufficient to complete the function?
-Simultaneously, you can refer to the operation sequence to get new insights, but remember that the actions in the sequence are not necessarily the correct absence(maybe all actions are useless). It can be used as a reference, but your own thinking is the priority.
+Simultaneously, you can refer to the operation sequence to get new insights, but remember that the actions in the sequence are not necessarily the correct absence (maybe all actions are useless). It can be used as a reference, but your own thinking is the priority.
 After determining the absent element, go to step 4.
 
 4.Summary and decision
 Based on the absent element you have detected, generate a new specification for it.
 You may have several ideas, but choose the one you believe to be the most likely.
-The answer(only one you believe to be the most likely) should be in the format of:
-absent element: the absent situation or the absent action(objects)
-new specification: a specification(without index) related to the absent element without any other complete specifications
+The answer (only one you believe to be the most likely) should be in the format of:
+absent element: the absent situation or the absent action (objects)
+new specification: a specification (without index) related to the absent element without any other complete specifications
 
 Let's see three examples to learn the analysis process.
 ##example 1

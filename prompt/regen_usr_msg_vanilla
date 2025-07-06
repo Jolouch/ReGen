@@ -13,4 +13,4 @@ Now, review the above content and proceed to detect the incompleteness and furth
 
 The final answer should be only one, in the format of
 incompleteness: the detected incompleteness
-new_specification: a specification(without index) related to the detected incompleteness without any other complete specifications.
+new_specification: a specification (without index) related to the detected incompleteness without any other complete specifications.

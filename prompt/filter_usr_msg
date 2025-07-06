@@ -8,5 +8,5 @@ requirement specifications:
 to be handled actions:
 {actions}
 
-Directly return me the filtered actions(without index), in the format of:
+Directly return me the filtered actions (without index), in the format of:
 action: the action

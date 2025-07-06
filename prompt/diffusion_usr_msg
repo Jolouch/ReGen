@@ -16,4 +16,4 @@ The truncated specifications you are going to complete are:
 {truncated}
 
 Return me the {cut_len} completed truncated specifications in the format of
-completed_truncated_specifications: truncated part(without index) + completed part
+completed_truncated_specifications: truncated part (without index) + completed part
