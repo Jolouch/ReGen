@@ -13,7 +13,6 @@ config = configparser.ConfigParser()
 config.read('setting.ini')
 api_key = config['API']['api_key']
 
-
 def simi(data):
     """Compute the similarity between two sentences
     @param data:
@@ -304,57 +303,65 @@ def eva_d_m(rp, k=3):
     return round(d_m / (total_gen - m_c) * 100, 2)
 
 
-def comt(path_list):
+def comt_avg(path_list, eva='mc', k=3):
     results = {"all": 0, "l1": 0, "l2": 0, "l3": 0}
-    for path in path_list:
-        tmp = acc_sample_levels(path)
-        results["all"] += tmp["all"]
-        results["l1"] += tmp["l1"]
-        results["l2"] += tmp["l2"]
-        results["l3"] += tmp["l3"]
-    results["all"] = round(results["all"] / 3, 2)
-    results["l1"] = round(results["l1"] / 3, 2)
-    results["l2"] = round(results["l2"] / 3, 2)
-    results["l3"] = round(results["l3"] / 3, 2)
-    return results
+    if eva == 'mc':
+        for path in path_list:
+            tmp = acc_sample_levels(path)
+            results["all"] += tmp["all"]
+            results["l1"] += tmp["l1"]
+            results["l2"] += tmp["l2"]
+            results["l3"] += tmp["l3"]
+        results["all"] = round(results["all"] / 3, 2)
+        results["l1"] = round(results["l1"] / 3, 2)
+        results["l2"] = round(results["l2"] / 3, 2)
+        results["l3"] = round(results["l3"] / 3, 2)
+        return results
+    else:
+        results_dm = 0.
+        for path in path_list:
+            tmp = eva_d_m(path, k)
+            results_dm += tmp
+        return round(results_dm / 3, 2)
 
 
 def main(args):
-    results_1_paths = ["records/records_regen/records_regen@1_1", "records/records_regen/records_regen@1_2", "records/records_regen/records_regen@1_3"]
-    results_3_paths = ["records/records_regen/records_regen@3_1", "records/records_regen/records_regen@3_2", "records/records_regen/records_regen@3_3"]
-    results_1_local_paths = ["records/records_local/records_local@1_1", "records/records_local/records_local@1_2", "records/records_local/records_local@1_3"]
-    results_3_local_paths = ["records/records_local/records_local@3_1", "records/records_local/records_local@3_2", "records/records_local/records_local@3_3"]
     if args.rq == "rq1":
-        results_1 = comt(results_1_paths)
-        results_1_local = comt(results_1_local_paths)
-        results_3 = comt(results_3_paths)
-        results_3_local = comt(results_3_local_paths)
+        # ReCompGPT pass@1 and pass@3
+        results_1_paths = ["results/rq1/records_regen@1_" + str(i+1) for i in range(3)]
+        results_3_paths = ["results/rq1/records_regen@3_" + str(i+1) for i in range(3)]
+        results_1 = comt_avg(results_1_paths)
+        results_3 = comt_avg(results_3_paths)
+        # ReCompGPT local pass@1 and pass@3
+        results_1_local_paths = ["results/rq1/records_local@1_" + str(i+1) for i in range(3)]
+        results_3_local_paths = ["results/rq1/records_local@3_" + str(i+1) for i in range(3)]
+        results_1_local = comt_avg(results_1_local_paths)
+        results_3_local = comt_avg(results_3_local_paths)
         # human eva
         llm_human = eva_llm_human(results_3_paths[0])
-
-        print("RePolishGPT@1 ALL: {}, L1: {}, L2: {}, L3: {}"
+        print("ReCompGPT@1 ALL: {}, L1: {}, L2: {}, L3: {}"
               .format(results_1['all'], results_1['l1'], results_1['l2'], results_1['l3']))
-        print("RePolishGPT@3 ALL: {}, L1: {}, L2: {}, L3: {}"
+        print("ReCompGPT@3 ALL: {}, L1: {}, L2: {}, L3: {}"
               .format(results_3['all'], results_3['l1'], results_3['l2'], results_3['l3']))
         print(
-            "RePolishGPT@1_LOCAL ALL: {}, L1: {}, L2: {}, L3: {}"
+            "ReCompGPT@1_LOCAL ALL: {}, L1: {}, L2: {}, L3: {}"
             .format(results_1_local['all'], results_1_local['l1'], results_1_local['l2'], results_1_local['l3']))
         print(
-            "RePolishGPT@3_LOCAL ALL: {}, L1: {}, L2: {}, L3: {}"
+            "ReCompGPT@3_LOCAL ALL: {}, L1: {}, L2: {}, L3: {}"
             .format(results_3_local['all'], results_3_local['l1'], results_3_local['l2'], results_3_local['l3']))
 
-        print(llm_human)
+        print("human evaluation: ", llm_human)
 
     if args.rq == "rq2":
-        wo_diff_1 = acc_sample_levels("records/records_regen/records_regen_wo_diff@1")
-        wo_diff_3 = acc_sample_levels("records/records_regen/records_regen_wo_diff@3")
+        wo_diff_1 = comt_avg(["results/rq2/records_regen_wo_diff@1_" + str(i+1) for i in range(3)])
+        wo_diff_3 = comt_avg(["results/rq2/records_regen_wo_diff@3_" + str(i+1) for i in range(3)])
         print(
-            "RePolishGPT@w/o_diffusion_1 ALL: {}, L1: {}, L2: {}, L3: {},"
-            "\nRePolishGPT@w/o_diffusion_3 ALL: {}, L1: {}, L2: {}, L3: {}"
+            "ReCompGPT@w/o_diffusion_1 ALL: {}, L1: {}, L2: {}, L3: {},"
+            "\nReCompGPT@w/o_diffusion_3 ALL: {}, L1: {}, L2: {}, L3: {}"
             .format(wo_diff_1['all'], wo_diff_1['l1'], wo_diff_1['l2'], wo_diff_1['l3'],
                     wo_diff_3['all'], wo_diff_3['l1'], wo_diff_3['l2'], wo_diff_3['l3']))
         print("")
-        act_rel = eva_act_rel("records/records_regen/records_regen@3_1")
+        act_rel = eva_act_rel("results/rq1/records_regen@3_1")
         print("Valuable actions / All actions: {},\n"
               "Cases with valuable actions/ All cases: {},\n"
               "Correctly predicted cases / Cases with valuable actions:{},\n"
@@ -362,17 +369,13 @@ def main(args):
               .format(act_rel['m1'], act_rel['m2'], act_rel['m3'], act_rel['m4']))
 
     if args.rq == "rq3":
-        dm_1, dm_3 = 0, 0
-        for path in results_1_paths:
-            dm_1 += eva_d_m(path, k=1)
-        for path in results_3_paths:
-            dm_3 += eva_d_m(path, k=3)
-        print("D-M@1 avg: {}, D-M@3 avg: {}"
-              .format(round(dm_1 / len(results_1_paths), 2), round(dm_3 / len(results_3_paths), 2)))
+        dm_1 = comt_avg(["results/rq3/records_regen@1_" + str(i+1) for i in range(3)], eva='dm', k=1)
+        dm_3 = comt_avg(["results/rq3/records_regen@3_" + str(i+1) for i in range(3)], eva='dm')
+        print("D-M@1 avg: {}, D-M@3 avg: {}".format(dm_1, dm_3))
 
     if args.rq == "rq4":
-        analytical_mc = acc_sample_levels("records/records_regen/records_regen_md@3")["all"]
-        analytical_dm = eva_d_m("records/records_regen/records_regen_md@3", k=3)
+        analytical_mc = comt_avg(["results/rq4/records_regen_md@3_" + str(i+1) for i in range(3)])["all"]
+        analytical_dm = comt_avg(["results/rq4/records_regen_md@3_" + str(i+1) for i in range(3)], eva='dm')
         print("analytical@3 filling rate, M-C: {}, D-M: {}".format(analytical_mc, analytical_dm))
 
 
