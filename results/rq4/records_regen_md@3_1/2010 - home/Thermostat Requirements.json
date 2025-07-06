@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.enable adjustments in one-degree increments",
+            "2.adjust the settings in one-degree increments within the established range",
+            "3.Adjust the thermostat temperature in one-degree increments"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "action of adjusting in one-degree increments",
+                "new_specification": "The thermostat system shall enable users to adjust the temperature settings in precise one-degree increments within the specified range."
+            },
+            {
+                "generation": "2",
+                "absent_element": "capability to adjust thermostat in one-degree increments",
+                "new_specification": "A DH user shall be able to adjust thermostat settings in one-degree increments within the specified range."
+            },
+            {
+                "generation": "3",
+                "absent_element": "mechanism for adjusting thermostat in one-degree increments",
+                "new_specification": "The DigitalHome system shall enable the user to adjust the thermostat setting in one-degree increments within the range of 60°F to 80°F."
+            }
+        ],
+        "label": "set the thermostat temperatures at one degree increments",
+        "absence": "set the thermostat temperatures at one degree increments",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

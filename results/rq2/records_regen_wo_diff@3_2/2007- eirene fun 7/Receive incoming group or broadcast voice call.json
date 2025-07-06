@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "calls are connected to the handset when the handset is off the hook",
+                "new_specification": "Group or broadcast calls shall be connected to the handset if it is off the hook."
+            },
+            {
+                "generation": "2",
+                "absent_element": "connection to the handset when off the hook",
+                "new_specification": "If the handset is off the hook, the system shall automatically connect the group or broadcast call to the handset."
+            },
+            {
+                "generation": "3",
+                "absent_element": "situation of connecting calls to the handset when it is off the hook",
+                "new_specification": "Calls shall automatically be connected to the handset when it is off the hook."
+            }
+        ],
+        "label": "be connected to the handset if the handset is off hook.",
+        "absence": "situation of the handset is off hook",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

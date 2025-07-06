@@ -1,0 +1,36 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.move the train",
+            "2.return",
+            "3.update the stored train data in the ETCS equipment",
+            "4.automatically enter data when stationary",
+            "5.entering train data automatically from an external data source",
+            "6.consulting train data anytime through the DMI",
+            "7.shall be able to consult train data anytime via the DMI",
+            "8.may be entered automatically by the system"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "confirmation of train data when entering manually",
+                "new_specification": "The driver shall confirm the entered train data when entering manually before the on-board ETCS equipment allows train movement."
+            },
+            {
+                "generation": "2",
+                "absent_element": "data validation after automatic or manual entry",
+                "new_specification": "The system shall validate train data for correctness and consistency after it has been entered manually or automatically before allowing train movement."
+            },
+            {
+                "generation": "3",
+                "absent_element": "confirmation of automatically entered data",
+                "new_specification": "The driver shall confirm automatically entered train data before the on-board ETCS equipment allows train movement."
+            }
+        ],
+        "label": "The driver shall be able to consult train data when the train is stationary or moving.",
+        "absence": "action of consulting train data when moving",
+        "semantic_similarity": "0.52,0.2,0.18",
+        "llm_eva_results": "0,0,0"
+    }
+]

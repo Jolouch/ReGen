@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation allowing change of non-crucial job parameters",
+                "new_specification": "If the user wishes to change non-crucial job parameters such as output directory or delayed deadline, and the conditions specified are met, the scheduler shall permit these changes and update the necessary job scheduling details."
+            }
+        ],
+        "label": "If the user wishes to specify a different output directory or a delayed deadline, the scheduler shall modify the job parameters.",
+        "absence": "situation of the user wishes to specify job parameters",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

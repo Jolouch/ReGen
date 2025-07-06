@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "Export functionality for SQL query results",
+                "new_specification": "The system shall provide the capability to export the results of SQL queries to a CSV file for external use."
+            },
+            {
+                "generation": "2",
+                "absent_element": "Constraints or conditions for map selection and list generation",
+                "new_specification": "The system shall clearly define and implement constraints and conditions under which projects are selected based on the map and project list is generated, ensuring functionality stability and reliability."
+            },
+            {
+                "generation": "3",
+                "absent_element": "visual feedback on map selection",
+                "new_specification": "The system shall provide visual feedback on the map when a project is selected, indicating the selection to the user."
+            }
+        ],
+        "label": "SQL errors will be reported to the user for correction.",
+        "absence": "feedback on error SQL",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 3
+    }
+]

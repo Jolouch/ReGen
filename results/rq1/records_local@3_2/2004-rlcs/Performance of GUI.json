@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.adjust the refresh rate via the database",
+            "2.adjust",
+            "3.deliver"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "handling of non-critical alarm notifications",
+                "new_specification": "The system shall deliver non-critical alarm notifications to the operator's workstation in a timely manner, with a maximum delay of 5 seconds, regardless of operator login status."
+            },
+            {
+                "generation": "2",
+                "absent_element": "specification for handling non-critical alarm notifications",
+                "new_specification": "The system shall deliver non-critical alarm notifications to the operator's workstation within a reasonable time frame, as defined in the database."
+            },
+            {
+                "generation": "3",
+                "absent_element": "adjustable refresh rate of facility map via GUI",
+                "new_specification": "The system shall allow users to adjust the facility map refresh rate via the graphical user interface."
+            }
+        ],
+        "label": "Refreshrate of the facility map can be configurable within the database to more than 2 seconds by the user.",
+        "absence": "action of modifying refresh rate within the database",
+        "semantic_similarity": "0.12,0.1,0.43",
+        "llm_eva_results": "0,0,0"
+    }
+]

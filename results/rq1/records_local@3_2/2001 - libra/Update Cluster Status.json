@@ -1,0 +1,30 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.update the cluster status",
+            "2.reflecting the changes in the host queue status"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of job failure or cancellation",
+                "new_specification": "The libra shall update the execution host queue status when a job fails or is cancelled."
+            },
+            {
+                "generation": "2",
+                "absent_element": "release of reserved resources when a job is removed",
+                "new_specification": "The libra shall release the reserved resources on the node when a job is removed from the execution host queue."
+            },
+            {
+                "generation": "3",
+                "absent_element": "release of reserved resources when a job is removed",
+                "new_specification": "The libra shall release the reserved resources on the node when a job is removed."
+            }
+        ],
+        "label": "After the execution host queue status is updated, the libra shall send the information about the additional load on the queue and node to the central information store.",
+        "absence": "update status information of the cluster",
+        "semantic_similarity": "0.21,0.13,0.13",
+        "llm_eva_results": "0,0,0"
+    }
+]

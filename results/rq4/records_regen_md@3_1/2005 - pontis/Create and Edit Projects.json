@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.create new projects within the system",
+            "2.edit existing projects by updating project information",
+            "3.delete projects that are no longer needed from the system"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "detailed handling for assignment and removal of work items in project management",
+                "new_specification": "The system shall provide detailed validation to ensure that only valid work items are assigned to a project and facilitate correction if invalid assignments occur."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification for assigning/removing work items to a project",
+                "new_specification": "The system shall notify the user when work items are assigned or removed from a project, detailing changes made."
+            },
+            {
+                "generation": "3",
+                "absent_element": "user feedback mechanism for successful or unsuccessful operations",
+                "new_specification": "The system shall notify the user of the success or failure when projects are assigned or removed from work items, or when projects are split."
+            }
+        ],
+        "label": "The user shall be able to combine multiple projects into a master project.",
+        "absence": "action of combining multiple projects into a master project",
+        "llm_eva_results": "0,0,0",
+        "D-M": "0,1,1",
+        "sample_level": 3
+    }
+]

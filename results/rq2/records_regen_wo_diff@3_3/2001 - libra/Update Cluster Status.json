@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "Explicit mention of job ending condition",
+                "new_specification": "The libra shall update the execution host queue status explicitly when a job ends."
+            },
+            {
+                "generation": "2",
+                "absent_element": "detailed context or prerequisite action when a job ends or is removed",
+                "new_specification": "The Libra shall ensure that all prerequisite actions specific to a job completing and being removed are conducted prior to updating the execution host queue status."
+            },
+            {
+                "generation": "3",
+                "absent_element": "verifying resource availability before updating the execution host queue status",
+                "new_specification": "The libra shall verify resource availability on the node before updating the execution host queue status when a job is scheduled for execution."
+            }
+        ],
+        "label": "After the execution host queue status is updated, the libra shall send the information about the additional load on the queue and node to the central information store.",
+        "absence": "update status information of the cluster",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 3
+    }
+]

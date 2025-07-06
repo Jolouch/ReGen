@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "the absence of displaying relevance scores for search results",
+                "new_specification": "The system should display the relevance score or the number of matched terms next to each search result."
+            }
+        ],
+        "label": "Relevance is determined by results that having the highest number terms matching the search terms.",
+        "absence": "relevance is determined by results that having the highest number terms matching the search terms.",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

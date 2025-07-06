@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "data recovery process in the event of a disaster",
+                "new_specification": "The system shall provide capabilities to restore lost or compromised data from backups following a disaster, ensuring minimal downtime and data loss."
+            }
+        ],
+        "label": "disaster recovery capabilities including data recovery",
+        "absence": "inclusion of data recovery",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

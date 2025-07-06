@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "naming the document",
+                "new_specification": "The system shall provide an option for users to name a document when they save it within the special GUI."
+            },
+            {
+                "generation": "2",
+                "absent_element": "ability to name the document",
+                "new_specification": "The user shall be able to assign a name to the document that reflects its identity or purpose."
+            },
+            {
+                "generation": "3",
+                "absent_element": "naming of the document",
+                "new_specification": "The user shall be able to name the document during the editing process using the special GUI."
+            }
+        ],
+        "label": "The user may optionally specify a descriptive name for the document.",
+        "absence": "action of naming the document",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

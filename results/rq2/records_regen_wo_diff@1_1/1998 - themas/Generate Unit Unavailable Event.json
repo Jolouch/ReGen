@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "action of specifying the denied heating or cooling unit in the event record",
+                "new_specification": "The system shall include the identifier of the heating or cooling unit that was not turned on in the generated event record, along with the event type, thermostat designation, and denial reason."
+            }
+        ],
+        "label": "This system event shall contain a designation of the heating or cooling unit that was not turned.",
+        "absence": "the designation of the not turned unit should be contained in the event",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

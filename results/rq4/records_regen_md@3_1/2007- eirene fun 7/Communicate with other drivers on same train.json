@@ -1,0 +1,34 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Ensure all drivers are aware of the connection and communication continuity between multiple traction vehicles.",
+            "2.Manage call participants, including adding or removing them as needed.",
+            "3.Respond to requests for call reestablishment from other drivers in the event of a connection failure.",
+            "4.reestablish the call if it fails for any cab other than the lead traction vehicle",
+            "5.attempt to reestablish the radio connection as soon as possible to maintain communication with other drivers."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of call failure in non-lead traction vehicles",
+                "new_specification": "If a call failure occurs in a cab other than the lead traction vehicle, the respective driver shall notify the lead driver who will then reestablish the call."
+            },
+            {
+                "generation": "2",
+                "absent_element": "Handling procedure when the call fails in any cab other than the lead traction vehicle",
+                "new_specification": "If the call fails in any cab other than the lead traction vehicle, the driver in the affected cab shall call the lead cab and request reestablishment of the call."
+            },
+            {
+                "generation": "3",
+                "absent_element": "reestablishment of call by other drivers when call fails",
+                "new_specification": "If the call fails for any cab other than the lead traction vehicle, the driver in that cab shall initiate a call to the lead cab and manage the reestablishment of the radio connection."
+            }
+        ],
+        "label": "If the call fails to any other cab, the driver in that cab will call the lead cab and request re-establishment of the call.",
+        "absence": "situation of call failure in other cabs(not the lead traction vehicle)",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

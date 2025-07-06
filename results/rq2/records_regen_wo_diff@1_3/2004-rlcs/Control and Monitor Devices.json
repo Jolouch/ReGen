@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "the option to mute the audible alarm permanently",
+                "new_specification": "The system shall provide an option to mute the audible alarm permanently."
+            }
+        ],
+        "label": "There shall be an option to turn off the audible alarm permanently.",
+        "absence": "action of turning off the audible alarm permanently",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

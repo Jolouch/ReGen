@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "deciding the queue on which the job will be placed",
+                "new_specification": "The system shall decide on which queue within the selected node the job will be inserted based on the current load and priority of each queue."
+            }
+        ],
+        "label": "After the host is determined, the Libra shall select the appropriate queue based on the job parameter.",
+        "absence": "the selection of the appropriate queue after the host is determined",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

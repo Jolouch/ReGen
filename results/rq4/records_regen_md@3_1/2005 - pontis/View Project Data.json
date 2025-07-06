@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Access detailed information about the project.",
+            "2.System generates a related list of project details including basic information, status, and associated data"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "retrieval of detailed project data after project selection",
+                "new_specification": "The system shall provide access to detailed project data, including basic information, status, and associated data, once a project is selected."
+            },
+            {
+                "generation": "2",
+                "absent_element": "access to detailed project information after initiating a selection",
+                "new_specification": "The system shall allow the user to access detailed information of a project after selecting it by project ID or on a map."
+            },
+            {
+                "generation": "3",
+                "absent_element": "access to detailed project data when selecting a project",
+                "new_specification": "Once a project is selected either by ID or on the map, the system shall allow the user to access and view detailed project data, including basic information, status, and associated data."
+            }
+        ],
+        "label": "SQL errors will be reported to the user for correction.",
+        "absence": "feedback on error SQL",
+        "llm_eva_results": "0,0,0",
+        "D-M": "1,1,1",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.recovery plans to restore system functionality",
+            "2.Reports any incidents of data corruption to ensure data integrity",
+            "3.initiate a pre-defined recovery procedure to restore affected data from backups"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "detailed recovery procedures and how they are initiated",
+                "new_specification": "The system shall define and implement a pre-defined recovery procedure to restore affected data from backups in case of data loss or corruption."
+            },
+            {
+                "generation": "2",
+                "absent_element": "recovery from backups",
+                "new_specification": "The system shall initiate a pre-defined recovery procedure to restore affected data from backups in case of data corruption during Archival Storage transfers."
+            },
+            {
+                "generation": "3",
+                "absent_element": "detailed actions regarding error reporting",
+                "new_specification": "The system shall report errors immediately upon detection during archival storage transfers and log these incidents for audit purposes."
+            }
+        ],
+        "label": "disaster recovery capabilities including data recovery",
+        "absence": "inclusion of data recovery",
+        "llm_eva_results": "1,1,0",
+        "D-M": "-1,-1,1",
+        "sample_level": 2
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.adjust",
+            "2.save"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "saving settings for initialization when the game begins",
+                "new_specification": "The system shall save all settings, including CO ability levels, Mahjong rules, and user images, for initialization when the game begins."
+            },
+            {
+                "generation": "2",
+                "absent_element": "saving settings for initialization when the game begins",
+                "new_specification": "The system shall save all game settings, including CO ability levels, Mahjong rules, and user images, for initialization when the game begins."
+            },
+            {
+                "generation": "3",
+                "absent_element": "saving settings for initialization when the game begins",
+                "new_specification": "The system shall save all adjusted settings for initialization when the game begins."
+            }
+        ],
+        "label": "The MultiMahjongClient will save the user preferences in a file and read them in when the program begins.",
+        "absence": "action of saving user preferences for initialization when the game begins",
+        "semantic_similarity": "0.86,0.86,0.86",
+        "llm_eva_results": "1,1,1"
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notification or confirmation of successful batch updates or budget changes",
+                "new_specification": "The system shall provide a notification or confirmation to users upon completion of batch project updates or budget monitoring actions."
+            },
+            {
+                "generation": "2",
+                "absent_element": "alert mechanism for budget overflows or shortfalls",
+                "new_specification": "The system shall alert the user if a project's budget exceeds or falls below the predefined thresholds."
+            },
+            {
+                "generation": "3",
+                "absent_element": "real-time notifications for budget updates or changes",
+                "new_specification": "The system shall provide real-time notifications to users when there are significant changes or overruns in project budgets."
+            }
+        ],
+        "label": "The system shall warn users if the project budget exceeds funding.",
+        "absence": "warn for over budget",
+        "llm_eva_results": "0,1,0",
+        "sample_level": 3
+    }
+]

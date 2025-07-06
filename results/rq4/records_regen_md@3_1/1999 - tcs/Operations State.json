@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Enable only one mode to be active at any given time while in the Operations State.",
+            "2.transition the system between modes"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "specification ensuring only one mode is active at any time",
+                "new_specification": "The TCS shall strictly ensure that only one mode (normal, training, or maintenance) is active at any time during Operations State."
+            },
+            {
+                "generation": "2",
+                "absent_element": "prohibition of simultaneous mode operations",
+                "new_specification": "The system shall ensure that only one mode is active at any given time while in the Operations State."
+            },
+            {
+                "generation": "3",
+                "absent_element": "the exclusivity of operation modes (only one mode to be active at any given time)",
+                "new_specification": "The system shall ensure that only one mode (normal, training, or maintenance) is active at any given time while in the Operations State."
+            }
+        ],
+        "label": "The Operations State modes shall not exist concurrently.",
+        "absence": "action of prohibiting multiple modes from running simultaneously",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

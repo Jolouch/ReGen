@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "adjustability of facility map refresh rate",
+                "new_specification": "The facility map refresh rate shall be adjustable via the database."
+            },
+            {
+                "generation": "2",
+                "absent_element": "adjustability of the facility map refresh interval",
+                "new_specification": "The facility map refresh interval shall be adjustable via the database interface."
+            },
+            {
+                "generation": "3",
+                "absent_element": "adjustability of the facility map refresh rate via the database",
+                "new_specification": "The RLCS shall allow the refresh rate of the facility map to be adjusted through the database settings."
+            }
+        ],
+        "label": "Refreshrate of the facility map can be configurable within the database to more than 2 seconds by the user.",
+        "absence": "action of modifying refresh rate within the database",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

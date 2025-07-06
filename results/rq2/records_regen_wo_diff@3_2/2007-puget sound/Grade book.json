@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "Ensuring privacy for grade visibility limited to relevant users",
+                "new_specification": "The system should ensure that grade details, averages, and overall scores are exclusively visible to relevant users, ensuring privacy."
+            },
+            {
+                "generation": "2",
+                "absent_element": "ensuring privacy and exclusivity of grade information to relevant users",
+                "new_specification": "The system should ensure that grade information such as grades, averages, and scores are only accessible to users relevant to that information, thereby maintaining privacy."
+            },
+            {
+                "generation": "3",
+                "absent_element": "assurance of privacy for relevant users",
+                "new_specification": "The system shall ensure that grade details, averages, and overall scores are accessible only to relevant users to maintain privacy."
+            }
+        ],
+        "label": "No other actor should be able to view another one's grades except the course administrator.",
+        "absence": "no mention of prohibiting anyone other than administrators from viewing others' grades",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

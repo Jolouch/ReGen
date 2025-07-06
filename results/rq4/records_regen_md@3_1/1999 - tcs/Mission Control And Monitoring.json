@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.maintain telemetry reception",
+            "2.ensure both vehicles maintain full operational control",
+            "3.support continuous mission execution without interruption",
+            "4.allow for continuous telemetry and payload data downlink to ensure effective monitoring and control"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of telemetry and payload data downlink",
+                "new_specification": "The TCS shall ensure continuous telemetry and payload data downlink to support effective monitoring and control of the AV."
+            },
+            {
+                "generation": "2",
+                "absent_element": "reception of telemetry and payload data downlink",
+                "new_specification": "The TCS shall receive telemetry and payload data from the AV via the downlink for monitoring and control purposes."
+            },
+            {
+                "generation": "3",
+                "absent_element": "reception of telemetry and payload data downlink",
+                "new_specification": "The TCS shall ensure continuous reception of telemetry and payload data via the downlink to maintain effective monitoring."
+            }
+        ],
+        "label": "The TCS shall receive AV telemetry and payload information via downlink from the AV",
+        "absence": "action of receiving data via downlink from the AV",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

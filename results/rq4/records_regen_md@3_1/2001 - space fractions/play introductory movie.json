@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Provide the storyline and instructions related to the fraction questions",
+            "2.user chooses to skip the movie by clicking a mouse button",
+            "3.Direct the user to the main menu if they click a mouse button to skip the movie."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "the movie providing information to help the user complete fraction questions",
+                "new_specification": "The introductory movie shall include content that aids the user in understanding and completing the fraction questions."
+            },
+            {
+                "generation": "2",
+                "absent_element": "skipping the movie by clicking a mouse button",
+                "new_specification": "If the user clicks a mouse button, the movie shall skip to the end and proceed directly to the main menu."
+            },
+            {
+                "generation": "3",
+                "absent_element": "provision of storyline and instructions related to fraction questions during the movie",
+                "new_specification": "The movie will present a storyline of the game and provide instructions to help the user complete the fraction questions."
+            }
+        ],
+        "label": "If a mouse click is received, this component will terminate the movie.",
+        "absence": "situation of the a mouse click is received",
+        "llm_eva_results": "0,1,0",
+        "D-M": "1,-1,0",
+        "sample_level": 2
+    }
+]

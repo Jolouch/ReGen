@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "Implementation guides publishing",
+                "new_specification": "Systems supporting OM must provide the ability to publish implementation guides along with the investigation-specific questionnaires."
+            },
+            {
+                "generation": "2",
+                "absent_element": "specific mechanism for ensuring common terminology",
+                "new_specification": "Systems supporting OM must ensure that reusable questionnaire libraries are linked with a standardized terminology database to facilitate seamless and efficient data exchange."
+            },
+            {
+                "generation": "3",
+                "absent_element": "control over and the publication protocol for 'implementation guides'",
+                "new_specification": "Systems supporting OM should provide the ability to configure and publish case investigation implementation guides, ensuring alignment with case definition updates."
+            }
+        ],
+        "label": "Systems supporting OM must provide the ability to publish investigation specific questionnaires and implementation guides.",
+        "absence": "action of publishing of implementation guides",
+        "llm_eva_results": "1,0,1",
+        "sample_level": 2
+    }
+]

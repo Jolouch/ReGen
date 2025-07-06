@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation when default settings resume after manual change ends",
+                "new_specification": "At the end of a manually set period, the system shall automatically revert the state of the power switch to the default setting and notify the user of the change."
+            },
+            {
+                "generation": "2",
+                "absent_element": "dynamic adjustment of default settings",
+                "new_specification": "The system shall allow for dynamic adjustment of default settings in response to user preferences or external conditions."
+            },
+            {
+                "generation": "3",
+                "absent_element": "notification to user at the end of manual override period",
+                "new_specification": "The system shall notify the user when the appliance switches back to the default setting after a manual override period ends."
+            }
+        ],
+        "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
+        "absence": "revert to the default setting after the manual set state ends",
+        "llm_eva_results": "1,0,0",
+        "sample_level": 1
+    }
+]

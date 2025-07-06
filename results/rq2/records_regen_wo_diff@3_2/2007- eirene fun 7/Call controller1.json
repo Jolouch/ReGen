@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "specific indication of busy line or network issue",
+                "new_specification": "The system shall provide an audible and visual indication to the driver specifying whether a call connection failure is due to a busy line or network issues."
+            },
+            {
+                "generation": "2",
+                "absent_element": "reasons for unsuccessful connection notifications",
+                "new_specification": "If the call is not received by the controller, an audible and visual indication will include information indicating if the line is busy or there are network issues."
+            },
+            {
+                "generation": "3",
+                "absent_element": "distinct indications for busy line vs network issues",
+                "new_specification": "For unsuccessful call attempts, provide distinct audible and visual indications to differentiate between a busy line and network issues."
+            }
+        ],
+        "label": "This shall also indicate if the called party was busy or if the network could not connect the call.",
+        "absence": "specific indication of unsuccessful connect: busy or network error",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

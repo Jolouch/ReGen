@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "procedure of resuming call after disconnection when the driver is already on the handset",
+                "new_specification": "If a call is disconnected while the driver has already picked up the handset, the system shall automatically attempt to reconnect to continue the call."
+            },
+            {
+                "generation": "2",
+                "absent_element": "1. Situation when the call continues after the handset is picked up. 2. Visual indication when the system cannot connect the call.",
+                "new_specification": "1. The call shall continue through the handset if the driver picks it up, until terminated by the calling party, authorized controller, or network. 2. If the system is not able to connect the call, an audible and visual indication shall be provided to the driver."
+            },
+            {
+                "generation": "3",
+                "absent_element": "network reconnection attempt procedure",
+                "new_specification": "If a call is lost due to network issues, the system shall attempt to reconnect automatically up to three times before notifying the driver of a permanent failure."
+            }
+        ],
+        "label": "If the system is not able to connect the call, an audible and visual indication shall be provided to the driver.",
+        "absence": "the visual indication shall be provided",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 1
+    }
+]

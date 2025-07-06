@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.create new user accounts",
+            "2.remove existing user accounts",
+            "3.modify permissions as necessary"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "automatically logging off blocked users",
+                "new_specification": "The system shall ensure that any user who is blocked will be automatically logged off."
+            },
+            {
+                "generation": "2",
+                "absent_element": "automatic log-off of blocked users",
+                "new_specification": "The system shall automatically log off users who are blocked."
+            },
+            {
+                "generation": "3",
+                "absent_element": "automatically log off blocked users",
+                "new_specification": "The system shall automatically log off any user that is blocked."
+            }
+        ],
+        "label": "All blocked users with active sessions shall automatically be logged off.",
+        "absence": "action of forced logout of blocked users",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

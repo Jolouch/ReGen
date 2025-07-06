@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "display of controller's identity when added to multi-driver call",
+                "new_specification": "When the controller is added to a multi-driver call, the system shall display the controller's identity in the lead cab."
+            }
+        ],
+        "label": "Functional identity of the automatically added controller shall be displayed in the leading cab.",
+        "absence": "display the identity of the automatically added controller ",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

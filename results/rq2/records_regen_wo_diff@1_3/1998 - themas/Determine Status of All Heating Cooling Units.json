@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "feedback about the current running or queued units",
+                "new_specification": "The system shall provide feedback on the current status of the heating and cooling units, indicating which are running and which are queued."
+            }
+        ],
+        "label": "When a request to turn off a heating or cooling unit is received, this process shall first check the LIFO queue and remove the unit-turn-on request from the queue if exists.",
+        "absence": "action of checking the queue and removing the unit-turn-on request if exists when a request to turn off a unit is received",
+        "llm_eva_results": "0",
+        "sample_level": 3
+    }
+]

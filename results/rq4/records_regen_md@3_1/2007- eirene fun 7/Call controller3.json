@@ -1,0 +1,36 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.obtain an appropriate destination",
+            "2.contact the destination",
+            "3.ensure all necessary information is included",
+            "4.ensure the destination is able to recognize the source of the call",
+            "5.Route the call to the loudspeaker for hands-free communication.",
+            "6.Attempt reconnection if possible if the system is not able to connect the call.",
+            "7.Notify the controller of the issue if the system is not able to connect the call."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "action for attempting reconnection if the call is not connected",
+                "new_specification": "If the system is not able to connect the call, it shall attempt to reconnect before notifying the driver about the failed connection."
+            },
+            {
+                "generation": "2",
+                "absent_element": "attempt reconnection if the system is not able to connect the call",
+                "new_specification": "If the system is not able to connect the call, it shall attempt to reconnect the call if possible."
+            },
+            {
+                "generation": "3",
+                "absent_element": "instructions to attempt reconnection after a failed call connection",
+                "new_specification": "The system shall attempt a reconnection if the initial call to the destination fails."
+            }
+        ],
+        "label": "If the system is not able to connect the call, an audible and visual indication shall be provided to the driver that the call was not received by the controller.",
+        "absence": "situation of the unsuccessful connect",
+        "llm_eva_results": "0,0,0",
+        "D-M": "1,1,1",
+        "sample_level": 3
+    }
+]

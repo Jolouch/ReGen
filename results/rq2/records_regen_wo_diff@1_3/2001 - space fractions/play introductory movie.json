@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "the situation of the user clicking to skip the movie",
+                "new_specification": "If the user clicks a mouse button during the movie, the movie will stop playing and the main menu will be displayed immediately."
+            }
+        ],
+        "label": "If a mouse click is received, this component will terminate the movie.",
+        "absence": "situation of the a mouse click is received",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

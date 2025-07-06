@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alerts or notifications for budget thresholds exceeded",
+                "new_specification": "The system shall alert the user when project budgets exceed predefined thresholds."
+            },
+            {
+                "generation": "2",
+                "absent_element": "alert for when project budgets exceed specified limits",
+                "new_specification": "The system shall alert the user if the project budgets exceed specified limits to ensure proper financial management."
+            },
+            {
+                "generation": "3",
+                "absent_element": "alerts or notifications for project budget thresholds",
+                "new_specification": "The system shall notify the user when a project budget exceeds predefined threshold limits."
+            }
+        ],
+        "label": "The system shall warn users if the project budget exceeds funding.",
+        "absence": "warn for over budget",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 3
+    }
+]

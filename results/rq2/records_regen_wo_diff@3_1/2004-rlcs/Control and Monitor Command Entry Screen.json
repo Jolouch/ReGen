@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "security level control in managing events",
+                "new_specification": "The GUI shall restrict or extend commands available for event management based on the security clearance level of the user."
+            },
+            {
+                "generation": "2",
+                "absent_element": "security level impact on control operations",
+                "new_specification": "The system shall restrict or permit control operations based on the user's security level, ensuring actions align with the permitted security permissions."
+            },
+            {
+                "generation": "3",
+                "absent_element": "varied control based on security levels",
+                "new_specification": "The GUI shall adjust control options based on the user's security level, ensuring appropriate permissions are enforced."
+            }
+        ],
+        "label": "Based on the user's security level, the control option shall provide the user with the appropriate level of control.",
+        "absence": "control levels based on the user's security level",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

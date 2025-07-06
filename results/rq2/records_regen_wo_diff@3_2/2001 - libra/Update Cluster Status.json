@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "confirmation of the update of the execution host queue status",
+                "new_specification": "Libra shall confirm the update of the execution host queue status after a job is scheduled or removed to ensure system accuracy."
+            },
+            {
+                "generation": "2",
+                "absent_element": "handling execution failures or exceptions during queue status updates",
+                "new_specification": "If a job fails to execute or resources cannot be reserved, the system shall roll back the queue status update and log the error state."
+            },
+            {
+                "generation": "3",
+                "absent_element": "validation of job completion status",
+                "new_specification": "Before updating the queue status upon job removal, the libra shall verify that the job has indeed completed or was terminated."
+            }
+        ],
+        "label": "After the execution host queue status is updated, the libra shall send the information about the additional load on the queue and node to the central information store.",
+        "absence": "update status information of the cluster",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.determine the most suitable host for job execution",
+            "2.place the job in its queue for execution"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "determination of the most suitable queue for job execution on the selected host",
+                "new_specification": "The Libra shall determine the most suitable queue for the job on the chosen host based on factors such as queue priority and availability of required resources."
+            },
+            {
+                "generation": "2",
+                "absent_element": "queue selection for job placement",
+                "new_specification": "The scheduler shall select a suitable queue on the chosen host based on the job's requirements and priority before inserting it into the queue for execution."
+            },
+            {
+                "generation": "3",
+                "absent_element": "consideration of queue selection",
+                "new_specification": "The scheduler shall select a suitable queue on the chosen host for the job to join the competition for resources."
+            }
+        ],
+        "label": "After the host is determined, the Libra shall select the appropriate queue based on the job parameter.",
+        "absence": "the selection of the appropriate queue after the host is determined",
+        "semantic_similarity": "0.81,0.64,0.79",
+        "llm_eva_results": "1,1,1"
+    }
+]

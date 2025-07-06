@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "projection capabilities for project budget monitoring",
+                "new_specification": "The system shall provide capabilities for projecting future budget scenarios based on current project data and funding levels."
+            }
+        ],
+        "label": "The system shall warn users if the project budget exceeds funding.",
+        "absence": "warn for over budget",
+        "llm_eva_results": "0",
+        "sample_level": 3
+    }
+]

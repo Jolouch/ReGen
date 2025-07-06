@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "detailed processes and criteria for creating new contacts and identifying contact types",
+                "new_specification": "The system shall employ a defined criterion for selecting existing records to create new contacts, ensuring relevancy and accuracy. Additionally, the system shall utilize predetermined logic or algorithms to identify and assign contact types for comprehensive outbreak management."
+            }
+        ],
+        "label": "It allows multiple contacts to be linked to a single case.",
+        "absence": "multiple contacts to be linked to a single case",
+        "llm_eva_results": "0",
+        "sample_level": 2
+    }
+]

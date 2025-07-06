@@ -1,0 +1,39 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Validate train data",
+            "2.Allow train movement",
+            "3.Initiate data entry",
+            "4.The driver must confirm the entry or overwrite after entering data manually.",
+            "5.Allow manual data entry or overwriting by the driver when the train is stationary.",
+            "6.Enable automatic train data entry when the train is stationary if supported by ETCS equipment.",
+            "7.Allow the driver to consult the train data at any time once it is entered.",
+            "8.Confirm all entered or automatically retrieved train data at the start of the Data Entry process",
+            "9.Consult current train data at any time",
+            "10.Ensure situational awareness and accuracy"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "validation of the entered train data",
+                "new_specification": "The system shall validate the entered train data before allowing confirmation by the driver."
+            },
+            {
+                "generation": "2",
+                "absent_element": "a specific action for confirming manual data entry or overwriting",
+                "new_specification": "The system shall ensure the driver confirms manual data entry or overwrite while stationary."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Driver confirmation after manual or overwritten data entry",
+                "new_specification": "The driver must confirm any manual or overwritten data entry once completed, ensuring accurate data entry before proceeding to the next step."
+            }
+        ],
+        "label": "The driver shall be able to consult train data when the train is stationary or moving.",
+        "absence": "action of consulting train data when moving",
+        "llm_eva_results": "0,0,0",
+        "D-M": "1,0,1",
+        "sample_level": 2
+    }
+]

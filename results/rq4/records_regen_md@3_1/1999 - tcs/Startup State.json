@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.initialize key operational parameters",
+            "2.conduct necessary system checks to ensure all subsystems are in a ready state for operation",
+            "3.Ensure stability and integrity before transitioning to normal operations."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "initialization of operational parameters and subsystem readiness check before executing startup mode",
+                "new_specification": "Prior to executing the startup mode, the TCS shall initialize key operational parameters and conduct checks to ensure all subsystems are in a ready state for operation."
+            },
+            {
+                "generation": "2",
+                "absent_element": "Initialization of key operational parameters",
+                "new_specification": "The TCS shall initialize key operational parameters upon entering Startup State to ensure readiness for operation."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Actions to initialize key parameters and conduct checks before transitioning to normal operations",
+                "new_specification": "The TCS shall initialize key operational parameters and conduct necessary system checks to ensure all subsystems are ready and stable before transitioning to normal operations."
+            }
+        ],
+        "label": "When the TCS Software is terminated normally the TCS shall enter the Normal Startup Mode of operation upon application of power.",
+        "absence": "situation of the TCS Software is terminated normally",
+        "llm_eva_results": "0,0,0",
+        "D-M": "1,1,1",
+        "sample_level": 2
+    }
+]

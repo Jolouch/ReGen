@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notification of remaining backup power time to CMCS",
+                "new_specification": "The system should ensure that UPS devices communicate the remaining backup power time to the CMCS when a power outage occurs."
+            },
+            {
+                "generation": "2",
+                "absent_element": "reporting of remaining backup power time",
+                "new_specification": "The UPS devices shall notify the CMCS of the remaining backup power time when a power outage occurs."
+            },
+            {
+                "generation": "3",
+                "absent_element": "UPS not notifying CMCS of remaining backup power time during outages",
+                "new_specification": "UPS devices shall notify the CMCS of the remaining backup power time during a power outage."
+            }
+        ],
+        "label": "The UPS shall keep the CMCS apprised of time remaining on backup power when a power outage has occurred.",
+        "absence": "action of sending time remaining on backup power upon a power outage",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

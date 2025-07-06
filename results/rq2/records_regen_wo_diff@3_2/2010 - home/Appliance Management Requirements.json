@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "reverting manual changes to default settings automatically",
+                "new_specification": "The system shall automatically revert the power switch to its default state after the planned or default time period ends."
+            },
+            {
+                "generation": "2",
+                "absent_element": "details on resuming default settings after manual changes",
+                "new_specification": "The system shall automatically revert the state of the power switch to default settings after the planned or default time period ends, following any manual switch state changes."
+            },
+            {
+                "generation": "3",
+                "absent_element": "default state resuming after the current time period ends",
+                "new_specification": "The system shall automatically revert the power switch and appliance to the default state once the current time period ends."
+            }
+        ],
+        "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
+        "absence": "revert to the default setting after the manual set state ends",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

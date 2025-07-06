@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "system automatic reversion to default settings post-manual changes",
+                "new_specification": "The system shall automatically revert to its default settings after the termination of the user's manually adjusted period."
+            },
+            {
+                "generation": "2",
+                "absent_element": "specification of time period management and state transition to default",
+                "new_specification": "The system shall be able to define, manage, and transition power states according to the defined time periods, resuming default states upon period completion."
+            },
+            {
+                "generation": "3",
+                "absent_element": "resuming default settings after manual switch duration ends",
+                "new_specification": "At the end of the user-defined switch state period, the system shall resume the default settings for the appliance."
+            }
+        ],
+        "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
+        "absence": "revert to the default setting after the manual set state ends",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

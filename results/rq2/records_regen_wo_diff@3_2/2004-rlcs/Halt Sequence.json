@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "change to 'open' status without an operator's command",
+                "new_specification": "The sequence shall be halted if the status of a closure device, which was previously closed at the current entrance, changes to open without an operator-initiated command."
+            },
+            {
+                "generation": "2",
+                "absent_element": "the status change of a closure device to 'open' without an operator's command.",
+                "new_specification": "If the status of a closure device, previously closed, changes to open without an operator's command, the sequence shall be halted."
+            },
+            {
+                "generation": "3",
+                "absent_element": "situation when the status of a closure device changes to open without an operator command",
+                "new_specification": "The system shall halt the opening or closing sequence if the status of a closure device, which was previously closed at the current entrance, changes to open without an operator-initiated command."
+            }
+        ],
+        "label": "The status of a closure device, which was previously closed at the current entrance, changes to unknown or open, without an operator-initiated command.",
+        "absence": "situation of previously closed device",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 3
+    }
+]

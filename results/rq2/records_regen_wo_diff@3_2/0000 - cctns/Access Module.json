@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of logging unauthorized access attempts",
+                "new_specification": "The system shall log all unauthorized access attempts to records, including user information and time of access attempt."
+            },
+            {
+                "generation": "2",
+                "absent_element": "logging of unauthorized access attempts",
+                "new_specification": "The system should ensure that all unauthorized access attempts are logged in the audit trail."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Log unauthorized access attempts",
+                "new_specification": "The system shall log any unauthorized access attempts to ensure a secure audit trail."
+            }
+        ],
+        "label": "Unauthorised attempts to access cases must be logged in the audit trail.",
+        "absence": "action of logging of unauthorised attempts to access",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

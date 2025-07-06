@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "user notification after clearing data",
+                "new_specification": "The system shall notify the user with a confirmation message that entered data has been cleared after clicking the Cancel button."
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation of data handling when the close button is clicked",
+                "new_specification": "When the Close button is clicked, the system shall prompt the user to save changes before closing."
+            },
+            {
+                "generation": "3",
+                "absent_element": "warning detailing potential data loss when close button is clicked without saving",
+                "new_specification": "The system shall display a warning detailing the potential data loss if the close button is clicked without saving data."
+            }
+        ],
+        "label": "The system shall direct the user to the xxx Page if the user chooses to click the close button without entering any data.",
+        "absence": "situation of clicking the close button",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 2
+    }
+]

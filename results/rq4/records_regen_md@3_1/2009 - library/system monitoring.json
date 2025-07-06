@@ -1,0 +1,34 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.customize the alert mechanism",
+            "2.configure alerts with customizable thresholds",
+            "3.customize thresholds for different resources",
+            "4.Configure alerts with customizable thresholds",
+            "5.Ensure prompt notification to specified recipients"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of configuring alert thresholds",
+                "new_specification": "The system shall allow administrators to configure alert thresholds for monitoring of resources."
+            },
+            {
+                "generation": "2",
+                "absent_element": "configurable alert thresholds for monitoring resources",
+                "new_specification": "System shall support configuration of alert thresholds for monitoring resources, allowing customization per monitored resource."
+            },
+            {
+                "generation": "3",
+                "absent_element": "timeliness of alerts delivered to recipients",
+                "new_specification": "Alerts shall be delivered promptly to all configured recipients"
+            }
+        ],
+        "label": "Alert thresholds are configurable.",
+        "absence": "action of configuring alert thresholds",
+        "llm_eva_results": "1,1,0",
+        "D-M": "-1,-1,1",
+        "sample_level": 1
+    }
+]

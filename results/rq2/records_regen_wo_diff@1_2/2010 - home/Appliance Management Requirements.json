@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "resuming default settings after the end of the current time period",
+                "new_specification": "The system shall automatically revert to default settings after the end of the current time period when a manual change has been made."
+            }
+        ],
+        "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
+        "absence": "revert to the default setting after the manual set state ends",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

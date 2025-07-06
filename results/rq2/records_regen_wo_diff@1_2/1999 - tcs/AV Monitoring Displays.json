@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "display the report time when the data link is interrupted",
+                "new_specification": "When the data link is interrupted, the TCS shall display the last known AV status values along with the report time."
+            }
+        ],
+        "label": "When the data link is interrupted, the TCS also shall present the time at which the last AV status values were reported",
+        "absence": "action of presenting the time at which the last AV status",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

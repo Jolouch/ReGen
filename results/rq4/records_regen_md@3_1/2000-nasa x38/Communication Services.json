@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.ensure messages are delivered in a reliable manner",
+            "2.maintain the order in which messages are sent",
+            "3.facilitate real-time communication between spacecraft subsystems"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "broadcasting to virtual groups",
+                "new_specification": "Communication services shall provide message broadcasting services to virtual groups to ensure messages are delivered to all intended recipients."
+            },
+            {
+                "generation": "2",
+                "absent_element": "broadcasts to virtual groups",
+                "new_specification": "Communication services shall provide message broadcasting services to virtual groups to facilitate communication among multiple subsystems."
+            },
+            {
+                "generation": "3",
+                "absent_element": "broadcast to virtual groups",
+                "new_specification": "Communication services shall support broadcasting messages to virtual groups."
+            }
+        ],
+        "label": "Communication services shall provide the capability to broadcast messages to all virtual groups.",
+        "absence": "action of broadcast messages",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

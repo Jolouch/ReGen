@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alerts via email for multiple failed logins from the same user",
+                "new_specification": "The system shall notify the System Administrator via email if there are multiple failed login attempts from the same user."
+            }
+        ],
+        "label": "These warnings are sent to the System Administrator.",
+        "absence": "action of sending warnings for failed login",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

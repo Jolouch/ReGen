@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "broadcasts to virtual groups",
+                "new_specification": "Communication services shall provide broadcasting services to virtual groups allowing messages to be delivered to all members within a virtual group."
+            }
+        ],
+        "label": "Communication services shall provide the capability to broadcast messages to all virtual groups.",
+        "absence": "action of broadcast messages",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

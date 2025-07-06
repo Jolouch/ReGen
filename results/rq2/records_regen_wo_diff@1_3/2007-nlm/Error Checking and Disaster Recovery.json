@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "details about recovery procedures",
+                "new_specification": "The system shall establish and document detailed recovery procedures to restore data to a trusted state following a failure or error during archival storage transfers."
+            }
+        ],
+        "label": "disaster recovery capabilities including data recovery",
+        "absence": "inclusion of data recovery",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

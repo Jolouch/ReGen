@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "specification for recording the generated event",
+                "new_specification": "The system shall record the generated event for future reference."
+            }
+        ],
+        "label": "This system event shall contain a designation of the heating or cooling unit that was not turned.",
+        "absence": "the designation of the not turned unit should be contained in the event",
+        "llm_eva_results": "0",
+        "sample_level": 2
+    }
+]

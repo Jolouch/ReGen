@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.control down to the device sensor level.",
+            "2.verify the valid status of device sensors before execution",
+            "3.ensure synchronization with the current status of all closure devices before execution"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "synchronization with the current status of closure devices before execution",
+                "new_specification": "The system shall synchronize with the current status of all closure devices in the system before executing any command."
+            },
+            {
+                "generation": "2",
+                "absent_element": "synchronization with current status of closure devices before execution",
+                "new_specification": "The system shall ensure synchronization with the current status of all closure devices before executing any command."
+            },
+            {
+                "generation": "3",
+                "absent_element": "synchronization with the current status of all closure devices before execution",
+                "new_specification": "The system shall ensure synchronization with the current status of all closure devices before executing any command."
+            }
+        ],
+        "label": "The system shall abort the device if the status is unknown.",
+        "absence": "situation of the device status is unknown",
+        "llm_eva_results": "0,0,0",
+        "D-M": "0,1,1",
+        "sample_level": 3
+    }
+]

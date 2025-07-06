@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "specific user autonomy in managing submissions according to access level",
+                "new_specification": "The system shall allow users to manage their submission schedules independently according to their access levels, with autonomy to edit or rearrange as necessary."
+            }
+        ],
+        "label": "Able to add and edit terms of agreement, based on access of level of user.",
+        "absence": "based on access of level to add and edit terms of agreement",
+        "llm_eva_results": "0",
+        "sample_level": 2
+    }
+]

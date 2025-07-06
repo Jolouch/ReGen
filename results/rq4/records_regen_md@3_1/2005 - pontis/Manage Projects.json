@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.manage multiple projects within the system",
+            "2.monitor project budgets",
+            "3.provide alerts when budgets exceed predefined thresholds",
+            "4.allow for easy management and review of projects based on similar attributes or requirements"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alert when project budgets exceed thresholds",
+                "new_specification": "The system shall provide alerts when project budgets exceed predefined thresholds."
+            },
+            {
+                "generation": "2",
+                "absent_element": "alerts for budget threshold breaches",
+                "new_specification": "The system shall provide alerts when project budgets exceed predefined thresholds."
+            },
+            {
+                "generation": "3",
+                "absent_element": "alerts when budgets exceed predefined thresholds",
+                "new_specification": "The system shall provide alerts to the user when project budgets exceed predefined thresholds."
+            }
+        ],
+        "label": "The system shall warn users if the project budget exceeds funding.",
+        "absence": "warn for over budget",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "mechanism of sorting results based on number of matched search terms",
+                "new_specification": "The system should explicitly sort search results based on the number of matched terms to ascertain relevance."
+            },
+            {
+                "generation": "2",
+                "absent_element": "relevance determination using matched terms",
+                "new_specification": "The system should determine the relevance of each search result based on the number of matched terms, and categorize the results accordingly."
+            },
+            {
+                "generation": "3",
+                "absent_element": "clarification on the algorithm or criteria for determining and sorting relevance based on matched terms",
+                "new_specification": "The system shall detail the algorithm or criteria used to determine and rank the relevance of search results based on matched term numbers."
+            }
+        ],
+        "label": "Relevance is determined by results that having the highest number terms matching the search terms.",
+        "absence": "relevance is determined by results that having the highest number terms matching the search terms.",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

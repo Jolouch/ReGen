@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "capability to record specific telemetry elements",
+                "new_specification": "TCS shall provide the capability to record specific telemetry elements real-time."
+            },
+            {
+                "generation": "2",
+                "absent_element": "lack of recording of specific telemetry elements",
+                "new_specification": "The system shall record all telemetry elements that are being monitored in real-time."
+            },
+            {
+                "generation": "3",
+                "absent_element": "monitoring significant deviations under 10%",
+                "new_specification": "TCS shall alert the operator when deviations from the mission plan are significant, even if they are less than 10%, under specific conditions such as approaching restricted zones or critical mission phases."
+            }
+        ],
+        "label": "TCS shall record all telemetry elements for future review and processing.",
+        "absence": "action of recording telemetry elements",
+        "llm_eva_results": "1,1,0",
+        "sample_level": 2
+    }
+]

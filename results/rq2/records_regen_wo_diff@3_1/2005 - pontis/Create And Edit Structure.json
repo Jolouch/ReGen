@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "checking user privileges before allowing renumbering of bridge keys",
+                "new_specification": "The system shall verify user privileges before allowing the renumbering of bridge keys."
+            },
+            {
+                "generation": "2",
+                "absent_element": "verification of user privileges for global renumbering",
+                "new_specification": "The system shall verify user privileges before permitting the global renumbering of bridge keys."
+            },
+            {
+                "generation": "3",
+                "absent_element": "verification of user privileges before renumbering bridge keys",
+                "new_specification": "The system shall verify user privileges prior to allowing the global renumbering of bridge keys."
+            }
+        ],
+        "label": "The renumbering shall be restricted depending on the user privilege",
+        "absence": "The renumbering function shall be restricted depending on the user privilege",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "situation of deactivating user accounts with history",
+                "new_specification": "The system shall automatically deactivate user accounts that have history associated with them."
+            }
+        ],
+        "label": "If an account has any history associated with it, it can only be deactivated and not deleted.",
+        "absence": "situation of an account has any history",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

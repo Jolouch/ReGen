@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "verification of queue updates",
+                "new_specification": "The libra shall verify the successful update of the execution host queue status whenever a job is scheduled for execution or removed, and log an error if the update fails."
+            }
+        ],
+        "label": "After the execution host queue status is updated, the libra shall send the information about the additional load on the queue and node to the central information store.",
+        "absence": "update status information of the cluster",
+        "llm_eva_results": "0",
+        "sample_level": 3
+    }
+]

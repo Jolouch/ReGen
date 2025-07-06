@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notifications for investigators about new or updated contact links",
+                "new_specification": "The system shall notify investigators automatically upon new contact linkages or updates to existing links involving their assigned subjects."
+            }
+        ],
+        "label": "It allows multiple contacts to be linked to a single case.",
+        "absence": "multiple contacts to be linked to a single case",
+        "llm_eva_results": "0",
+        "sample_level": 2
+    }
+]

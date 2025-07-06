@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "assigning application permissions to roles",
+                "new_specification": "The administrator shall be able to assign application permissions to roles."
+            },
+            {
+                "generation": "2",
+                "absent_element": "ability to assign application permissions to roles",
+                "new_specification": "Administrators shall be able to assign application permissions to different roles."
+            },
+            {
+                "generation": "3",
+                "absent_element": "assigning application permissions to roles",
+                "new_specification": "The administrator shall be able to assign application permissions to application roles."
+            }
+        ],
+        "label": "The administrator shall be able to assign application permissions to each user roles.",
+        "absence": "action of assigning application permissions to user roles",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

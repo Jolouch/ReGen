@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.support",
+            "2.send",
+            "3.leave",
+            "4.not receive"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of user leaving the group and not receiving multicast message",
+                "new_specification": "agentMom shall not allow receiving multicast message from a group after leaving that multicast group"
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation of user after leaving the group",
+                "new_specification": "agentMom shall not allow receiving multicast message from a group after leaving that multicast group"
+            },
+            {
+                "generation": "3",
+                "absent_element": "situation of not receiving multicast message after leaving the group",
+                "new_specification": "agentMom shall not allow receiving multicast message from a group after leaving that multicast group"
+            }
+        ],
+        "label": "agentMom shall not allow receiving multicast message from a group after leaving that multicast group",
+        "absence": "situation of rejection of receiving multicast message after leaving the multicast group",
+        "semantic_similarity": "0.86,0.39,0.92",
+        "llm_eva_results": "1,1,1"
+    }
+]

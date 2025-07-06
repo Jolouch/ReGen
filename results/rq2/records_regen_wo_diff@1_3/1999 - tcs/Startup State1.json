@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alert to operator when executing functions beyond permitted interaction level",
+                "new_specification": "The system shall alert the operator when attempting to execute any interaction level beyond what is permissible by the configuration settings."
+            }
+        ],
+        "label": "The TCS shall inform the operator if the operator attempts to execute a function prohibited as a result of the determined level of interaction.",
+        "absence": "Warning for execution of functions prohibited according to determined interaction levels",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.implement the stride-scheduling algorithm to determine the order and priority of jobs execution",
+            "2.trigger a stop condition.",
+            "3.maintain fairness and efficiency as per the stride-scheduling algorithm rules."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "maintenance of fairness and efficiency during job execution",
+                "new_specification": "The scheduler shall ensure fairness and efficiency during job execution in accordance with the stride-scheduling algorithm rules."
+            },
+            {
+                "generation": "2",
+                "absent_element": "stop condition when no jobs left",
+                "new_specification": "The scheduler shall trigger a stop condition when there are no remaining jobs in the queues."
+            },
+            {
+                "generation": "3",
+                "absent_element": "ensuring fairness and efficiency in job scheduling as per stride-scheduling algorithm",
+                "new_specification": "The scheduler shall ensure fairness and efficiency in job scheduling, as per the stride-scheduling algorithm."
+            }
+        ],
+        "label": "In case of a tie, the arbitrary FIFO job ordering is used.",
+        "absence": "situation of multiple minimum pass values(tie)",
+        "llm_eva_results": "0,0,1",
+        "D-M": "1,0,-1",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "sending a VMEbus reset on failed re-sync",
+                "new_specification": "System Initialization shall send a VMEbus reset if an attempted re-sync fails."
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation of handling failed re-sync by sending VMEbus reset",
+                "new_specification": "If a re-sync of any of the FCP processors fails, the system shall send a VMEbus reset to handle the failure."
+            },
+            {
+                "generation": "3",
+                "absent_element": "handling failed re-sync by sending a VMEbus reset",
+                "new_specification": "If the re-synchronization of any FCP processor fails, System Initialization shall send a VMEbus reset to handle the failure."
+            }
+        ],
+        "label": "If the failed FCP processor has not synced, it shall send a single voted VMEbus reset through the NE to the failed FCP",
+        "absence": "action of sending a VMEbus reset",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

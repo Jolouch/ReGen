@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.associate roles with divisions",
+            "2.associate roles with divisions for new users",
+            "3.save relationship information to the database",
+            "4.add a new user to the system"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "associating roles with divisions for new users",
+                "new_specification": "The system shall associate user roles with divisions when adding a new user to the database."
+            },
+            {
+                "generation": "2",
+                "absent_element": "associating roles with divisions for new users",
+                "new_specification": "The system shall associate the appropriate roles with the respective divisions for new users when they are added to the system."
+            },
+            {
+                "generation": "3",
+                "absent_element": "associating roles with divisions for new users",
+                "new_specification": "The system shall associate roles with divisions when adding new users."
+            }
+        ],
+        "label": "The system shall save the user info to the database with specified roles associated with divisions for the newly created/added user.",
+        "absence": "action of associating the new user with the divisions",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

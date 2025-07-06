@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "jurisdictional link management",
+                "new_specification": "The system shall ensure proper management and verification of jurisdictional links when associating exposure contacts."
+            },
+            {
+                "generation": "2",
+                "absent_element": "handling updates or deletions of contact records to maintain data integrity",
+                "new_specification": "The system shall allow for updating or deleting contact records while ensuring the integrity and traceability of contact information is maintained."
+            },
+            {
+                "generation": "3",
+                "absent_element": "real-time updates and ongoing monitoring",
+                "new_specification": "The system shall provide real-time updates and support ongoing monitoring of exposure contacts over time to ensure timely action can be taken."
+            }
+        ],
+        "label": "It allows multiple contacts to be linked to a single case.",
+        "absence": "multiple contacts to be linked to a single case",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 2
+    }
+]

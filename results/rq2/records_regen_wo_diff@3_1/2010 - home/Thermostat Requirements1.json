@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "the scenario when no subsequent scheduled setting exists after a manual setting",
+                "new_specification": "A manual setting shall revert to a predefined default temperature if no subsequent scheduled setting exists after the current scheduled ends."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification for manual setting override",
+                "new_specification": "The system shall notify the user when a manual temperature setting is overridden by a scheduled setting."
+            },
+            {
+                "generation": "3",
+                "absent_element": "notification when manual setting reverts to default",
+                "new_specification": "The system should notify the user when the manual setting has been deactivated and the default is restored."
+            }
+        ],
+        "label": "When a manual temperature setting ends, the default setting will be used for the next time period.",
+        "absence": "using the default setting after a manual temperature setting ends",
+        "llm_eva_results": "1,0,0",
+        "sample_level": 1
+    }
+]

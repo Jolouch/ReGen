@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Update requests from the GUI for status updates within 2 seconds, excluding device and network response times.",
+            "2.Refresh the facility map on the screen every 2 seconds, configurable via the database.",
+            "3.Adjust the refresh rate of the facility map via the database.",
+            "4.Deliver RLCS notifications irrespective of the operator's login status."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "ability to adjust the refresh rate of the facility map via the database",
+                "new_specification": "The system shall allow adjustment of the facility map refresh rate through configurations in the database."
+            },
+            {
+                "generation": "2",
+                "absent_element": "adjustability of facility map refresh rate via the database",
+                "new_specification": "The system shall allow configuration of the facility map refresh rate via the database."
+            },
+            {
+                "generation": "3",
+                "absent_element": "configurability of facility map refresh rate via the database",
+                "new_specification": "The system shall allow configuration of the facility map refresh rate via the database."
+            }
+        ],
+        "label": "Refreshrate of the facility map can be configurable within the database to more than 2 seconds by the user.",
+        "absence": "action of modifying refresh rate within the database",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

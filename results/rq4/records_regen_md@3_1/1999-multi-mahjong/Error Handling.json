@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Provide a link to an online troubleshooting guide if the error is nonfatal.",
+            "2.quit the game",
+            "3.terminate all processes"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "provision of an online troubleshooting guide for nonfatal errors",
+                "new_specification": "The system shall provide a link to an online troubleshooting guide when a nonfatal error occurs."
+            },
+            {
+                "generation": "2",
+                "absent_element": "providing online troubleshooting guide for nonfatal errors",
+                "new_specification": "When a nonfatal error occurs, the system shall provide a link to an online troubleshooting guide."
+            },
+            {
+                "generation": "3",
+                "absent_element": "provision of an online troubleshooting guide for nonfatal errors",
+                "new_specification": "When a nonfatal error occurs, the system shall provide a link to an online troubleshooting guide."
+            }
+        ],
+        "label": "If a nonfatal error occurs, the user will be able to continue the current game, and an option to access the online troubleshooting guide is included in the error dialogue box.",
+        "absence": "situation of a nonfatal error occurs",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

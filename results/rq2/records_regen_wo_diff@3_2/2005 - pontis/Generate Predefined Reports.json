@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of incorporating PDF files into reports",
+                "new_specification": "The system shall incorporate PDF files into the generated reports."
+            },
+            {
+                "generation": "2",
+                "absent_element": "incorporation of PDF files into reports",
+                "new_specification": "The system shall provide functionality to incorporate PDF files into the generated reports."
+            },
+            {
+                "generation": "3",
+                "absent_element": "incorporation of PDF files into reports",
+                "new_specification": "The system shall have the capability to incorporate PDF files into the generated reports."
+            }
+        ],
+        "label": "The system shall provide the ability to incorporate PDF files into standard Pontis reports.",
+        "absence": "action of incorporating PDF files into standard reports",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "reverting to default settings after scheduled period ends",
+                "new_specification": "After the scheduled time or manual setting period ends, the thermostat shall revert to its default setting."
+            },
+            {
+                "generation": "2",
+                "absent_element": "handling conflicts between manual and scheduled settings",
+                "new_specification": "If a scheduled setting is due to take effect during the persistence of a manual setting, the system shall prompt the user to decide whether to override the manual setting or defer the scheduled change until the manual setting period expires."
+            },
+            {
+                "generation": "3",
+                "absent_element": "reverting to an explicit default temperature when manual settings end",
+                "new_specification": "When a manual temperature setting ends, the thermostat shall revert to a predefined default temperature setting."
+            }
+        ],
+        "label": "When a manual temperature setting ends, the default setting will be used for the next time period.",
+        "absence": "using the default setting after a manual temperature setting ends",
+        "llm_eva_results": "0,0,1",
+        "sample_level": 1
+    }
+]

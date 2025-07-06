@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "procedure for reestablishing call if it fails in any cab other than the lead",
+                "new_specification": "If the call fails in any cab other than the lead, the driver in that cab shall call the lead cab to request reestablishment of the call."
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation where a driver in another cab requests call reestablishment upon failure",
+                "new_specification": "If the call fails in a cab other than the lead traction vehicle, the driver in that cab shall initiate a request to the lead driver for call reestablishment."
+            },
+            {
+                "generation": "3",
+                "absent_element": "The procedure when a call fails in any cab other than the lead cab",
+                "new_specification": "If the call fails in any cab other than the lead cab, the driver in that cab shall be responsible for calling the lead cab and requesting reestablishment of the call."
+            }
+        ],
+        "label": "If the call fails to any other cab, the driver in that cab will call the lead cab and request re-establishment of the call.",
+        "absence": "situation of call failure in other cabs(not the lead traction vehicle)",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

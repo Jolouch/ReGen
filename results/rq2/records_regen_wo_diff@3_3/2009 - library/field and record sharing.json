@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alert after record changes",
+                "new_specification": "The system shall issue an alert to relevant parties whenever a record change occurs."
+            },
+            {
+                "generation": "2",
+                "absent_element": "alert mechanism after record changes",
+                "new_specification": "The system shall alert users when changes to a record have been successfully applied."
+            },
+            {
+                "generation": "3",
+                "absent_element": "alert after modifications to records",
+                "new_specification": "An alert should be issued after modifications to records to ensure users are informed of changes."
+            }
+        ],
+        "label": "The system shall warn when a record is changed.",
+        "absence": "action of warning when a record is changed",
+        "llm_eva_results": "0,1,1",
+        "sample_level": 1
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "conditions and permitted changes to job parameters",
+                "new_specification": "The scheduler shall allow the user to change the output directory or delay the deadline of a job only if specific conditions are met."
+            },
+            {
+                "generation": "2",
+                "absent_element": "the situation permitting change of job parameters (output directory, delayed deadline)",
+                "new_specification": "The scheduler shall permit the user to change the output directory or set a delayed deadline under specified conditions."
+            },
+            {
+                "generation": "3",
+                "absent_element": "situations for changing the output directory or specifying a delayed deadline",
+                "new_specification": "If the user wishes to change the output directory or specify a delayed deadline, the scheduler shall allow these changes only if they do not adversely affect the overall job scheduling and resource allocation."
+            }
+        ],
+        "label": "If the user wishes to specify a different output directory or a delayed deadline, the scheduler shall modify the job parameters.",
+        "absence": "situation of the user wishes to specify job parameters",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

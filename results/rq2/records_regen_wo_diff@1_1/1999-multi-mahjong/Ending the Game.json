@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "replacement of user with a Computer Opponent when a user leaves early",
+                "new_specification": "If a user departs before the game concludes, the system shall replace the user with a Computer Opponent to continue the game."
+            }
+        ],
+        "label": "If a user leaves the game prematurely, a new CO is created to fill their place.",
+        "absence": "creation of a new CO to fill the place of a user leaving the game prematurely",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

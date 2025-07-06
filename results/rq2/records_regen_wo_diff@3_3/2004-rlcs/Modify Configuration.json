@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "requirement of an additional login password to configure device rules",
+                "new_specification": "The system shall require an additional login password to configure device rules."
+            },
+            {
+                "generation": "2",
+                "absent_element": "additional login password required for configuring device rules",
+                "new_specification": "The GUI shall require an additional login password to configure device rules."
+            },
+            {
+                "generation": "3",
+                "absent_element": "requirement of an additional login password for device rule configurations",
+                "new_specification": "The GUI shall require an additional login password to authenticate users before allowing device rule configurations."
+            }
+        ],
+        "label": "The option to configure device rules shall require an additional login password for that option.",
+        "absence": "an additional login password for configuring device rules",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

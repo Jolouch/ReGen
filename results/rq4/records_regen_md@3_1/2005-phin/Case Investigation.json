@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.allow for the publishing of questionnaires and implementation guides",
+            "2.ensure the accessibility and usability of investigation-specific questionnaires",
+            "3.Allow for the integration of reusable questionnaire libraries using common terminology in case investigation",
+            "4.track all changes to ensure a comprehensive audit trail of investigation modifications"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "publishing of implementation guides",
+                "new_specification": "The system shall provide the ability to publish implementation guides related to investigation-specific questionnaires."
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation of publishing implementation guides and ensuring accessibility and usability of questionnaires",
+                "new_specification": "Systems supporting OM must provide the ability to publish implementation guides and ensure accessibility and usability of investigation-specific questionnaires."
+            },
+            {
+                "generation": "3",
+                "absent_element": "accessibility and usability of investigation-specific questionnaires",
+                "new_specification": "Systems supporting OM should ensure the accessibility and usability of investigation-specific questionnaires to enhance user experience."
+            }
+        ],
+        "label": "Systems supporting OM must provide the ability to publish investigation specific questionnaires and implementation guides.",
+        "absence": "action of publishing of implementation guides",
+        "llm_eva_results": "1,1,0",
+        "D-M": "-1,-1,0",
+        "sample_level": 2
+    }
+]

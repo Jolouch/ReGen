@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.prepare job parameters for scheduling",
+            "2.extract necessary details such as job size, expected runtime, and resource requirements",
+            "3.used by the scheduling module to make a decision regarding whether the job is accepted or rejected"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "passing variables to the scheduling module",
+                "new_specification": "The system shall pass the initialized job parameters to the scheduling module which will decide if the job can be accepted or rejected."
+            },
+            {
+                "generation": "2",
+                "absent_element": "passing variables to the scheduling module for decision",
+                "new_specification": "The system shall pass the variables to the scheduling module to determine whether the job is accepted or rejected."
+            },
+            {
+                "generation": "3",
+                "absent_element": "passing variables to the scheduling module",
+                "new_specification": "The system shall pass the initialized variables to the scheduling module to determine the acceptance or rejection of the job."
+            }
+        ],
+        "label": "The parsed parameters shall be passed on to the scheduling module to be handled.",
+        "absence": "operation of passing the variables to the scheduling module",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

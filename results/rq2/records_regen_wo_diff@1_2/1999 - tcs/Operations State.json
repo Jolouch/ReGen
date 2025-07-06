@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "prohibition of simultaneous mode operation",
+                "new_specification": "The system shall ensure that no two modes(normal, training, maintenance) operate simultaneously."
+            }
+        ],
+        "label": "The Operations State modes shall not exist concurrently.",
+        "absence": "action of prohibiting multiple modes from running simultaneously",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

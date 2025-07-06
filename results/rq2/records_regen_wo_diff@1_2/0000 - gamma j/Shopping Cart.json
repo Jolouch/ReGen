@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "display of the total number of items in the shopping cart",
+                "new_specification": "The shopping cart shall display the total number of items."
+            }
+        ],
+        "label": "The shopping cart will display the number of items in the cart",
+        "absence": "action of displaying the number of items",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

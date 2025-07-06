@@ -1,0 +1,29 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.modify simulation rules"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "modification of simulation rules details",
+                "new_specification": "The system shall allow users to modify specific simulation rules including editing or adding new rules for the improvement model."
+            },
+            {
+                "generation": "2",
+                "absent_element": "modification of simulation rules",
+                "new_specification": "The system shall allow users to modify the simulation rules."
+            },
+            {
+                "generation": "3",
+                "absent_element": "modification of simulation parameters rules",
+                "new_specification": "The system shall allow the user to modify the simulation rules."
+            }
+        ],
+        "label": "The user shall be able to modify the simulation rules",
+        "absence": "action of modify the simulation rules",
+        "semantic_similarity": "0.89,0.91,0.86",
+        "llm_eva_results": "1,1,0"
+    }
+]

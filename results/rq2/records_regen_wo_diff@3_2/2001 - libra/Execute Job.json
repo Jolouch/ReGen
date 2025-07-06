@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "action when a new job is added while another is running",
+                "new_specification": "The system shall recalculate pass values and re-evaluate scheduling priority upon new job insertion."
+            },
+            {
+                "generation": "2",
+                "absent_element": "dynamic time-slicing between all jobs currently running",
+                "new_specification": "The scheduler shall dynamically adjust time slices between all running jobs to optimize resource utilization and ensure fair execution."
+            },
+            {
+                "generation": "3",
+                "absent_element": "detailed stride-scheduling time slice application",
+                "new_specification": "The scheduler shall determine and adjust time slices for each job executed based on stride values to ensure efficiency."
+            }
+        ],
+        "label": "In case of a tie, the arbitrary FIFO job ordering is used.",
+        "absence": "situation of multiple minimum pass values(tie)",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "naming the document before saving",
+                "new_specification": "The GUI shall provide an option for the user to name the document before it is saved with its Entity connections."
+            }
+        ],
+        "label": "The user may optionally specify a descriptive name for the document.",
+        "absence": "action of naming the document",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

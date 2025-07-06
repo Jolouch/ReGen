@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "adjustable refresh rate for the facility map",
+                "new_specification": "The refresh rate of the facility map shall be modifiable according to the settings specified in the database."
+            }
+        ],
+        "label": "Refreshrate of the facility map can be configurable within the database to more than 2 seconds by the user.",
+        "absence": "action of modifying refresh rate within the database",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

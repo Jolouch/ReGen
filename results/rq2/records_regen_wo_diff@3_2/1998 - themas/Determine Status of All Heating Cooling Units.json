@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "postponed queue processing for turning on requests",
+                "new_specification": "The system shall automatically attempt to honor queued requests to turn on units whenever the number of active units falls below the maximum allowed."
+            },
+            {
+                "generation": "2",
+                "absent_element": "the management of queue when limits change or units turn off",
+                "new_specification": "The THEMAS system shall monitor the LIFO queue and automatically process queued requests when the number of active heating or cooling units falls below the maximum limit."
+            },
+            {
+                "generation": "3",
+                "absent_element": "systematic monitoring and control over heating and cooling units",
+                "new_specification": "The THEMAS system shall continuously monitor and manage the operation of each heating and cooling unit to ensure compliance with operational thresholds and adjust operations as necessary."
+            }
+        ],
+        "label": "When a request to turn off a heating or cooling unit is received, this process shall first check the LIFO queue and remove the unit-turn-on request from the queue if exists.",
+        "absence": "action of checking the queue and removing the unit-turn-on request if exists when a request to turn off a unit is received",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 3
+    }
+]

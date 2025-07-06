@@ -1,0 +1,35 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Clearly define options for easy access and usability.",
+            "2.Provide feedback to the user on successful or erroneous submissions.",
+            "3.provide feedback through the GUI",
+            "4.allow modifications to be stored",
+            "5.configuration option does not allow any modifications to log tables",
+            "6.exclude access to log tables"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "prohibition of log tables modification",
+                "new_specification": "The configuration option shall not allow modifications to log tables."
+            },
+            {
+                "generation": "2",
+                "absent_element": "restriction on modification of log tables",
+                "new_specification": "The configuration option shall prohibit any modifications to log tables, ensuring data integrity and security."
+            },
+            {
+                "generation": "3",
+                "absent_element": "exclusion of modifications to log tables",
+                "new_specification": "Modifications to log tables are not permitted in the Configuration option."
+            }
+        ],
+        "label": "It shall allow modification of all database tables with the exception of log tables",
+        "absence": "modify database tables except log tables",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

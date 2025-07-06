@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "details on the error highlighting process in the data review wizard",
+                "new_specification": "The system shall specify conditions and procedures for highlighting errors in the data review wizard when comparing incoming data with existing data."
+            },
+            {
+                "generation": "2",
+                "absent_element": "action of defining severity levels for validation errors",
+                "new_specification": "The system shall categorize validation errors by severity."
+            },
+            {
+                "generation": "3",
+                "absent_element": "automation and management of batch processing",
+                "new_specification": "The system should automatically initiate and manage batch processing of validation tasks without manual intervention."
+            }
+        ],
+        "label": "Configuring data validation rules shall be a privileged operation.",
+        "absence": "action of granting privilege to configuring data validation rules",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 2
+    }
+]

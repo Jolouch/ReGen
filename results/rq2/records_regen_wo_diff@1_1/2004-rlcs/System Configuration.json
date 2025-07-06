@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "assignment of passwords to staff members",
+                "new_specification": "The configuration option shall allow the assignment of passwords to each defined staff member for secure access."
+            }
+        ],
+        "label": "The configuration option shall allow a security level and password to be assigned to each defined staff member.",
+        "absence": "a password to be assigned to each staff member",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

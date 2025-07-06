@@ -1,0 +1,38 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.maintain an efficient and balanced operational status",
+            "2.manage the number of active heating units",
+            "3.manage the number of active cooling units",
+            "4.prevent system overload",
+            "5.ensure optimal performance",
+            "6.Evaluate the current operational status of all units",
+            "7.Process queued requests in the order received once capacity allows",
+            "8.Check the LIFO queue for any pending requests to turn on units after turning a unit off.",
+            "9.Take the appropriate action to turn on a unit based on the next request in the queue if there are requests present."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "the continuous evaluation of operational units' status for optimal performance",
+                "new_specification": "The system should continuously evaluate the operational status of all heating and cooling units and make adjustments as necessary to ensure optimal performance and balance."
+            },
+            {
+                "generation": "2",
+                "absent_element": "process queued requests once capacity allows",
+                "new_specification": "The system shall evaluate and process queued requests to turn on a unit once it determines that capacity is available."
+            },
+            {
+                "generation": "3",
+                "absent_element": "automatic processing of queue when conditions allow",
+                "new_specification": "The system shall automatically evaluate and process the queued requests whenever a unit turns off and capacity allows."
+            }
+        ],
+        "label": "When a request to turn off a heating or cooling unit is received, this process shall first check the LIFO queue and remove the unit-turn-on request from the queue if exists.",
+        "absence": "action of checking the queue and removing the unit-turn-on request if exists when a request to turn off a unit is received",
+        "llm_eva_results": "0,0,0",
+        "D-M": "0,1,1",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.manage",
+            "2.restrict",
+            "3.modify",
+            "4.assign",
+            "5.grant",
+            "6.audit"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "logging of user access",
+                "new_specification": "The DUAP System shall log all instances of user access to the system."
+            },
+            {
+                "generation": "2",
+                "absent_element": "logging of user access",
+                "new_specification": "The DUAP System shall log user access to Administrative Services"
+            },
+            {
+                "generation": "3",
+                "absent_element": "logging of user access",
+                "new_specification": "The DUAP System shall log user access to Administrative Services"
+            }
+        ],
+        "label": "The DUAP System shall be able to log records of user access.",
+        "absence": "action of logging user access",
+        "semantic_similarity": "0.86,0.86,0.86",
+        "llm_eva_results": "1,1,1"
+    }
+]

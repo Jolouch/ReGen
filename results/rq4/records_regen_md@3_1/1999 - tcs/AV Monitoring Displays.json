@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.present the last reported known values of AV status and fuel parameters along with the report time to the operators when the data link is interrupted.",
+            "2.display the estimated AV position during a Loss of Link event"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "presentation of report time during data link interruption",
+                "new_specification": "The system shall present the report time along with the last known AV status values when the data link is interrupted."
+            },
+            {
+                "generation": "2",
+                "absent_element": "report time when displaying last known AV status and fuel parameters",
+                "new_specification": "The TCS shall present the last known AV status values and fuel parameters along with the report time when data link is interrupted."
+            },
+            {
+                "generation": "3",
+                "absent_element": "report time along with the last known values during a data link interruption.",
+                "new_specification": "The TCS shall display the last known AV status and fuel parameters along with the report time when the data link is interrupted."
+            }
+        ],
+        "label": "When the data link is interrupted, the TCS also shall present the time at which the last AV status values were reported",
+        "absence": "action of presenting the time at which the last AV status",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

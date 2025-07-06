@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "exclusivity and privacy of grade information display",
+                "new_specification": "The system shall ensure that grade details, averages, and overall scores are exclusively accessible to relevant users, with implemented privacy measures to protect sensitive information."
+            }
+        ],
+        "label": "No other actor should be able to view another one's grades except the course administrator.",
+        "absence": "no mention of prohibiting anyone other than administrators from viewing others' grades",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

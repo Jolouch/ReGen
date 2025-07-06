@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of clicking on multiple points simultaneously",
+                "new_specification": "The system should allow users to click on multiple data points simultaneously and reveal their names at once."
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation of simultaneous clicks on multiple data points",
+                "new_specification": "The system should be able to handle simultaneous clicks on multiple data points, revealing their names."
+            },
+            {
+                "generation": "3",
+                "absent_element": "handling multiple data points clicked simultaneously",
+                "new_specification": "If multiple data points are clicked simultaneously, the application should display the names of all the clicked data points."
+            }
+        ],
+        "label": "The product should allow multiple points to be clicked so that multiple names can be displayed.",
+        "absence": "action of clicking multiple points to display multiple names of the data points",
+        "llm_eva_results": "1,0,1",
+        "sample_level": 1
+    }
+]

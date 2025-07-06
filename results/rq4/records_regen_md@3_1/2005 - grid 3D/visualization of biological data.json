@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.support the visualization of up to 2000 biological data points in a 3D space",
+            "2.Identify single click event over a data point to display the data point's name and allow interaction with multiple points.",
+            "3.Display full details about the data point on double-click"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "interaction with multiple data points in a single click",
+                "new_specification": "The product should allow multiple data points to be clicked simultaneously to display their respective names."
+            },
+            {
+                "generation": "2",
+                "absent_element": "explicit mention of simultaneous multi-point interaction",
+                "new_specification": "The product should support selection and interaction with multiple data points via simultaneous mouse clicks."
+            },
+            {
+                "generation": "3",
+                "absent_element": "interaction with multiple data points simultaneously",
+                "new_specification": "The product should allow users to simultaneously interact with multiple data points to reveal each data point's name on single-click."
+            }
+        ],
+        "label": "The product should allow multiple points to be clicked so that multiple names can be displayed.",
+        "absence": "action of clicking multiple points to display multiple names of the data points",
+        "llm_eva_results": "0,1,1",
+        "D-M": "1,-1,-1",
+        "sample_level": 1
+    }
+]

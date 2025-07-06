@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "response to correct answers",
+                "new_specification": "If the user selects the correct answer, the component will present the next question without plot change or scoring adjustment."
+            }
+        ],
+        "label": "If the user selects the correct answer, a message to this effect will be displayed and the component will move to the next question. ",
+        "absence": "situation of selecting the correct answer",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

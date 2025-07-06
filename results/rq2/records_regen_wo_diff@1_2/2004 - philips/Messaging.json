@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "offering emoticons for enriching messages",
+                "new_specification": "The application shall provide emoticons in the messaging interface to enrich text communication."
+            }
+        ],
+        "label": "Display a list of emoticons to choose from when the user wants to include an emoticon in the message.",
+        "absence": "support of selecting emoticons when the user wants to include an emoticon in the message",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

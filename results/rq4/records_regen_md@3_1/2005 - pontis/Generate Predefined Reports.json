@@ -1,0 +1,36 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.review and edit report templates",
+            "2.customize and filter predefined reports",
+            "3.select specific data fields and criteria for report generation",
+            "4.incorporate PDF files into reports",
+            "5.include necessary documentations and graphical representations into reports",
+            "6.enable the integration and display of PDF file content within generated reports",
+            "7.provide options for saving and exporting reports in different formats such as PDF, Excel, and Word"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "incorporating PDF files into reports",
+                "new_specification": "The system shall provide the capability to incorporate PDF files into generated reports."
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation of incorporating PDF files into reports",
+                "new_specification": "The system shall provide the ability to incorporate PDF files into reports, thereby enabling their integration and display within generated reports."
+            },
+            {
+                "generation": "3",
+                "absent_element": "full integration and display of PDF file within the report",
+                "new_specification": "The system shall enable the full integration and display of PDF file content within the generated reports."
+            }
+        ],
+        "label": "The system shall provide the ability to incorporate PDF files into standard Pontis reports.",
+        "absence": "action of incorporating PDF files into standard reports",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

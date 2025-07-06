@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.select whether to create a new user manually",
+            "2.add additional roles as needed"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "ability to add additional roles after template inheritance",
+                "new_specification": "The system shall allow users to add additional roles to a user record after it has been created from a template."
+            },
+            {
+                "generation": "2",
+                "absent_element": "ability to add additional roles when creating a user from a template",
+                "new_specification": "When creating a user from a template, the user shall be able to add additional roles to the user record."
+            },
+            {
+                "generation": "3",
+                "absent_element": "adding additional roles to the created user",
+                "new_specification": "The system shall allow the addition of extra roles for a user created from the template or manually."
+            }
+        ],
+        "label": "The user shall be able to add additional roles manually while creating/adding a new user from a user template.",
+        "absence": "action of adding additional roles when creating from a user template",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "accessing remotely sensed observations",
+                "new_specification": "The Clarus system shall be capable of accessing remotely sensed environmental observations from data collectors."
+            }
+        ],
+        "label": "access remotely sensed environmental observations from data collectors",
+        "absence": "access remotely sensed data",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

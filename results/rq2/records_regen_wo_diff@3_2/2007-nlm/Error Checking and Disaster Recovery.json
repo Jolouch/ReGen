@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "recovery aspect of disaster recovery capabilities",
+                "new_specification": "The system shall provide disaster recovery capabilities that include the recovery of data from backups, ensuring full restoration in the event of data loss."
+            },
+            {
+                "generation": "2",
+                "absent_element": "the recovery actions in disaster recovery processes",
+                "new_specification": "The system shall provide procedures for restoring data from backups to ensure complete recovery in case of data loss."
+            },
+            {
+                "generation": "3",
+                "absent_element": "handling and corrective actions following error detection",
+                "new_specification": "The system shall execute corrective measures and send alerts to administrators when errors are detected during Archival Storage transfers to ensure timely recovery actions."
+            }
+        ],
+        "label": "disaster recovery capabilities including data recovery",
+        "absence": "inclusion of data recovery",
+        "llm_eva_results": "1,1,0",
+        "sample_level": 2
+    }
+]

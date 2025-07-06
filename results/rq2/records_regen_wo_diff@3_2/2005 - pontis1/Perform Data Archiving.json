@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "restore archived data as needed",
+                "new_specification": "The system shall provide a functionality to restore archived data to its original state."
+            },
+            {
+                "generation": "2",
+                "absent_element": "ability to restore archived data",
+                "new_specification": "The system shall provide the capability to restore archived data as needed."
+            },
+            {
+                "generation": "3",
+                "absent_element": "ability to restore archived data",
+                "new_specification": "The system shall provide the capability to restore archived data as needed."
+            }
+        ],
+        "label": "The user shall be able to restore the archived data.",
+        "absence": "action of restoring the archived data",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

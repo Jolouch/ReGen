@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "reception of telemetry and payload data downlink",
+                "new_specification": "The system shall receive telemetry and payload data from the AV via the downlink."
+            },
+            {
+                "generation": "2",
+                "absent_element": "reception of telemetry and payload data downlink",
+                "new_specification": "The TCS shall receive telemetry and payload data from the AV via the downlink."
+            },
+            {
+                "generation": "3",
+                "absent_element": "reception of telemetry and payload data via downlink",
+                "new_specification": "The TCS shall receive telemetry and payload data from the AV via the downlink."
+            }
+        ],
+        "label": "The TCS shall receive AV telemetry and payload information via downlink from the AV",
+        "absence": "action of receiving data via downlink from the AV",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

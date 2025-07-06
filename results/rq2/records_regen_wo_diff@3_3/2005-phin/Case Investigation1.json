@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "tracking of all changes made to questionnaires and case records",
+                "new_specification": "Systems supporting OM should track and log all changes made to the questionnaires and case records to ensure traceability and accountability."
+            },
+            {
+                "generation": "2",
+                "absent_element": "tracking all changes made to case investigations",
+                "new_specification": "The system should provide functionality to track all changes made to the case investigations, including configurations, revisions, publications, and status updates."
+            },
+            {
+                "generation": "3",
+                "absent_element": "situation of version conflicts in reusable questionnaire libraries",
+                "new_specification": "The system shall detect and resolve version conflicts when multiple users attempt to modify the same reusable questionnaire library simultaneously."
+            }
+        ],
+        "label": "Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition.",
+        "absence": "action of tracking changes made to the status of cases records",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 1
+    }
+]

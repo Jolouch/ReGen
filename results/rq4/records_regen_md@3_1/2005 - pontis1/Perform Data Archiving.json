@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Restore archived data from the archive",
+            "2.Allow the user to specify the criteria for data archiving",
+            "3.Allow users to specify which data to archive based on criteria such as date range, structure type, or other relevant filters.",
+            "4.Allow users to restore archived data as needed."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "ability to restore archived data",
+                "new_specification": "The user shall be able to restore archived data as needed."
+            },
+            {
+                "generation": "2",
+                "absent_element": "ability to restore data based on specific criteria",
+                "new_specification": "The system shall allow users to restore archived data based on criteria such as date range, structure type, or specific user-defined filters."
+            },
+            {
+                "generation": "3",
+                "absent_element": "restoration of archived data",
+                "new_specification": "The user shall be able to restore archived data as needed."
+            }
+        ],
+        "label": "The user shall be able to restore the archived data.",
+        "absence": "action of restoring the archived data",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "displaying 'no-results' message if no results are found",
+                "new_specification": "If no results are found for a query, the system shall display a message indicating that no results were found."
+            }
+        ],
+        "label": "If no results are found on a search it will display a message that No results were found for this search.",
+        "absence": "situation of no results were found",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.confirm from the driver",
+            "2.confirmation from the driver",
+            "3.confirm",
+            "4.supervise",
+            "5.indicate",
+            "6.indicate"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "automatic transfer to Shunting from Stand By operation",
+                "new_specification": "The system shall allow automatic transfer to Shunting from Stand By operation at speeds equal or lower to the supervised shunting speed with confirmation from the driver."
+            },
+            {
+                "generation": "2",
+                "absent_element": "confirmation of successful transfer to Shunting operation",
+                "new_specification": "The system shall confirm to the driver when automatic transfer to Shunting operation is completed."
+            },
+            {
+                "generation": "3",
+                "absent_element": "automatic transfer confirmation from the driver",
+                "new_specification": "The system shall require confirmation from the driver before automatic transfer to Shunting operation"
+            }
+        ],
+        "label": "Before authomatic transition to Shunting, ETCS shall request confirmation from the driver.",
+        "absence": "confirmation from the driver if authomatic transition to Shunting",
+        "semantic_similarity": "0.58,0.63,0.48",
+        "llm_eva_results": "0,0,1"
+    }
+]

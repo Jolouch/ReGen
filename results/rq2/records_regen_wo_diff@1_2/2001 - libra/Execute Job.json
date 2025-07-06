@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "explicit time-slicing between jobs according to the stride-scheduling algorithm",
+                "new_specification": "The scheduler shall time-slice between all jobs being executed according to the stride-scheduling algorithm."
+            }
+        ],
+        "label": "In case of a tie, the arbitrary FIFO job ordering is used.",
+        "absence": "situation of multiple minimum pass values(tie)",
+        "llm_eva_results": "0",
+        "sample_level": 3
+    }
+]

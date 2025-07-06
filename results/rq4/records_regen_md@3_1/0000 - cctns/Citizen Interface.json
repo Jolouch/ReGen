@@ -1,0 +1,35 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.enable citizens to report crimes",
+            "2.enable citizens to lodge complaints",
+            "3.enable citizens to provide additional information related to ongoing cases",
+            "4.report crimes",
+            "5.provide information or tips related to ongoing cases",
+            "6.receive updates about the status of their reports or inquiries"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "enabling citizens to report crimes and lodge complaints",
+                "new_specification": "The Citizen Interface module of the CCTNS shall enable citizens to report crimes and lodge complaints directly to police units."
+            },
+            {
+                "generation": "2",
+                "absent_element": "reporting crimes and receiving responses through the Citizen Interface",
+                "new_specification": "The Citizen Interface shall enable citizens to report crimes and receive prompt responses from the police units regarding these reports."
+            },
+            {
+                "generation": "3",
+                "absent_element": "ensuring quickness and efficiency of communication",
+                "new_specification": "The system shall ensure that all communications are acknowledged within a predefined time frame to facilitate quick and efficient interactions."
+            }
+        ],
+        "label": "The police in turn can use it to respond to citizens with very little turnaround time.",
+        "absence": "action of respond to citizens by police",
+        "llm_eva_results": "0,1,1",
+        "D-M": "1,-1,-1",
+        "sample_level": 2
+    }
+]

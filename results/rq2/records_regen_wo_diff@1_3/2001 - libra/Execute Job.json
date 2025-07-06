@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "handling preemption or priority changes in scheduling execution",
+                "new_specification": "The scheduler shall handle preemptions or priority changes by recalculating the job priorities immediately and adjusting execution accordingly."
+            }
+        ],
+        "label": "In case of a tie, the arbitrary FIFO job ordering is used.",
+        "absence": "situation of multiple minimum pass values(tie)",
+        "llm_eva_results": "0",
+        "sample_level": 3
+    }
+]

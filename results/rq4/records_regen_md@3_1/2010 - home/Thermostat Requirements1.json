@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Allow precise temperature control throughout the day",
+            "2.Allow manual temperature setting to persist until the next scheduled setting.",
+            "3.Revert to the default schedule after the scheduled setting occurs."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "method to determine completion of scheduled setting and revert to default",
+                "new_specification": "The system shall identify the end of each scheduled setting and automatically revert the thermostat to the default setting thereafter."
+            },
+            {
+                "generation": "2",
+                "absent_element": "the action of reverting to the default setting after a manual setting ends",
+                "new_specification": "The thermostat system shall revert to the default schedule after a manual setting ends."
+            },
+            {
+                "generation": "3",
+                "absent_element": "reverting to default schedule after manual or scheduled setting ends",
+                "new_specification": "The system shall ensure that after the end of any manual or scheduled setting, the thermostat reverts to its default schedule unless another scheduled event is to take place immediately after."
+            }
+        ],
+        "label": "When a manual temperature setting ends, the default setting will be used for the next time period.",
+        "absence": "using the default setting after a manual temperature setting ends",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

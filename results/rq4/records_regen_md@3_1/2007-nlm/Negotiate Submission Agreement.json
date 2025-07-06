@@ -1,0 +1,40 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.manage the negotiation status",
+            "2.track each stage of the negotiation process",
+            "3.ensure transparency and efficiency",
+            "4.submit proposals for review and approval",
+            "5.allow flexibility in managing repository content intake",
+            "6.Allow multiple users to collaborate on submission agreements",
+            "7.Ensure role-based permissions allow only authorized individuals to make changes",
+            "8.Send notifications when submission limits are exceeded",
+            "9.Send notifications when submission limits require renegotiation",
+            "10.Ensures users with appropriate access levels can add or edit the terms of submission agreements.",
+            "11.Facilitates comprehensive management and oversight of submission volumes."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "explicit role-based access control for adding or editing agreement terms",
+                "new_specification": "The system shall ensure that only users with the appropriate access level can add or edit the terms of submission agreements, enforcing role-based permissions."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification for exceeded submission limits or renegotiation",
+                "new_specification": "The system shall send notifications when submission limits are exceeded or when limits require renegotiation to the appropriate users."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Role-based permission enforcement for adding and setting terms",
+                "new_specification": "The system shall enforce role-based permissions, ensuring only authorized users can add or edit the terms of submission agreements."
+            }
+        ],
+        "label": "Able to add and edit terms of agreement, based on access of level of user.",
+        "absence": "based on access of level to add and edit terms of agreement",
+        "llm_eva_results": "1,0,1",
+        "D-M": "-1,1,-1",
+        "sample_level": 2
+    }
+]

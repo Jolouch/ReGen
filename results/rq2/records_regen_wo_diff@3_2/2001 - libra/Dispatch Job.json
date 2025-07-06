@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "queue selection for dispatching the job",
+                "new_specification": "The system shall select an appropriate queue for the job on the chosen host based on current queue workloads to optimize resource allocation."
+            },
+            {
+                "generation": "2",
+                "absent_element": "the decision on which queue the job will be placed",
+                "new_specification": "The system shall determine and specify the queue within the chosen execution host where the job will be placed."
+            },
+            {
+                "generation": "3",
+                "absent_element": "decision of which queue the job will be placed on",
+                "new_specification": "The Libra shall decide which queue the job will be placed in on the execution host."
+            }
+        ],
+        "label": "After the host is determined, the Libra shall select the appropriate queue based on the job parameter.",
+        "absence": "the selection of the appropriate queue after the host is determined",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

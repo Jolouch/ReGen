@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Provide a clear indication to the controller when a driver is disconnected.",
+            "2.display the controller's identity in the lead cab"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "indication to the controller when a driver is disconnected from the call",
+                "new_specification": "The system shall provide a clear indication to the controller when a driver is disconnected from the multi-driver call."
+            },
+            {
+                "generation": "2",
+                "absent_element": "display of the controller's identity in lead cab when initiated by the controller",
+                "new_specification": "When the controller initiates a call, the controller’s identity shall be displayed in the lead cab for clarity and verification."
+            },
+            {
+                "generation": "3",
+                "absent_element": "displaying the controller's identity in the lead cab",
+                "new_specification": "The system shall display the controller's identity in the lead cab when the controller is part of the call."
+            }
+        ],
+        "label": "Functional identity of the automatically added controller shall be displayed in the leading cab.",
+        "absence": "display the identity of the automatically added controller ",
+        "llm_eva_results": "0,1,1",
+        "D-M": "1,-1,-1",
+        "sample_level": 1
+    }
+]

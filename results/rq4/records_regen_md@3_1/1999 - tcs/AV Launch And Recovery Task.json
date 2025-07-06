@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.abort operations if necessary",
+            "2.enable the operator to abort these operations"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of aborting operations",
+                "new_specification": "The system shall provide an option for the operator to manually abort automatic launch and recovery operations when necessary."
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation of aborting operations",
+                "new_specification": "The TCS shall abort the automatic launch and recovery operations if necessary."
+            },
+            {
+                "generation": "3",
+                "absent_element": "situation for aborting operations",
+                "new_specification": "The TCS shall enable the operator to abort automatic launch and recovery operations if conditions necessitate."
+            }
+        ],
+        "label": "The TCS shall initiate abort the launch and recovery procedures if required.",
+        "absence": "action of aborting the launch and recovery procedures",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

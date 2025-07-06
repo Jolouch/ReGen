@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.minimize the loudspeaker volume",
+            "2.reduce the volume of the loudspeaker",
+            "3.user to speak by pressing a button",
+            "4.temporarily enable the microphone"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "action to minimize loudspeaker volume when the handset is lifted",
+                "new_specification": "The system shall minimize the loudspeaker volume when the handset is lifted, transferring the communication to the handset."
+            },
+            {
+                "generation": "2",
+                "absent_element": "explicit minimization of loudspeaker volume when the handset is lifted",
+                "new_specification": "The system shall minimize the loudspeaker volume when the communication is transferred to the handset upon lifting the handset."
+            },
+            {
+                "generation": "3",
+                "absent_element": "minimizing the loudspeaker volume when the handset is lifted",
+                "new_specification": "When the handset is lifted, the system shall minimize the loudspeaker volume to prevent feedback."
+            }
+        ],
+        "label": "Picking up the handset shall reduce the loudspeaker volume to its minimum level.",
+        "absence": "action of reducing the loudspeaker volume to its minimum level",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

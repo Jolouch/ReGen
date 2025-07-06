@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "ability to save the game in single-player mode",
+                "new_specification": "Users will be able to save their game progress at any time while playing in single-player mode."
+            },
+            {
+                "generation": "2",
+                "absent_element": "saving the game in single-player mode",
+                "new_specification": "Users will be able to save their current game in single-player mode."
+            },
+            {
+                "generation": "3",
+                "absent_element": "saving the game in single-player mode",
+                "new_specification": "Users will be able to save the game in single-player mode."
+            }
+        ],
+        "label": "Users will be able to save their game if playing in single player mode.",
+        "absence": "save game in single player mode",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

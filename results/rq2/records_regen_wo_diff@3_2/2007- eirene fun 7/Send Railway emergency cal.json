@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "continuation of visual and audible alert until termination",
+                "new_specification": "A continuous visual and audible alert shall remain active in the cab until the Railway emergency call is terminated."
+            },
+            {
+                "generation": "2",
+                "absent_element": "Ongoing alerts until call termination or upon activation failure",
+                "new_specification": "The system shall maintain continuous visual and audible alerts in the cab until the Railway emergency call is terminated or if there is a failure in call activation."
+            },
+            {
+                "generation": "3",
+                "absent_element": "continuous visual and audible alerts until the calls are terminated",
+                "new_specification": "A continuous visual and audible alert shall be maintained in the cab until the Railway emergency call is terminated."
+            }
+        ],
+        "label": "Once the call is terminated, the continuous visual alarm indication in the cab shall cease.",
+        "absence": "action of ceasing the alarm",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 3
+    }
+]

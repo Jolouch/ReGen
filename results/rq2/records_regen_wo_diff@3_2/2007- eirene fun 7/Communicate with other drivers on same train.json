@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "procedure for reconnection request by non-lead drivers after call failure",
+                "new_specification": "After a call fails in a cab that is not the lead cab, the driver in that cab shall initiate a call to the lead cab and request reestablishment of the communication."
+            },
+            {
+                "generation": "2",
+                "absent_element": "protocol for handling call failure in non-lead cabs",
+                "new_specification": "The driver in the affected cab shall call the lead cab to request reestablishment of the connection when a call fails."
+            },
+            {
+                "generation": "3",
+                "absent_element": "handling for call failure to cabs other than the lead vehicle",
+                "new_specification": "If the call fails to any cab other than the lead traction vehicle, the driver in that cab shall call the lead cab to request reestablishment of the call."
+            }
+        ],
+        "label": "If the call fails to any other cab, the driver in that cab will call the lead cab and request re-establishment of the call.",
+        "absence": "situation of call failure in other cabs(not the lead traction vehicle)",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

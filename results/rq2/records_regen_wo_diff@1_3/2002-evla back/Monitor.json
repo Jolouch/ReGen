@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notifying status/outcomes of compute error repairs",
+                "new_specification": "The system shall notify the operator of the status or outcomes once compute errors have been repaired, including specifics about the errors fixed and any ongoing issues."
+            }
+        ],
+        "label": "Report all out of tolerance conditions when monitoring Compute Errors.",
+        "absence": "action of reporting when monitoring Compute Errors",
+        "llm_eva_results": "0",
+        "sample_level": 2
+    }
+]

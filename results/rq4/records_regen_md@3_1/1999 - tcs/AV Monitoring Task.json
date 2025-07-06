@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.ensure that real-time data is accurately captured",
+            "2.store real-time data for post-mission analysis and diagnostics",
+            "3.alert operators to any anomalies or failures for immediate resolution"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "Recording telemetry data for post-mission analysis",
+                "new_specification": "TCS shall provide the capability to record specific telemetry elements data for post-mission analysis and diagnostics."
+            },
+            {
+                "generation": "2",
+                "absent_element": "recording of telemetry elements",
+                "new_specification": "TCS shall record specific telemetry elements for post-mission analysis and diagnostics."
+            },
+            {
+                "generation": "3",
+                "absent_element": "recording specific telemetry elements",
+                "new_specification": "The system shall provide the capability to record specific telemetry elements for later analysis."
+            }
+        ],
+        "label": "TCS shall record all telemetry elements for future review and processing.",
+        "absence": "action of recording telemetry elements",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

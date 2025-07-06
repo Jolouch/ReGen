@@ -1,0 +1,39 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.provide seamless transitioning between manual and autonomous control modes",
+            "2.provide real-time alerts and notifications when any UAV exceeds its preset operational limits",
+            "3.ensure immediate corrective actions to maintain safe flight operations",
+            "4.allow for seamless control handoff between manual and autonomous control systems",
+            "5.enable operators to dynamically toggle between different control modes",
+            "6.monitor UAV operations in real-time",
+            "7.provide alerts whenever operational parameters exceed the defined presets",
+            "8.alert the operator when preset flight operation limits have been exceeded",
+            "9.define preset operational limits for both manual and autonomous modes",
+            "10.trigger appropriate alerts when operational limits are breached"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alerting when UAV operations exceed preset operational limits",
+                "new_specification": "The TCS shall provide real-time alerts when any UAV exceeds its preset operational limits to ensure safe and efficient operations."
+            },
+            {
+                "generation": "2",
+                "absent_element": "alert when UAV operational limits are exceeded",
+                "new_specification": "The TCS shall provide real-time alerts and notifications whenever UAVs exceed predefined operational limits in order to ensure safe and efficient UAV operations."
+            },
+            {
+                "generation": "3",
+                "absent_element": "generation of alerts when UAVs exceed preset operational limits",
+                "new_specification": "The TCS shall provide real-time alerts and notifications whenever a UAV exceeds its preset operational limits to ensure safe and efficient operations."
+            }
+        ],
+        "label": "TCS shall notify the operator when AV performance parameters are out of limits.",
+        "absence": "action of notifying the operator when AV performance parameters are out of limits.",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

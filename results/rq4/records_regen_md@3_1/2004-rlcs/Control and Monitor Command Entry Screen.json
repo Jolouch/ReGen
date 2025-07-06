@@ -1,0 +1,37 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Provide users with an interface to manage railway control events",
+            "2.Ensure ease of access and intuitive operation based on varying levels of security clearance",
+            "3.Offer different levels of access privileges",
+            "4.Ensure that only authorized users can operate or modify specific functionalities within the railway control system",
+            "5.Provide different levels of access based on user security clearance",
+            "6.adjust the GUI based on the security level assigned to each user.",
+            "7.permit users with the required permissions to view or modify control settings.",
+            "8.allow operators to understand which policies or rules have been temporarily bypassed and take appropriate actions."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of security level based control options",
+                "new_specification": "The GUI shall adjust control options based on user security clearance levels, ensuring appropriate permissions are enforced for each action."
+            },
+            {
+                "generation": "2",
+                "absent_element": "specification for adjusting GUI based on user security clearance",
+                "new_specification": "The GUI shall adjust its interface to reflect the security clearance level granted to each user."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Adjustment of the GUI based on security level",
+                "new_specification": "The system shall adjust the GUI dynamically based on the security clearance assigned to each user."
+            }
+        ],
+        "label": "Based on the user's security level, the control option shall provide the user with the appropriate level of control.",
+        "absence": "control levels based on the user's security level",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

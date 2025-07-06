@@ -1,0 +1,32 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Verify that the computed 'Message Digest' values for each control unit match the development records to ensure data integrity and consistency.",
+            "2.Compare current hash values with those documented during the development process to ensure integrity and accuracy of the system data.",
+            "3.Flag any discrepancies identified in 'Message Digest' value for further analysis and resolution."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "discrepancy resolution procedure for 'Message Digest' values",
+                "new_specification": "The system shall flag and initiate further analysis and resolution for any discrepancies identified in 'Message Digest' values."
+            },
+            {
+                "generation": "2",
+                "absent_element": "handling discrepancies found in 'Message Digest' verification",
+                "new_specification": "The system shall flag any discrepancies identified in the computed 'Message Digest' value for further analysis and resolution."
+            },
+            {
+                "generation": "3",
+                "absent_element": "handling of discrepancies in 'Message Digest' values",
+                "new_specification": "The system shall flag any discrepancies identified in 'Message Digest' values for further analysis and resolution to ensure data integrity."
+            }
+        ],
+        "label": "A verification failure shall will cause an alarm condition for the affected control unit.",
+        "absence": "action of alarm for a verification failure",
+        "llm_eva_results": "0,1,1",
+        "D-M": "1,-1,-1",
+        "sample_level": 3
+    }
+]

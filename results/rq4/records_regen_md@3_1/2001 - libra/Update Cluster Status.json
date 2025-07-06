@@ -1,0 +1,30 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.reserve the amount of resources that will be required by the job on the node."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "notification mechanism upon status change",
+                "new_specification": "The libra shall notify the system administrator each time the execution host queue status is updated."
+            },
+            {
+                "generation": "2",
+                "absent_element": "releasing or reallocating resources upon job completion",
+                "new_specification": "The libra shall release or reallocate the resources on a node when a job ends and is removed."
+            },
+            {
+                "generation": "3",
+                "absent_element": "logging of updates to the execution host queue status",
+                "new_specification": "The system shall log each update of the execution host queue status for monitoring purposes."
+            }
+        ],
+        "label": "After the execution host queue status is updated, the libra shall send the information about the additional load on the queue and node to the central information store.",
+        "absence": "update status information of the cluster",
+        "llm_eva_results": "1,0,0",
+        "D-M": "-1,1,0",
+        "sample_level": 3
+    }
+]

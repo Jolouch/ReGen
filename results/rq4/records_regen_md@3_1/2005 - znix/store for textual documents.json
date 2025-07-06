@@ -1,0 +1,37 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.offer a unique graphical user interface for editing documents",
+            "2.allow users to annotate documents",
+            "3.allow users to manage document relationships",
+            "4.establish relationships",
+            "5.visualize relationships",
+            "6.assign names to documents",
+            "7.Continue editing the document.",
+            "8.Review the established relationships."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "naming the document",
+                "new_specification": "The GUI shall provide users the ability to assign names to documents during the editing process."
+            },
+            {
+                "generation": "2",
+                "absent_element": "naming the document",
+                "new_specification": "The GUI shall allow the user to assign a name to the document before saving."
+            },
+            {
+                "generation": "3",
+                "absent_element": "action of naming the document",
+                "new_specification": "The document must be given a name by the user before saving to reflect its relationship contextually and to facilitate easy retrieval by name in future."
+            }
+        ],
+        "label": "The user may optionally specify a descriptive name for the document.",
+        "absence": "action of naming the document",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

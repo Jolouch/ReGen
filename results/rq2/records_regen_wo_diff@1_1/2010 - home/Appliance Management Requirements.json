@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "notification to user at the end of manual override period",
+                "new_specification": "The system shall notify the user when the appliance switches back to the default setting after a manual override period ends."
+            }
+        ],
+        "label": "When a manual set state of power ends, the default setting will be used for the next time period.",
+        "absence": "revert to the default setting after the manual set state ends",
+        "llm_eva_results": "0",
+        "sample_level": 1
+    }
+]

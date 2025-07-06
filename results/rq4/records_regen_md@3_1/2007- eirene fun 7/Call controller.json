@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.ensure the preset volume level is maintained",
+            "2.Notify the driver both audibly and visually."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "ensure the preset volume level is maintained",
+                "new_specification": "The system shall confirm that the preset volume level is maintained when connecting calls to the loudspeaker."
+            },
+            {
+                "generation": "2",
+                "absent_element": "Verification and adjustment to loudspeaker volume for preset level",
+                "new_specification": "The system shall verify and, if necessary, adjust the loudspeaker's volume to ensure it is set at the preset level before connecting the call."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Ensure preset volume level during call connection to the loudspeaker",
+                "new_specification": "The system shall ensure that the call is connected to the loudspeaker at the preset volume level, maintaining consistency."
+            }
+        ],
+        "label": "The functional identity includes the engine number, if no train number is available.",
+        "absence": "situation of no train number is available",
+        "llm_eva_results": "0,0,0",
+        "D-M": "0,1,0",
+        "sample_level": 2
+    }
+]

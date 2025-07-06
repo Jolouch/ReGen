@@ -1,0 +1,35 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.ensure",
+            "2.remain",
+            "3.synchronized",
+            "4.editing",
+            "5.modification",
+            "6.validation",
+            "7.error handling"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "batch submissions update process",
+                "new_specification": "The system shall support batch submissions of updates for multiple records."
+            },
+            {
+                "generation": "2",
+                "absent_element": "batch submissions update process",
+                "new_specification": "The system shall support batch submissions for updating multiple records at once."
+            },
+            {
+                "generation": "3",
+                "absent_element": "batch submissions processing",
+                "new_specification": "The system shall process batch submissions of updates for multiple records."
+            }
+        ],
+        "label": "Allows updates to be submitted in batches.",
+        "absence": "batch submissions",
+        "semantic_similarity": "0.77,0.77,0.89",
+        "llm_eva_results": "1,1,1"
+    }
+]

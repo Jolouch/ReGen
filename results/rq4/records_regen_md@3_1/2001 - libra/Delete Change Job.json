@@ -1,0 +1,34 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.allow users to change specific job parameters",
+            "2.allow users to change the output directory",
+            "3.allow users to extend the deadline",
+            "4.Provide a confirmation prompt to the user who wishes to cancel a job.",
+            "5.Log the action along with the time and user information for auditing purposes when a job is deleted or changed."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "actions to change job parameters under specific circumstances",
+                "new_specification": "The scheduler shall allow changing the output directory or delaying the deadline under specific conditions authorized for the job."
+            },
+            {
+                "generation": "2",
+                "absent_element": "condition where users can change parameters such as output directory or extend a deadline",
+                "new_specification": "During the job's waiting period, if the user requests, they can modify the output directory or extend the deadline for valid reasons approved by the system."
+            },
+            {
+                "generation": "3",
+                "absent_element": "ability to change job parameters under specific circumstances",
+                "new_specification": "The scheduler shall allow users to change the output directory or extend the deadline under specified conditions."
+            }
+        ],
+        "label": "If the user wishes to specify a different output directory or a delayed deadline, the scheduler shall modify the job parameters.",
+        "absence": "situation of the user wishes to specify job parameters",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

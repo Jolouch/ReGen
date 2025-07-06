@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "data purging after one week of caching",
+                "new_specification": "The DUAP System shall automatically purge data that has been cached for more than one week."
+            }
+        ],
+        "label": "The DUAP System shall cache data for one week.",
+        "absence": "statement of cached time of one week",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

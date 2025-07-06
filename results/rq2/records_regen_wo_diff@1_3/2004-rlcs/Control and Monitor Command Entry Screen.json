@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "varying control based on security levels",
+                "new_specification": "The control option shall adjust the level of control that users have based on their security clearance levels, ensuring appropriate management of opening and closing events."
+            }
+        ],
+        "label": "Based on the user's security level, the control option shall provide the user with the appropriate level of control.",
+        "absence": "control levels based on the user's security level",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

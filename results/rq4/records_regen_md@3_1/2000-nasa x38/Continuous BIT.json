@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.ensure seamless operation",
+            "2.detect faults timely within the system"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "execution time constraint under fault conditions",
+                "new_specification": "Continuous BIT, in conjunction with Redundancy Management and Scheduler operations, shall take less than 3 milliseconds when processing faults."
+            },
+            {
+                "generation": "2",
+                "absent_element": "specification for maintaining execution time under 3 milliseconds when processing faults",
+                "new_specification": "In fault conditions, Continuous BIT, along with Redundancy Management and Scheduler operations, shall execute within less than 3 milliseconds."
+            },
+            {
+                "generation": "3",
+                "absent_element": "execution time under fault processing conditions",
+                "new_specification": "Continuous BIT, when processing faults, shall take less than 3 milliseconds in conjunction with Redundancy Management and Scheduler operations running in the 50Hz rategroup after the application tasks."
+            }
+        ],
+        "label": "Continuous BIT shall take less than 3 milliseconds while processing faults.",
+        "absence": "situation of processing faults",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

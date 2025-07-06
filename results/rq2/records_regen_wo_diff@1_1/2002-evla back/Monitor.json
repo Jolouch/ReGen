@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "alert mechanism for persistently exceeded tolerances",
+                "new_specification": "The system shall alert operators to take immediate corrective actions when the I/O or Compute Performance tolerances are consistently exceeded."
+            }
+        ],
+        "label": "Report all out of tolerance conditions when monitoring Compute Errors.",
+        "absence": "action of reporting when monitoring Compute Errors",
+        "llm_eva_results": "0",
+        "sample_level": 2
+    }
+]

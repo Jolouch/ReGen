@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.track login activities",
+            "2.track logout activities",
+            "3.track login activities",
+            "4.track logout activities"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "tracking of login and logout activities",
+                "new_specification": "The system shall track each user’s login and logout activities for auditing purposes."
+            },
+            {
+                "generation": "2",
+                "absent_element": "tracking login and logout activities",
+                "new_specification": "The system shall track and log all user login and logout activities to maintain an access audit trail."
+            },
+            {
+                "generation": "3",
+                "absent_element": "tracking login and logout activities",
+                "new_specification": "The system shall be capable of tracking login and logout activities of users."
+            }
+        ],
+        "label": "The system shall be capable of tracking login and logout activity.",
+        "absence": "tracking login and logout activity",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

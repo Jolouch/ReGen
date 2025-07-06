@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "maintain execution under 3ms while processing faults",
+                "new_specification": "Continuous BIT, during fault conditions, shall execute within the 50Hz rategroup after the application tasks and take less than 3 milliseconds."
+            }
+        ],
+        "label": "Continuous BIT shall take less than 3 milliseconds while processing faults.",
+        "absence": "situation of processing faults",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

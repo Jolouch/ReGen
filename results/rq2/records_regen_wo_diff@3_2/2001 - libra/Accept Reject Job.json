@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "integration of budget in decision-making",
+                "new_specification": "The system shall incorporate both budget and deadline in a comprehensive evaluation, determining if a job is to be accepted or rejected by evaluating both parameters in conjunction."
+            },
+            {
+                "generation": "2",
+                "absent_element": "consideration of the budget parameter in evaluating acceptance",
+                "new_specification": "The scheduler shall take into account the budget parameter when determining the possibility of accepting or rejecting a job."
+            },
+            {
+                "generation": "3",
+                "absent_element": "budget consideration for job acceptance or rejection",
+                "new_specification": "The scheduler shall evaluate whether the job budget falls within the acceptable range before determining job acceptance or rejection."
+            }
+        ],
+        "label": "The scheduler shall evaluate the budget for the job.",
+        "absence": "evaluation of budget for the job",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

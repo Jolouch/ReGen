@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "automatic generation of metadata",
+                "new_specification": "If the user does not provide metadata related to the conversion, the system shall automatically generate metadata to be stored in the converted files."
+            }
+        ],
+        "label": "The system shall automatically generate migration metadata.",
+        "absence": "action of automatically generating migration metadata",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "calls connect to the handset when off the hook",
+                "new_specification": "The system shall automatically connect group or broadcast calls to the handset when it is off the hook."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification for call redirection when handset off the hook",
+                "new_specification": "The system shall notify the driver when a call is redirected to the handset as it is picked up, ensuring clarity on call status."
+            },
+            {
+                "generation": "3",
+                "absent_element": "the connection of calls to the handset when off the hook",
+                "new_specification": "Calls shall automatically be connected to the handset if it is off the hook."
+            }
+        ],
+        "label": "be connected to the handset if the handset is off hook.",
+        "absence": "situation of the handset is off hook",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of varying control based on security levels",
+                "new_specification": "The GUI shall adapt the control permissions based on the security levels of the system user, ensuring restrictions and allowances are adequately enforced."
+            },
+            {
+                "generation": "2",
+                "absent_element": "control options based on different security levels",
+                "new_specification": "The system shall limit or enhance control options available to users based on their security level."
+            },
+            {
+                "generation": "3",
+                "absent_element": "lack of explicit specification on security level protocols for control management",
+                "new_specification": "The control option shall incorporate different security level protocols that dictate varying permissions for managing events."
+            }
+        ],
+        "label": "Based on the user's security level, the control option shall provide the user with the appropriate level of control.",
+        "absence": "control levels based on the user's security level",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

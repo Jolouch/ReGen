@@ -1,0 +1,35 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.assign grades to each assignment manually",
+            "2.assign grades to each assignment through bulk upload",
+            "3.provide feedback in text after grading each assignment",
+            "4.provide feedback as an attachment after grading each assignment",
+            "5.ensure grade details, averages, and overall scores are only accessible to users with necessary permissions",
+            "6.ensure that grade details, averages, and overall scores are only accessible to relevant users, with privacy being maintained"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "privacy and restricted access to relevant users",
+                "new_specification": "The system shall ensure that grade details, averages, and overall scores are only accessible to users with appropriate permissions, thereby maintaining data privacy."
+            },
+            {
+                "generation": "2",
+                "absent_element": "privacy, user access control to grade information",
+                "new_specification": "The system should ensure that grade details, averages, and overall scores are only accessible to users with necessary permissions, and privacy is safeguarded."
+            },
+            {
+                "generation": "3",
+                "absent_element": "ensure grade details, averages, and overall scores are only accessible to users with necessary permissions, maintaining privacy",
+                "new_specification": "The system should ensure that grade details, averages, and overall scores are only accessible to users with necessary permissions, maintaining privacy."
+            }
+        ],
+        "label": "No other actor should be able to view another one's grades except the course administrator.",
+        "absence": "no mention of prohibiting anyone other than administrators from viewing others' grades",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

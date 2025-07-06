@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.sustain operations during power outages",
+            "2.provide backup power for a minimum duration as specified by system requirements",
+            "3.Ensure all operational steps can be taken to secure data during power-related incidents.",
+            "4.Preserve the integrity of the system during power-related incidents."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "reporting remaining backup power time during an outage",
+                "new_specification": "The UPS devices shall notify the CMCS of the remaining backup power time during a power outage."
+            },
+            {
+                "generation": "2",
+                "absent_element": "notification of remaining backup power time",
+                "new_specification": "The UPS devices shall notify the CMCS with details of the remaining backup power time whenever a power outage is detected."
+            },
+            {
+                "generation": "3",
+                "absent_element": "notification of remaining backup power time",
+                "new_specification": "The UPS devices shall notify the CMCS of the remaining backup power time during power outages."
+            }
+        ],
+        "label": "The UPS shall keep the CMCS apprised of time remaining on backup power when a power outage has occurred.",
+        "absence": "action of sending time remaining on backup power upon a power outage",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 2
+    }
+]

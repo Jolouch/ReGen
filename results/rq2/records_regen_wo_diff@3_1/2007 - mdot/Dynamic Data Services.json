@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "the condition of caching data for one week",
+                "new_specification": "The DUAP System shall cache all raw and derived data for a period of one week."
+            },
+            {
+                "generation": "2",
+                "absent_element": "handling of cached data after one week period",
+                "new_specification": "The DUAP System shall automatically delete or archive cached data after one week to ensure efficient data management."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Cache data for one week",
+                "new_specification": "The DUAP System shall retain cached data for a duration of one week before automatic deletion."
+            }
+        ],
+        "label": "The DUAP System shall cache data for one week.",
+        "absence": "statement of cached time of one week",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

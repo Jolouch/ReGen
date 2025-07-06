@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "configurable alert thresholds for resource monitoring",
+                "new_specification": "The system shall allow configuration of alert thresholds for resource monitoring to trigger alerts."
+            }
+        ],
+        "label": "Alert thresholds are configurable.",
+        "absence": "action of configuring alert thresholds",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

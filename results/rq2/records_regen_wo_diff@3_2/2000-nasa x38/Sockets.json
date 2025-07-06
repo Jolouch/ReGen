@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "maximum message size definition",
+                "new_specification": "The create and open API calls for synchronous sockets shall allow the application to specify the maximum message size for transmission."
+            },
+            {
+                "generation": "2",
+                "absent_element": "defining maximum message size during socket creation",
+                "new_specification": "The create and open API calls for synchronous sockets shall allow the application to specify the maximum size of messages the socket can handle."
+            },
+            {
+                "generation": "3",
+                "absent_element": "maximum message size specification",
+                "new_specification": "The create and open API calls for synchronous sockets shall allow the application to specify the maximum message size for transmission."
+            }
+        ],
+        "label": "The create and open API calls for synchronous sockets allow the application to specify the maximum message size.",
+        "absence": "action of specifying the maximum message size",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

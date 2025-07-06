@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "automatic log off for blocked users",
+                "new_specification": "Blocked users shall be automatically logged off from the system immediately upon access being revoked."
+            }
+        ],
+        "label": "All blocked users with active sessions shall automatically be logged off.",
+        "absence": "action of forced logout of blocked users",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

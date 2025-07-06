@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "recording of specific telemetry elements",
+                "new_specification": "TCS shall provide the capability to record specific telemetry elements for analysis and future reference."
+            }
+        ],
+        "label": "TCS shall record all telemetry elements for future review and processing.",
+        "absence": "action of recording telemetry elements",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": 1,
+                "absent_element": "detailed control specifications for closure devices in degraded mode",
+                "new_specification": "The system shall define operational limits and exceptions for controlling closure devices down to the sensor level during degraded mode."
+            }
+        ],
+        "label": "The system shall abort the device if the status is unknown.",
+        "absence": "situation of the device status is unknown",
+        "llm_eva_results": "0",
+        "sample_level": 3
+    }
+]

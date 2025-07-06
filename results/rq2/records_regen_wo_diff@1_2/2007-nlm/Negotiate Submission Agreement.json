@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "management of user access levels for agreement terms",
+                "new_specification": "The system shall define and manage user access levels to control the addition and editing of agreement terms."
+            }
+        ],
+        "label": "Able to add and edit terms of agreement, based on access of level of user.",
+        "absence": "based on access of level to add and edit terms of agreement",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.enter train data automatically",
+            "2.confirm data when stationary",
+            "3.consult train data",
+            "4.viewing train data",
+            "5.store current train data",
+            "6.confirm stored train data"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "confirmation of manually entered or overwritten data by the driver",
+                "new_specification": "The system shall require confirmation from the driver for manually entered or overwritten train data before allowing train movement."
+            },
+            {
+                "generation": "2",
+                "absent_element": "automatic entry of train data when stationary",
+                "new_specification": "The system shall allow automatic entry of train data when the train is stationary."
+            },
+            {
+                "generation": "3",
+                "absent_element": "warning for incorrect or incomplete train data entry",
+                "new_specification": "The system shall alert the driver if the entered train data is incorrect or incomplete."
+            }
+        ],
+        "label": "The driver shall be able to consult train data when the train is stationary or moving.",
+        "absence": "action of consulting train data when moving",
+        "semantic_similarity": "0.23,0.66,0.43",
+        "llm_eva_results": "0,0,0"
+    }
+]

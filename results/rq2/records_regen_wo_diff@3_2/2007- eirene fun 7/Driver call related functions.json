@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "minimizing the loudspeaker volume when the handset is lifted",
+                "new_specification": "The system shall minimize the loudspeaker volume when the handset is lifted to transfer communication."
+            },
+            {
+                "generation": "2",
+                "absent_element": "minimizing the loudspeaker volume when the handset is lifted",
+                "new_specification": "The system shall minimize the loudspeaker volume when the handset is lifted during a call."
+            },
+            {
+                "generation": "3",
+                "absent_element": "minimizing loudspeaker volume when handset is lifted and returning to initial volume when replaced",
+                "new_specification": "When the handset is lifted, the loudspeaker volume shall be minimized. Once the handset is replaced, the volume shall return to its initial setting."
+            }
+        ],
+        "label": "Picking up the handset shall reduce the loudspeaker volume to its minimum level.",
+        "absence": "action of reducing the loudspeaker volume to its minimum level",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "action of notifying for rejection reasons ",
+                "new_specification": "The system shall communicate detailed reasons for job rejection to the user."
+            }
+        ],
+        "label": "The scheduler shall evaluate the budget for the job.",
+        "absence": "evaluation of budget for the job",
+        "llm_eva_results": "0",
+        "sample_level": 2
+    }
+]

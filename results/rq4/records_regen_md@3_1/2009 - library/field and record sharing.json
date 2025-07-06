@@ -1,0 +1,33 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.system automatically tracks changes",
+            "2.system sends alerts after records are modified",
+            "3.edit specific fields within patron and item records",
+            "4.notify relevant staff members"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alert after record modifications",
+                "new_specification": "The system shall send alerts to relevant staff members after records are modified."
+            },
+            {
+                "generation": "2",
+                "absent_element": "alerts after record changes",
+                "new_specification": "The system shall send an alert to relevant users whenever a record is modified."
+            },
+            {
+                "generation": "3",
+                "absent_element": "alert after record changes",
+                "new_specification": "The system shall send alerts to relevant staff members after any patron or item record is modified."
+            }
+        ],
+        "label": "The system shall warn when a record is changed.",
+        "absence": "action of warning when a record is changed",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

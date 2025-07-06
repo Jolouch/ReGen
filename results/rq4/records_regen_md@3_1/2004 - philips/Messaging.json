@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.offer a variety of emoticons for enriching messages",
+            "2.support the use of emoticons"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "offering and supporting the use of emoticons",
+                "new_specification": "The application shall offer a variety of emoticons for enriching messages and support their use in chat messages."
+            },
+            {
+                "generation": "2",
+                "absent_element": "support and offer of emoticons",
+                "new_specification": "The application shall offer a variety of emoticons to users and support the use of these emoticons while composing messages."
+            },
+            {
+                "generation": "3",
+                "absent_element": "support for offering and using emoticons",
+                "new_specification": "The application should offer a variety of emoticons for users to add to their messages, enhancing the expressiveness of their communication."
+            }
+        ],
+        "label": "Display a list of emoticons to choose from when the user wants to include an emoticon in the message.",
+        "absence": "support of selecting emoticons when the user wants to include an emoticon in the message",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

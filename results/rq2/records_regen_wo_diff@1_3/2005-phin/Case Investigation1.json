@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "tracking all changes",
+                "new_specification": "The system shall provide a mechanism to track and record all changes to investigation-specific questionnaires and case records to ensure an accurate historical log."
+            }
+        ],
+        "label": "Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition.",
+        "absence": "action of tracking changes made to the status of cases records",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

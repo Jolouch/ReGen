@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "facility map refresh rate adjustability",
+                "new_specification": "The facility map refresh rate shall be adjustable through database configuration settings, with a default refresh every 2 seconds."
+            },
+            {
+                "generation": "2",
+                "absent_element": "clarity on database constraints for GUI control commands",
+                "new_specification": "The RLCS shall ensure that requests from the GUI for device status changes (control commands) are also subject to the database-defined constraints, similar to those applied to user logins."
+            },
+            {
+                "generation": "3",
+                "absent_element": "the adjustable refresh rate for the facility map",
+                "new_specification": "The refresh rate of the facility map shall be adjustable via the database."
+            }
+        ],
+        "label": "Refreshrate of the facility map can be configurable within the database to more than 2 seconds by the user.",
+        "absence": "action of modifying refresh rate within the database",
+        "llm_eva_results": "1,0,1",
+        "sample_level": 1
+    }
+]

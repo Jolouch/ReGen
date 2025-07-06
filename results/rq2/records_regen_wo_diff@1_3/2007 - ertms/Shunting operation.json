@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "Driver confirmation for automatic transfer",
+                "new_specification": "Automatic transfer to Shunting operation shall require confirmation from the driver when the speed is equal to or less than the supervised shunting speed."
+            }
+        ],
+        "label": "Before authomatic transition to Shunting, ETCS shall request confirmation from the driver.",
+        "absence": "confirmation from the driver if authomatic transition to Shunting",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

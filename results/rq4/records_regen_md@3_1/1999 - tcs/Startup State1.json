@@ -1,0 +1,39 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Alert the operator if functions beyond the permitted interaction level are executed.",
+            "2.initialize the system in either Normal Mode or Recovery Mode depending on the type of the last software termination",
+            "3.ensure that the system is ready for interaction assessment",
+            "4.alert the operator if a function execution attempt surpasses the permitted interaction level.",
+            "5.continue its standard operation without triggering Recovery Mode",
+            "6.Initialize its systems according to the last known state",
+            "7.Perform diagnostics when entering the Recovery Startup Mode",
+            "8.Revert to a safe state when entering the Recovery Startup Mode",
+            "9.Evaluate and adjust to the system's operational status during Recovery Startup Mode.",
+            "10.Provide appropriate notifications to the operator regarding any limitations."
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alert to the operator when executing functions beyond the permitted interaction level",
+                "new_specification": "The system shall alert the operator if a function execution attempt surpasses the permitted interaction level."
+            },
+            {
+                "generation": "2",
+                "absent_element": "explicit operator alert notifications regarding execution limitations",
+                "new_specification": "The system shall notify the operator regarding any execution limitations while performing functions, ensuring they are aware of exceeding permitted interaction levels."
+            },
+            {
+                "generation": "3",
+                "absent_element": "necessary adjustment/evaluation during Recovery Startup Mode",
+                "new_specification": "During Recovery Startup Mode, the TCS shall evaluate the operational status and make necessary adjustments for safe operation."
+            }
+        ],
+        "label": "The TCS shall inform the operator if the operator attempts to execute a function prohibited as a result of the determined level of interaction.",
+        "absence": "Warning for execution of functions prohibited according to determined interaction levels",
+        "llm_eva_results": "1,1,0",
+        "D-M": "-1,-1,1",
+        "sample_level": 1
+    }
+]

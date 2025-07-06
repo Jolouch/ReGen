@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "minimizing the loudspeaker volume when the handset is picked up",
+                "new_specification": "When picking up the handset, the system shall minimize the loudspeaker volume."
+            },
+            {
+                "generation": "2",
+                "absent_element": "detailed action/rule about minimizing loudspeaker volume when the handset is lifted or the transition management of sound levels",
+                "new_specification": "The system shall minimize the loudspeaker volume to a predefined level when the handset is lifted, ensuring consistency and clarity of sound."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Minimizing loudspeaker volume upon lifting the handset",
+                "new_specification": "When the handset is lifted, the loudspeaker's volume shall be minimized."
+            }
+        ],
+        "label": "Picking up the handset shall reduce the loudspeaker volume to its minimum level.",
+        "absence": "action of reducing the loudspeaker volume to its minimum level",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

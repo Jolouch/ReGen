@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "visual indication if a call cannot be connected",
+                "new_specification": "If the system is not able to connect the call, a visual indication shall also be provided to the driver."
+            },
+            {
+                "generation": "2",
+                "absent_element": "visual indication when system cannot connect the call",
+                "new_specification": "If the system is not able to connect the call, a visual indication shall be provided to the driver."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Feedback to the calling driver when call gets disconnected due to network issues",
+                "new_specification": "If the call is terminated due to network issues, the system shall provide an audible indication to the calling driver about the disconnection."
+            }
+        ],
+        "label": "If the system is not able to connect the call, an audible and visual indication shall be provided to the driver.",
+        "absence": "the visual indication shall be provided",
+        "llm_eva_results": "1,1,0",
+        "sample_level": 1
+    }
+]

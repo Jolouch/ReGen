@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "detailed action for correct answers at plot-critical points",
+                "new_specification": "When a correct answer is selected, and if it occurs at a plot-critical point, the component will adjust the plot direction according to predefined criteria."
+            }
+        ],
+        "label": "If the user selects the correct answer, a message to this effect will be displayed and the component will move to the next question. ",
+        "absence": "situation of selecting the correct answer",
+        "llm_eva_results": "0",
+        "sample_level": 1
+    }
+]

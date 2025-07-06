@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "tracking all changes in the system",
+                "new_specification": "The system must track all changes made to case investigations and questionnaire configurations, ensuring a comprehensive audit trail."
+            },
+            {
+                "generation": "2",
+                "absent_element": "tracking of all changes",
+                "new_specification": "Systems supporting OM must provide a mechanism to track all changes made to questionnaires and case records."
+            },
+            {
+                "generation": "3",
+                "absent_element": "tracking of all changes",
+                "new_specification": "Systems supporting OM must provide a mechanism to track all changes made to case records and questionnaires."
+            }
+        ],
+        "label": "Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition.",
+        "absence": "action of tracking changes made to the status of cases records",
+        "llm_eva_results": "0,0,1",
+        "sample_level": 1
+    }
+]

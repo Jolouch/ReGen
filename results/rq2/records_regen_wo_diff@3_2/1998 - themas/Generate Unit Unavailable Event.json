@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "action of timestamping the event",
+                "new_specification": "The system shall record the exact time when the request was denied in the event."
+            },
+            {
+                "generation": "2",
+                "absent_element": "procedure for the recording of the event",
+                "new_specification": "The system shall automatically record the generated event when a request for a heating unit or cooling is denied, for future reference."
+            },
+            {
+                "generation": "3",
+                "absent_element": "notification to the system operator about request denial",
+                "new_specification": "The system shall notify the system operator of the denial of a request for turning on a heating or cooling unit."
+            }
+        ],
+        "label": "This system event shall contain a designation of the heating or cooling unit that was not turned.",
+        "absence": "the designation of the not turned unit should be contained in the event",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 2
+    }
+]

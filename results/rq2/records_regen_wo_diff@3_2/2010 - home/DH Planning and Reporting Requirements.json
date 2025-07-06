@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "indication of any non-operational periods of the DH System",
+                "new_specification": "The month report shall include data on any non-operational periods of the DH System, specifying the dates and duration of such periods."
+            },
+            {
+                "generation": "2",
+                "absent_element": "indication of non-operational periods of the DH System",
+                "new_specification": "The monthly report shall indicate any non-operational periods of the DH System, including starting and ending dates and times."
+            },
+            {
+                "generation": "3",
+                "absent_element": "indicating non-operational periods of the DH System",
+                "new_specification": "The month report shall indicate any non-operational periods of the DigitalHome System within the specified month."
+            }
+        ],
+        "label": "The month report shall provide a section that indicates the periods of time when the DH System was not in operation.",
+        "absence": "indication of periods when the DH System was not in operation",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alerting user when project budgets are exceeded or at risk",
+                "new_specification": "The system should alert the user when project budgets are exceeded or are at risk."
+            }
+        ],
+        "label": "The system shall warn users if the project budget exceeds funding.",
+        "absence": "warn for over budget",
+        "llm_eva_results": "1",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alerts when UAV operations exceed preset limits",
+                "new_specification": "The system shall alert the operator whenever UAV operations exceed preset limits to ensure efficient and safe UAV operations."
+            },
+            {
+                "generation": "2",
+                "absent_element": "situation of alert when preset limits are exceeded",
+                "new_specification": "The TCS shall alert the operator when any preset limit of airspeed, altitude, or fuel is exceeded to ensure safe and efficient UAV operations."
+            },
+            {
+                "generation": "3",
+                "absent_element": "alerting when out of preset limits",
+                "new_specification": "The TCS shall generate an alert if preset limits (airspeed, altitude, or fuel) are exceeded to ensure efficient and safe UAV operations."
+            }
+        ],
+        "label": "TCS shall notify the operator when AV performance parameters are out of limits.",
+        "absence": "action of notifying the operator when AV performance parameters are out of limits.",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

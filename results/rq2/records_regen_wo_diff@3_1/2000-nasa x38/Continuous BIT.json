@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "execution time constraint under fault conditions and integration with redundancy management",
+                "new_specification": "The Continuous BIT, along with Redundancy Management and Scheduler operations, shall maintain execution under 3 milliseconds within the 50Hz rategroup when processing faults."
+            },
+            {
+                "generation": "2",
+                "absent_element": "processing under fault conditions",
+                "new_specification": "The system shall ensure Continuous BIT executes within 3 milliseconds under fault conditions."
+            },
+            {
+                "generation": "3",
+                "absent_element": "execution time under fault conditions (<3ms)",
+                "new_specification": "Under fault conditions, Continuous BIT, along with Redundancy Management and Scheduler operations running in the 50Hz rategroup, shall take less than 3 milliseconds."
+            }
+        ],
+        "label": "Continuous BIT shall take less than 3 milliseconds while processing faults.",
+        "absence": "situation of processing faults",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

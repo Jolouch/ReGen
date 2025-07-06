@@ -1,0 +1,38 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 3",
+        "diff_act": [
+            "1.monitoring",
+            "2.tracking",
+            "3.overriding",
+            "4.set flight trajectories",
+            "5.adjust flight trajectories",
+            "6.pass control of an AV between different operators",
+            "7.transfer control seamlessly",
+            "8.define",
+            "9.manage",
+            "10.generate"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "alert when UAV operates beyond preset limits",
+                "new_specification": "The system shall generate an alert to the operator when a UAV exceeds its preset airspeed, altitude, or fuel limits during operation."
+            },
+            {
+                "generation": "2",
+                "absent_element": "alerting when UAV operations exceed preset limits",
+                "new_specification": "The system shall generate an alert when the UAV operations exceed the predefined airspeed, altitude, or fuel limits."
+            },
+            {
+                "generation": "3",
+                "absent_element": "alert when out of preset limits",
+                "new_specification": "The TCS shall generate an alert when the AV exceeds the preset limits, including airspeed, altitude, and fuel limits."
+            }
+        ],
+        "label": "TCS shall notify the operator when AV performance parameters are out of limits.",
+        "absence": "action of notifying the operator when AV performance parameters are out of limits.",
+        "semantic_similarity": "0.49,0.49,0.38",
+        "llm_eva_results": "1,1,1"
+    }
+]

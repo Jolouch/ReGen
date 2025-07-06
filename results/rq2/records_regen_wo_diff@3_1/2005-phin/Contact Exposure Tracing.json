@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "auditing or reporting the historical linking actions",
+                "new_specification": "The system should be able to audit and report the historical linking actions for contacts and cases for verification and compliance purposes."
+            },
+            {
+                "generation": "2",
+                "absent_element": "feedback mechanism during monitoring of contact status changes",
+                "new_specification": "The system shall support real-time alerts or notifications to investigators based on updates in contact's health status or exposure information."
+            },
+            {
+                "generation": "3",
+                "absent_element": "Handling of duplicate contacts or updates on contact status",
+                "new_specification": "The system shall be able to identify and manage duplicate contact records and update contact status as necessary to ensure accurate tracing and monitoring."
+            }
+        ],
+        "label": "It allows multiple contacts to be linked to a single case.",
+        "absence": "multiple contacts to be linked to a single case",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 2
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "budget monitoring notifications",
+                "new_specification": "The system shall notify users when project budgets are exceeded or funding levels fall below expected thresholds."
+            },
+            {
+                "generation": "2",
+                "absent_element": "warnings for project budget discrepancies or over-budget status",
+                "new_specification": "The system shall alert the user if a project budget exceeds its allocated funding or if any discrepancies are detected."
+            },
+            {
+                "generation": "3",
+                "absent_element": "notification on project budget overruns",
+                "new_specification": "The system shall notify the user if a project budget exceeds its defined limit during tracking."
+            }
+        ],
+        "label": "The system shall warn users if the project budget exceeds funding.",
+        "absence": "warn for over budget",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 3
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "bidirectional linking between multiple contacts and cases",
+                "new_specification": "Systems supporting OM must ensure bidirectional linking between contacts and their associated cases, maintaining mutual awareness across all linked entities."
+            },
+            {
+                "generation": "2",
+                "absent_element": "capability to track and analyze temporal changes",
+                "new_specification": "The system should maintain a temporal record of contact exposures to analyze changes over time and adapt to evolving outbreak dynamics."
+            },
+            {
+                "generation": "3",
+                "absent_element": "monitoring changes in contact information over time",
+                "new_specification": "Systems supporting OM should track and record changes in contact information over time to maintain current and accurate investigation data."
+            }
+        ],
+        "label": "It allows multiple contacts to be linked to a single case.",
+        "absence": "multiple contacts to be linked to a single case",
+        "llm_eva_results": "1,0,0",
+        "sample_level": 2
+    }
+]

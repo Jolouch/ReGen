@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "reporting errors to users or systems",
+                "new_specification": "The system shall notify the relevant users or systems of any detected errors during data integrity checks."
+            },
+            {
+                "generation": "2",
+                "absent_element": "data recovery after a disaster",
+                "new_specification": "The system shall perform recovery of data after a disaster or system failure to ensure data integrity is maintained."
+            },
+            {
+                "generation": "3",
+                "absent_element": "explicit specification for disaster data recovery",
+                "new_specification": "The system shall provide procedures for data recovery following a disaster event, ensuring all data can be accurately restored to meet statutory obligations."
+            }
+        ],
+        "label": "disaster recovery capabilities including data recovery",
+        "absence": "inclusion of data recovery",
+        "llm_eva_results": "0,1,1",
+        "sample_level": 2
+    }
+]

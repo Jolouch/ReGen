@@ -1,0 +1,38 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.Track all changes to case records.",
+            "2.ensure that updates or revisions are accurately reflected and controlled within the system",
+            "3.track all changes made to case definitions and status updates",
+            "4.maintain a comprehensive history of changes for accountability and reference",
+            "5.incorporate common terminology to maintain consistency",
+            "6.improve efficiency within the system",
+            "7.ensure all changes are tracked",
+            "8.maintain historical accuracy",
+            "9.maintain traceability"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "explicit tracking of all changes to case records and definitions",
+                "new_specification": "Systems supporting OM must track all changes to case records and definitions to ensure accountability and transparency."
+            },
+            {
+                "generation": "2",
+                "absent_element": "tracking of all changes made to case records and definitions",
+                "new_specification": "The system should provide comprehensive tracking of all changes made to investigation case records and definitions, maintaining an auditable history of revisions."
+            },
+            {
+                "generation": "3",
+                "absent_element": "tracking all changes",
+                "new_specification": "The system shall provide mechanisms to track all changes made to case records, case definitions, and status updates to ensure accountability and historical accuracy."
+            }
+        ],
+        "label": "Systems supporting OM should track the changes made to the status of case records as a result of changes in the case definition.",
+        "absence": "action of tracking changes made to the status of cases records",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]

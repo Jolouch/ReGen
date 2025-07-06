@@ -1,0 +1,38 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.track contact statuses",
+            "2.monitor contact statuses",
+            "3.update contact statuses",
+            "4.link to investigation subjects",
+            "5.examine contacts",
+            "6.monitor contacts",
+            "7.ensure effective management of potential outbreaks",
+            "8.enhance the tracing capability",
+            "9.ensure comprehensive tracking of outbreak spread across multiple jurisdictions"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "mechanism for tracking evolving contact statuses",
+                "new_specification": "The system shall continuously track the statuses of contacts to ensure updated information is available for investigators to act upon."
+            },
+            {
+                "generation": "2",
+                "absent_element": "updating and maintaining contact statuses for outbreak tracking",
+                "new_specification": "The system shall track, update, and maintain the health status of contacts to facilitate comprehensive outbreak tracking and monitoring across jurisdictions."
+            },
+            {
+                "generation": "3",
+                "absent_element": "action for updating contact statuses",
+                "new_specification": "The system should allow updating contact statuses to ensure up-to-date tracing information is maintained for effective contact exposure tracing."
+            }
+        ],
+        "label": "It allows multiple contacts to be linked to a single case.",
+        "absence": "multiple contacts to be linked to a single case",
+        "llm_eva_results": "0,0,0",
+        "D-M": "1,1,1",
+        "sample_level": 2
+    }
+]

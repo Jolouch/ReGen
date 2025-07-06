@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "simultaneous click action on multiple data points",
+                "new_specification": "When multiple data points are clicked simultaneously, their names should display simultaneously."
+            }
+        ],
+        "label": "The product should allow multiple points to be clicked so that multiple names can be displayed.",
+        "absence": "action of clicking multiple points to display multiple names of the data points",
+        "llm_eva_results": "1",
+        "sample_level": 1
+    }
+]

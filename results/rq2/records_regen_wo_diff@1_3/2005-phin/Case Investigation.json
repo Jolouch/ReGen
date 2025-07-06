@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "enabling publishing of implementation guides",
+                "new_specification": "Systems supporting OM must provide the ability to publish implementation guides."
+            }
+        ],
+        "label": "Systems supporting OM must provide the ability to publish investigation specific questionnaires and implementation guides.",
+        "absence": "action of publishing of implementation guides",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

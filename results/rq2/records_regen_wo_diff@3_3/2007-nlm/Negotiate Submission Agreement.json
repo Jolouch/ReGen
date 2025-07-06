@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "user access level affecting the ability to edit agreements",
+                "new_specification": "The system shall ensure that only users with the appropriate access level can add or edit terms of agreements."
+            },
+            {
+                "generation": "2",
+                "absent_element": "access-level-based restriction for editing agreement terms",
+                "new_specification": "The system shall restrict the ability to add and edit terms of agreement based on user's access level to ensure data integrity."
+            },
+            {
+                "generation": "3",
+                "absent_element": "control of user permissions when adding or editing agreement terms",
+                "new_specification": "The system shall verify the user's access level before allowing them to add or edit agreement terms."
+            }
+        ],
+        "label": "Able to add and edit terms of agreement, based on access of level of user.",
+        "absence": "based on access of level to add and edit terms of agreement",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 2
+    }
+]

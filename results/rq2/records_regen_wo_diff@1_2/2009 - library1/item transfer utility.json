@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "situation of reverting transferred items",
+                "new_specification": "The utility shall provide the ability to revert transferred items back to their original location."
+            }
+        ],
+        "label": "Utility provides means to revert items to original location after a set period of time",
+        "absence": "ability of reverting items to original location",
+        "llm_eva_results": "1",
+        "sample_level": 2
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 1, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "conflict between scheduled and manual settings",
+                "new_specification": "The system shall resolve conflicts between scheduled and manual settings by prioritizing the manual setting until the scheduled period ends, at which point it should evaluate and align with the next immediate schedule."
+            }
+        ],
+        "label": "When a manual temperature setting ends, the default setting will be used for the next time period.",
+        "absence": "using the default setting after a manual temperature setting ends",
+        "llm_eva_results": "0",
+        "sample_level": 1
+    }
+]

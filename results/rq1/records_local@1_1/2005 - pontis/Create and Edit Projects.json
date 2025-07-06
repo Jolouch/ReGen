@@ -1,0 +1,21 @@
+[
+    {
+        "desc": "model: llama3.3:70B Q4_K_M, generation: 1",
+        "diff_act": [
+            "1.assign Pontis numbers",
+            "2.add relevant details to a project",
+            "3.modify project information"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "remove Pontis-generated work recommendations, inspector work candidates, or user-specified work items from a project after it has been split",
+                "new_specification": "The system shall allow the removal of work items from projects that have been created by splitting an existing project."
+            }
+        ],
+        "label": "The user shall be able to combine multiple projects into a master project.",
+        "absence": "action of combining multiple projects into a master project",
+        "semantic_similarity": "0.34",
+        "llm_eva_results": "0"
+    }
+]

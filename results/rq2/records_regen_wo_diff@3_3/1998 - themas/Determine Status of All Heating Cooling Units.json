@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "queue processing when a unit is turned off",
+                "new_specification": "After a unit is successfully turned off, the system shall process the next request in the LIFO queue to turn on a unit, if any."
+            },
+            {
+                "generation": "2",
+                "absent_element": "handling of dequeued requests",
+                "new_specification": "The system shall automatically attempt to process requests in the queue when a heating or cooling unit becomes available."
+            },
+            {
+                "generation": "3",
+                "absent_element": "actions to manage the LIFO queue",
+                "new_specification": "The system shall periodically review the LIFO queue and attempt to process requests when units become available, or remove requests after a timeout period."
+            }
+        ],
+        "label": "When a request to turn off a heating or cooling unit is received, this process shall first check the LIFO queue and remove the unit-turn-on request from the queue if exists.",
+        "absence": "action of checking the queue and removing the unit-turn-on request if exists when a request to turn off a unit is received",
+        "llm_eva_results": "0,0,0",
+        "sample_level": 3
+    }
+]

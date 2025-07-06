@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "decision of which queue the job will be placed on for execution",
+                "new_specification": "The scheduler shall determine the appropriate queue on the selected execution node for the job."
+            },
+            {
+                "generation": "2",
+                "absent_element": "insertion of jobs into queues after host selection",
+                "new_specification": "The scheduler shall select the appropriate queue on the selected host and insert the job for execution."
+            },
+            {
+                "generation": "3",
+                "absent_element": "queue placement selection",
+                "new_specification": "The Libra shall determine the appropriate queue for the job on the selected execution host before inserting the job."
+            }
+        ],
+        "label": "After the host is determined, the Libra shall select the appropriate queue based on the job parameter.",
+        "absence": "the selection of the appropriate queue after the host is determined",
+        "llm_eva_results": "1,1,1",
+        "sample_level": 1
+    }
+]

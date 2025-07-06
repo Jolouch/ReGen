@@ -1,0 +1,27 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: False",
+        "diff_act": [],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "confirmation for successful execution of mode transitions",
+                "new_specification": "The TCS shall confirm and log the successful execution of the transition to the determined startup mode."
+            },
+            {
+                "generation": "2",
+                "absent_element": "decision-making process detail for mode execution based on termination type",
+                "new_specification": "Before executing a startup mode, the TCS shall verify the status of the previous termination to determine the appropriate mode."
+            },
+            {
+                "generation": "3",
+                "absent_element": "logging or notification of the selected startup mode",
+                "new_specification": "The TCS shall log the selected startup mode (Normal or Recovery) during each initialization for diagnostic purposes."
+            }
+        ],
+        "label": "When the TCS Software is terminated normally the TCS shall enter the Normal Startup Mode of operation upon application of power.",
+        "absence": "situation of the TCS Software is terminated normally",
+        "llm_eva_results": "0,1,0",
+        "sample_level": 2
+    }
+]

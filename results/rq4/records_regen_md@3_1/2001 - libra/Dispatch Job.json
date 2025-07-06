@@ -1,0 +1,36 @@
+[
+    {
+        "desc": "model: gpt-4o, generation: 3, isDiffusion: True",
+        "diff_act": [
+            "1.evaluate the requirements of the job",
+            "2.consider factors such as resource requests, priority, and deadline",
+            "3.determine the appropriate queue for the job based on the evaluation",
+            "4.dispatch the job to the selected host",
+            "5.ensure the chosen host meets the job's execution requirements",
+            "6.Place the job into the chosen host's appropriate queue for execution",
+            "7.Ensure that the job aligns with the resource requirements and queue policies"
+        ],
+        "regen": [
+            {
+                "generation": "1",
+                "absent_element": "determination of the queue for the job",
+                "new_specification": "After sorting the hosts and selecting the least loaded one, the system shall determine the appropriate queue for the job based on factors such as resource requirements, priority, and deadlines."
+            },
+            {
+                "generation": "2",
+                "absent_element": "procedures to determine and ensure the job is placed into the appropriate queue",
+                "new_specification": "The scheduler shall determine the appropriate queue for the job on the selected host based on resource requests, priority, and deadline, aligning with queue policies."
+            },
+            {
+                "generation": "3",
+                "absent_element": "specific conditions for queue placement based on resource requests, priority, and deadlines",
+                "new_specification": "The scheduler shall evaluate job requirements such as resource requests, priority, and deadlines, and determine the appropriate queue on the host for execution based on the evaluation."
+            }
+        ],
+        "label": "After the host is determined, the Libra shall select the appropriate queue based on the job parameter.",
+        "absence": "the selection of the appropriate queue after the host is determined",
+        "llm_eva_results": "1,1,1",
+        "D-M": "-1,-1,-1",
+        "sample_level": 1
+    }
+]
