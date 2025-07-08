@@ -8,6 +8,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 import configparser
 
+from utils import action_simi
+
 config = configparser.ConfigParser()
 config.read('setting.ini')
 api_key = config['API']['api_key']
@@ -348,6 +350,9 @@ def main(args):
               "Cases with valuable actions / Correctly predicted cases :{}"
               .format(act_rel['m1'], act_rel['m2'], act_rel['m3'], act_rel['m4']))
 
+        # average semantic similarity of diffused actions
+        action_simi()
+
     if args.rq == "rq3":
         dm_1 = comt_avg(["results/rq3/records_regen@1_" + str(i+1) for i in range(3)], eva='dm', k=1)
         dm_3 = comt_avg(["results/rq3/records_regen@3_" + str(i+1) for i in range(3)], eva='dm')
@@ -361,6 +366,6 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--rq", type=str, default='rq1', choices=['rq1', 'rq2', 'rq3', 'rq4'])
+    parser.add_argument("--rq", type=str, default='rq2', choices=['rq1', 'rq2', 'rq3', 'rq4'])
     args = parser.parse_args()
     main(args)
