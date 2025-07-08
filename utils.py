@@ -50,8 +50,7 @@ def llm_call(process: str, prompt_files: Tuple, batch_info, model='gpt-4o', temp
             count += 1
 
 def action_simi():
-    # model = "all-mpnet-base-v2"
-    model = "E:\hf_models\hub\models--sentence-transformers--all-mpnet-base-v2\snapshots\84f2bcc00d77236f9e89c8a360a00fb1139bf47d"
+    model = "all-mpnet-base-v2"
     rp = "results/rq1/records_regen@3_1"
 
     actions = []
